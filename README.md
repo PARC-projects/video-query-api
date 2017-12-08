@@ -1,1 +1,5 @@
-# video-query-api
+# Video Query API
+
+```bash
+pip install psycopg2
+```
