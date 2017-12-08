@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from .serializers import UserSerializer, GroupSerializer
+from .serializers import UserSerializer, GroupSerializer, VideoSerializer
+from .models import Video
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -16,3 +17,11 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+
+class VideoViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows videos to be viewed or edited.
+    """
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
