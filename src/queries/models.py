@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
 
-class VideoDataset(models.Model):
+class Dataset(models.Model):
     name = models.CharField(max_length=254, unique=True)
 
     class Meta:
@@ -11,7 +11,7 @@ class VideoDataset(models.Model):
 
 class Video(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    video_dataset = models.ForeignKey(VideoDataset, on_delete=models.PROTECT)
+    video_dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
 
     class Meta:
         db_table = 'video'
@@ -19,7 +19,7 @@ class Video(models.Model):
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    video_dataset = models.ForeignKey(VideoDataset, on_delete=models.PROTECT)
+    video_dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
     video = models.ForeignKey(Video, on_delete=models.CASCADE)
     reference_time = models.TimeField(default='00:00:00')
     max_matches = models.PositiveIntegerField(default=20)

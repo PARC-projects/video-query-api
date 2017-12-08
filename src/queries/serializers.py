@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import Video, VideoDataset, Query, MatchArray, Signature
+from .models import *
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -21,9 +21,9 @@ class VideoSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('__all__')
 
 
-class VideoDatasetSerializer(serializers.HyperlinkedModelSerializer):
+class DatasetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = VideoDataset
+        model = Dataset
         fields = ('__all__')
 
 
