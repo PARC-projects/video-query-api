@@ -11,7 +11,7 @@ class Dataset(models.Model):
 
 class Video(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    video_dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
+    dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
 
     class Meta:
         db_table = 'video'
