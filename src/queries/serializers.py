@@ -18,13 +18,13 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class VideoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Video
-        fields = ('id', 'name', 'dataset_id')
+        fields = ('url','id', 'name', 'dataset_id')
 
 
 class DatasetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Dataset
-        fields = ('id', 'name')
+        fields = ('url', 'id', 'name')
 
 
 class QuerySerializer(serializers.HyperlinkedModelSerializer):
