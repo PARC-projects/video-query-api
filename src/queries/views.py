@@ -1,8 +1,11 @@
 from rest_framework import viewsets
 from .serializers import *
 from .models import *
-
-
+from rest_framework.decorators import detail_route
+from rest_framework.response import Response
+from rest_framework import status
+import logging
+logger = logging.getLogger(__name__)
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
@@ -33,6 +36,13 @@ class DatasetViewSet(viewsets.ModelViewSet):
     """
     queryset = Dataset.objects.all()
     serializer_class = DatasetSerializer
+
+    @detail_route(methods=['get'])
+    def videos(self, request, pk):
+        """
+        Get videos based on dataset id
+        """
+        return Response(Video.objects.filter(dataset_id=pk).values())
 
 
 class QueryViewSet(viewsets.ModelViewSet):
