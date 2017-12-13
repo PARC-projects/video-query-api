@@ -24,7 +24,7 @@ router.register(r'groups', views.GroupViewSet)
 router.register(r'videos', views.VideoViewSet)
 router.register(r'datasets', views.DatasetViewSet)
 router.register(r'queries', views.QueryViewSet)
-router.register(r'match-arrays', views.MatchArrayViewSet)
+router.register(r'matched-arrays', views.MatchedArrayViewSet)
 router.register(r'signatures', views.SignatureViewSet)
 
 urlpatterns = [

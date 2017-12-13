@@ -33,9 +33,9 @@ class QuerySerializer(serializers.HyperlinkedModelSerializer):
         fields = ('__all__')
 
 
-class MatchArraySerializer(serializers.HyperlinkedModelSerializer):
+class MatchedArraySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = MatchArray
+        model = MatchedArray
         fields = ('__all__')
 
 

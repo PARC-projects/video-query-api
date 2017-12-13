@@ -34,6 +34,7 @@ class DatasetViewSet(viewsets.ModelViewSet):
     queryset = Dataset.objects.all()
     serializer_class = DatasetSerializer
 
+
 class QueryViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows video queries to be viewed or edited.
@@ -42,12 +43,12 @@ class QueryViewSet(viewsets.ModelViewSet):
     serializer_class = QuerySerializer
 
 
-class MatchArrayViewSet(viewsets.ModelViewSet):
+class MatchedArrayViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows matched arrays to be viewed or edited.
     """
-    queryset = MatchArray.objects.all()
-    serializer_class = MatchArraySerializer
+    queryset = MatchedArray.objects.all()
+    serializer_class = MatchedArraySerializer
 
 
 class SignatureViewSet(viewsets.ModelViewSet):
