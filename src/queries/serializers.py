@@ -3,43 +3,43 @@ from rest_framework import serializers
 from .models import *
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('username', 'email', 'groups')
 
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
-        fields = ('url', 'name')
+        fields = ('name')
 
 
-class VideoSerializer(serializers.HyperlinkedModelSerializer):
+class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
-        fields = ('url','id', 'name', 'dataset_id')
+        fields = ('id', 'name', 'dataset_id')
 
 
-class DatasetSerializer(serializers.HyperlinkedModelSerializer):
+class DatasetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dataset
-        fields = ('url', 'id', 'name')
+        fields = ('id', 'name')
 
 
-class QuerySerializer(serializers.HyperlinkedModelSerializer):
+class QuerySerializer(serializers.ModelSerializer):
     class Meta:
         model = Query
         fields = ('__all__')
 
 
-class MatchedArraySerializer(serializers.HyperlinkedModelSerializer):
+class MatchedArraySerializer(serializers.ModelSerializer):
     class Meta:
         model = MatchedArray
         fields = ('__all__')
 
 
-class SignatureSerializer(serializers.HyperlinkedModelSerializer):
+class SignatureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Signature
         fields = ('__all__')

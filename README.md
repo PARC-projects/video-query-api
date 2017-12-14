@@ -1,6 +1,6 @@
 # Video Query API
 
-Dependices
+Dependencies
 
 ```bash
 pip install psycopg2
