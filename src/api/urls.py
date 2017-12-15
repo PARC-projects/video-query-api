@@ -16,14 +16,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from src.videoQuery.videoQueryApi import views
+from queries import views
+from rest_framework import renderers
+from rest_framework.documentation import include_docs_urls
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'videos', views.VideoViewSet)
+router.register(r'datasets', views.DatasetViewSet)
+router.register(r'queries', views.QueryViewSet)
+router.register(r'matched-arrays', views.MatchedArrayViewSet)
+router.register(r'signatures', views.SignatureViewSet)
+
+dataset_videos = views.DatasetViewSet.as_view({
+    'get': 'videos'
+}, renderer_classes=[renderers.StaticHTMLRenderer])
 
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
+    path('docs/', include_docs_urls(title='Video Query', public=False))
 ]
