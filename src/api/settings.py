@@ -60,9 +60,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:4200',
-    'http://localhost:8001',
-    'http://127.0.0.1:8001'
+    'http://localhost:4200'
+    'http://localhost:8001'
 )
 
 ROOT_URLCONF = 'api.urls'
