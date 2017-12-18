@@ -19,12 +19,12 @@ class Video(models.Model):
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
-    video = models.ForeignKey(Video, on_delete=models.CASCADE)
+    dataset_id = models.ForeignKey(Dataset, on_delete=models.PROTECT)
+    video_id = models.ForeignKey(Video, on_delete=models.CASCADE)
     reference_time = models.TimeField(default='00:00:00')
     max_matches = models.PositiveIntegerField(default=20)
     query_notes = models.TextField()
-    reference_clip_image = models.ImageField(default='Picture1.jpg')
+    reference_clip_image = models.ImageField()
 
     class Meta:
         db_table = 'query'
