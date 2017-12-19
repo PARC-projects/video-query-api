@@ -22,8 +22,8 @@ from rest_framework.documentation import include_docs_urls
 from rest_framework.authtoken import views
 
 router = routers.DefaultRouter()
-router.register(r'users', query_views.UserViewSet)
-router.register(r'groups', query_views.GroupViewSet)
+# router.register(r'users', query_views.UserViewSet)
+# router.register(r'groups', query_views.GroupViewSet)
 router.register(r'videos', query_views.VideoViewSet)
 router.register(r'datasets', query_views.DatasetViewSet)
 router.register(r'queries', query_views.QueryViewSet)

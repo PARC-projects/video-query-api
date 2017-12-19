@@ -35,7 +35,7 @@ class Query(models.Model):
     reference_time = models.TimeField(default='00:00:00')
     max_matches = models.PositiveIntegerField(default=20)
     query_notes = models.TextField()
-    reference_clip_image = models.ImageField()
+    reference_clip_image = models.ImageField(null=True)
 
     class Meta:
         db_table = 'query'
