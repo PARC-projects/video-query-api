@@ -15,14 +15,13 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 
 class Dataset(models.Model):
     name = models.CharField(max_length=254, unique=True)
-
     class Meta:
         db_table = 'dataset'
 
 
 class Video(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
+    dataset = models.ForeignKey(Dataset, related_name='videos', on_delete=models.PROTECT)
 
     class Meta:
         db_table = 'video'
@@ -30,19 +29,20 @@ class Video(models.Model):
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    dataset_id = models.ForeignKey(Dataset, on_delete=models.PROTECT)
-    video_id = models.ForeignKey(Video, on_delete=models.CASCADE)
+    dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
+    video = models.ForeignKey(Video, on_delete=models.CASCADE)
     reference_time = models.TimeField(default='00:00:00')
     max_matches = models.PositiveIntegerField(default=20)
     query_notes = models.TextField()
     reference_clip_image = models.ImageField(null=True)
+
 
     class Meta:
         db_table = 'query'
 
 
 class MatchedArray(models.Model):
-    query_name = models.ForeignKey(Query, on_delete=models.PROTECT)
+    query = models.ForeignKey(Query, on_delete=models.PROTECT)
     round = models.PositiveIntegerField()
     matches = ArrayField(models.PositiveIntegerField(), default=[1, 2])  # array of snippet ids
     near_matches = ArrayField(models.PositiveIntegerField(), default=[3, 4])  # array of snippet ids
