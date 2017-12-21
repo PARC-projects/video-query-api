@@ -28,8 +28,8 @@ class VideoSerializer(serializers.ModelSerializer):
 
 
 class QuerySerializer(serializers.ModelSerializer):
-    dataset = DatasetSerializer(many=False, read_only=True)
-    video = VideoSerializer(many=False, read_only=True)
+    # dataset = DatasetSerializer(many=False, read_only=True)
+    # video = VideoSerializer(many=False, read_only=True)
 
     class Meta:
         model = Query

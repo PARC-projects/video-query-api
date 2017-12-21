@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     'queries'
 ]
 
-# TODO: Not sure why we need SessionAuthentication but without it, TokenAuthentication th
+# TODO: Not sure why we need SessionAuthentication but without it, TokenAuthentication does not work
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication'
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication'
     ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated'
