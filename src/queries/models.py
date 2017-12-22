@@ -23,7 +23,7 @@ class Dataset(models.Model):
 class Video(models.Model):
     name = models.CharField(max_length=254, unique=True)
     dataset = models.ForeignKey(Dataset, related_name='videos', on_delete=models.PROTECT)
-    path = models.CharField(max_length=4096, blank=True) # TODO: make required
+    path = models.CharField(max_length=4096, null=True)  # TODO: make required
 
     class Meta:
         db_table = 'video'
@@ -35,11 +35,11 @@ class Query(models.Model):
     video = models.ForeignKey(Video, on_delete=models.PROTECT)
     reference_time = models.TimeField(default='00:00:00')
     max_matches = models.PositiveIntegerField(default=20)
-    query_notes = models.TextField(blank=True)
-    reference_clip_image = models.ImageField(blank=True)
+    query_notes = models.TextField(null=True)
+    reference_clip_image = models.ImageField(null=True)
     current_round = models.PositiveIntegerField(default=1)
     current_match_criterion = models.FloatField(default=0.8)
-    current_weights = ArrayField(models.FloatField(), blank=True)
+    current_weights = ArrayField(models.FloatField(), null=True)
 
     class Meta:
         db_table = 'query'

@@ -73,5 +73,53 @@
       "dataset": 3,
       "path": ""
     }
+  },
+  {
+    "model": "queries.query",
+    "pk": 1,
+    "fields": {
+      "name": "Query 1",
+      "dataset": 1,
+      "video": 1,
+      "reference_time": "00:01:10",
+      "max_matches": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": null
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 2,
+    "fields": {
+      "name": "Query 2",
+      "dataset": 2,
+      "video": 4,
+      "reference_time": "00:00:10",
+      "max_matches": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": null
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 3,
+    "fields": {
+      "name": "Query 3",
+      "dataset": 3,
+      "video": 6,
+      "reference_time": "00:01:00",
+      "max_matches": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": null
+    }
   }
 ]
