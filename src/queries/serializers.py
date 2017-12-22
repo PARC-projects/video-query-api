@@ -36,11 +36,11 @@ class QuerySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class MatchedArraySerializer(serializers.ModelSerializer):
+class QueryResultSerializer(serializers.ModelSerializer):
     query = QuerySerializer(many=False, read_only=True)
 
     class Meta:
-        model = MatchedArray
+        model = QueryResult
         fields = '__all__'
 
 

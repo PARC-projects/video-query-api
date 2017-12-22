@@ -3,7 +3,6 @@ from .serializers import *
 from .models import *
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -47,18 +46,18 @@ class DatasetViewSet(viewsets.ModelViewSet):
 
 class QueryViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows video queries to be viewed or edited.
+    API endpoint that allows queries to be viewed or edited.
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
 
 
-class MatchedArrayViewSet(viewsets.ModelViewSet):
+class QueryResultViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows matched arrays to be viewed or edited.
+    API endpoint that allows query result to be viewed or edited.
     """
-    queryset = MatchedArray.objects.all()
-    serializer_class = MatchedArraySerializer
+    queryset = QueryResult.objects.all()
+    serializer_class = QueryResultSerializer
 
 
 class SignatureViewSet(viewsets.ModelViewSet):
