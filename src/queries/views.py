@@ -67,6 +67,14 @@ class QueryResultViewSet(viewsets.ModelViewSet):
     serializer_class = QueryResultSerializer
 
 
+class MatchViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows match to be viewed or edited.
+    """
+    queryset = Match.objects.all()
+    serializer_class = MatchSerializer
+
+
 class SignatureViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows signatures to be viewed or edited.

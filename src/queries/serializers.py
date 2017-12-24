@@ -28,21 +28,23 @@ class VideoSerializer(serializers.ModelSerializer):
 
 
 class QuerySerializer(serializers.ModelSerializer):
-    # dataset = DatasetSerializer(many=False, read_only=True)
-    # video = VideoSerializer(many=False, read_only=True)
+    dataset_to_query = DatasetSerializer(many=False, read_only=True)
+    video = VideoSerializer(many=False, read_only=True)
 
     class Meta:
         model = Query
         fields = '__all__'
 
+class MatchSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Match
+        fields = '__all__'
 
 class QueryResultSerializer(serializers.ModelSerializer):
-    query = QuerySerializer(many=False, read_only=True)
-
     class Meta:
         model = QueryResult
         fields = '__all__'
-
 
 class SignatureSerializer(serializers.ModelSerializer):
     video = VideoSerializer(many=False, read_only=True)

@@ -56,7 +56,7 @@ class QueryResult(models.Model):
 
 
 class Match(models.Model):
-    query_result = models.ForeignKey(Query, on_delete=models.PROTECT)
+    query_result = models.ForeignKey(QueryResult, on_delete=models.PROTECT)
     score = models.FloatField(default=0)
     is_match = models.BooleanField(default=0)
     reference_video_id = models.CharField(max_length=4096, null=True)  # TODO: make required

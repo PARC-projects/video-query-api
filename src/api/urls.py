@@ -28,6 +28,7 @@ router.register(r'videos', query_views.VideoViewSet)
 router.register(r'datasets', query_views.DatasetViewSet)
 router.register(r'queries', query_views.QueryViewSet)
 router.register(r'query-results', query_views.QueryResultViewSet)
+router.register(r'matches', query_views.MatchViewSet)
 router.register(r'signatures', query_views.SignatureViewSet)
 
 # dataset_videos = query_views.DatasetViewSet.as_view({
