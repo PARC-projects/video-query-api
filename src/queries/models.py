@@ -31,10 +31,10 @@ class Video(models.Model):
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    dataset = models.ForeignKey(Dataset, on_delete=models.PROTECT)
+    dataset_to_query = models.ForeignKey(Dataset, on_delete=models.PROTECT)
     video = models.ForeignKey(Video, on_delete=models.PROTECT)
     reference_time = models.TimeField(default='00:00:00')
-    max_matches = models.PositiveIntegerField(default=20)
+    max_matches_for_review = models.PositiveIntegerField(default=20)
     query_notes = models.TextField(null=True)
     reference_clip_image = models.ImageField(null=True)
     current_round = models.PositiveIntegerField(default=1)
@@ -47,15 +47,22 @@ class Query(models.Model):
 
 class QueryResult(models.Model):
     query = models.ForeignKey(Query, on_delete=models.PROTECT)
-    matches = ArrayField(models.PositiveIntegerField())
     round = models.PositiveIntegerField(default=1)
-    score = models.FloatField(default=0)
-    is_match = models.BooleanField(default=0)
     match_criterion = models.FloatField(default=0.8)
     weights = ArrayField(models.FloatField())
 
     class Meta:
         db_table = 'query_result'
+
+
+class Match(models.Model):
+    query_result = models.ForeignKey(Query, on_delete=models.PROTECT)
+    score = models.FloatField(default=0)
+    is_match = models.BooleanField(default=0)
+    reference_video_id = models.CharField(max_length=4096, null=True)  # TODO: make required
+
+    class Meta:
+        db_table = 'match'
 
 
 class Signature(models.Model):
