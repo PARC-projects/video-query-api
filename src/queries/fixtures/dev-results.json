@@ -16,7 +16,7 @@
       "query_result": 1,
       "score": 1,
       "is_match": true,
-      "reference_video_id": 1
+      "reference_video": 1
     }
   },
   {
@@ -26,7 +26,7 @@
       "query_result": 1,
       "score": 0.75,
       "is_match": false,
-      "reference_video_id": 2
+      "reference_video": 2
     }
   },
   {
@@ -36,7 +36,7 @@
       "query_result": 1,
       "score": 0.86,
       "is_match": true,
-      "reference_video_id": 3
+      "reference_video": 3
     }
   },
   {
@@ -46,7 +46,7 @@
       "query_result": 1,
       "score": 0.65,
       "is_match": false,
-      "reference_video_id": 4
+      "reference_video": 4
     }
   }
 ]

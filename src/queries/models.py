@@ -59,7 +59,7 @@ class Match(models.Model):
     query_result = models.ForeignKey(QueryResult, on_delete=models.PROTECT)
     score = models.FloatField(default=0)
     is_match = models.BooleanField(default=0)
-    reference_video_id = models.CharField(max_length=4096, null=True)  # TODO: make required
+    reference_video = models.ForeignKey(Video, related_name='reference_video', on_delete=models.PROTECT)
 
     class Meta:
         db_table = 'match'

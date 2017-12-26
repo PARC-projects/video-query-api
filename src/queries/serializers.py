@@ -28,8 +28,8 @@ class VideoSerializer(serializers.ModelSerializer):
 
 
 class QuerySerializer(serializers.ModelSerializer):
-    dataset_to_query = DatasetSerializer(many=False, read_only=True)
-    video = VideoSerializer(many=False, read_only=True)
+    # dataset_to_query = DatasetSerializer(many=False, read_only=True)
+    # video = VideoSerializer(many=False, read_only=True)
 
     class Meta:
         model = Query
@@ -47,7 +47,7 @@ class QueryResultSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class SignatureSerializer(serializers.ModelSerializer):
-    video = VideoSerializer(many=False, read_only=True)
+    # video = VideoSerializer(many=False, read_only=True)
 
     class Meta:
         model = Signature
