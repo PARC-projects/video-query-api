@@ -66,6 +66,13 @@ class QueryResultViewSet(viewsets.ModelViewSet):
     queryset = QueryResult.objects.all()
     serializer_class = QueryResultSerializer
 
+    @detail_route(methods=['get'])
+    def matches(self, request, pk):
+        """
+        Get videos based on dataset id
+        """
+        return Response(Match.objects.filter(query_result_id=pk).values())
+
 
 class MatchViewSet(viewsets.ModelViewSet):
     """
