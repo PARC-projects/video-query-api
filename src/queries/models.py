@@ -63,6 +63,7 @@ class Match(models.Model):
 
     class Meta:
         db_table = 'match'
+        ordering = ('-score',)
 
 
 class Signature(models.Model):
