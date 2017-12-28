@@ -2,7 +2,6 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from .models import *
 
-
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -30,7 +29,6 @@ class VideoSerializer(serializers.ModelSerializer):
 class QuerySerializer(serializers.ModelSerializer):
     # dataset_to_query = DatasetSerializer(many=False, read_only=True)
     # video = VideoSerializer(many=False, read_only=True)
-
     class Meta:
         model = Query
         fields = '__all__'

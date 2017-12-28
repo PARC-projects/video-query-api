@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from rest_framework import viewsets
 from .serializers import *
 from .models import *
@@ -41,7 +42,7 @@ class DatasetViewSet(viewsets.ModelViewSet):
         """
         Get videos based on dataset id
         """
-        return Response(Video.objects.filter(dataset_id=pk).values())
+        return JsonResponse(Video.objects.filter(dataset_id=pk).values())
 
 
 class QueryViewSet(viewsets.ModelViewSet):
@@ -52,11 +53,18 @@ class QueryViewSet(viewsets.ModelViewSet):
     serializer_class = QuerySerializer
 
     @detail_route(methods=['get'])
-    def query_results(self, request, pk):
+    def query_result(self, request, pk):
         """
-        Get videos based on dataset id
+        Get latest query result based on query id
         """
-        return Response(QueryResult.objects.filter(query_id=pk).values())
+        return Response(QueryResultSerializer(Query.get_latestest_query_result_by_query_id(self, pk), many=False).data)
+
+    @detail_route(methods=['get'])
+    def matches(self, request, pk):
+        """
+        Get latest matches based on query id
+        """
+        return Response(MatchSerializer(Query.get_latestest_matches_by_query_id(self, pk), many=True).data)
 
 
 class QueryResultViewSet(viewsets.ModelViewSet):

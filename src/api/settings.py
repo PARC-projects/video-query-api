@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'queries',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'rest_framework.authtoken',
-    'queries'
+    'rest_framework.authtoken'
 ]
 
 # TODO: Not sure why we need SessionAuthentication but without it, TokenAuthentication does not work

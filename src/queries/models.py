@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
-
 from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -44,6 +43,19 @@ class Query(models.Model):
     class Meta:
         db_table = 'query'
 
+    def get_latestest_query_result_by_query_id(self, pk):
+        """
+        Get latest query result based on query id
+        """
+        return QueryResult.objects.filter(query_id=pk).last()
+
+    def get_latestest_matches_by_query_id(self, pk):
+        """
+        Get latest matches based on query id
+        """
+        result = QueryResult.objects.filter(query_id=pk).last()
+        return Match.objects.filter(query_result=result.id)
+
 
 class QueryResult(models.Model):
     query = models.ForeignKey(Query, on_delete=models.PROTECT)
@@ -64,6 +76,14 @@ class Match(models.Model):
     class Meta:
         db_table = 'match'
         ordering = ('-score',)
+
+    def get_latest_matches_by_query_id(self, pk):
+        """
+        Get latest query result based on query id
+        """
+        latest = QueryResult.get_latestest_query_result(self, pk)
+
+        return Match.objects.filter(query_result_id=latest.round).values()
 
 
 class Signature(models.Model):
