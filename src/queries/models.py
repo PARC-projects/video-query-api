@@ -54,7 +54,10 @@ class Query(models.Model):
         Get latest matches based on query id
         """
         result = QueryResult.objects.filter(query_id=pk).last()
-        return Match.objects.filter(query_result=result.id)
+        if result == None:
+            return None
+        else:
+            return Match.objects.filter(query_result=result.id)
 
 
 class QueryResult(models.Model):

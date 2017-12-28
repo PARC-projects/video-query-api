@@ -42,28 +42,26 @@ class DatasetViewSet(viewsets.ModelViewSet):
         """
         Get videos based on dataset id
         """
-        return JsonResponse(Video.objects.filter(dataset_id=pk).values())
+        return Response(Video.objects.filter(dataset_id=pk).values())
 
 
 class QueryViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows queries to be viewed or edited.
+    <br/>
+    <b>queries/{id}/query_result</b>: GET latest query result based on query id
+    <br/>
+    <b>queries/{id}/matches</b>: GET latest matches based on query id
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
 
     @detail_route(methods=['get'])
     def query_result(self, request, pk):
-        """
-        Get latest query result based on query id
-        """
         return Response(QueryResultSerializer(Query.get_latestest_query_result_by_query_id(self, pk), many=False).data)
 
     @detail_route(methods=['get'])
     def matches(self, request, pk):
-        """
-        Get latest matches based on query id
-        """
         return Response(MatchSerializer(Query.get_latestest_matches_by_query_id(self, pk), many=True).data)
 
 
