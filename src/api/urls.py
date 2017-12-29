@@ -27,17 +27,17 @@ router = routers.DefaultRouter()
 router.register(r'videos', query_views.VideoViewSet)
 router.register(r'datasets', query_views.DatasetViewSet)
 router.register(r'queries', query_views.QueryViewSet)
-router.register(r'matched-arrays', query_views.MatchedArrayViewSet)
+router.register(r'query-results', query_views.QueryResultViewSet)
+router.register(r'matches', query_views.MatchViewSet)
 router.register(r'signatures', query_views.SignatureViewSet)
 
-dataset_videos = query_views.DatasetViewSet.as_view({
-    'get': 'videos'
-}, renderer_classes=[renderers.StaticHTMLRenderer])
+# dataset_videos = query_views.DatasetViewSet.as_view({
+#     'get': 'videos'
+# }, renderer_classes=[renderers.StaticHTMLRenderer])
 
 urlpatterns = [
     path('', include(router.urls)),
     path('api-token-auth/', views.obtain_auth_token,  name='get_auth_token'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('admin/', admin.site.urls),
-    path('docs/', include_docs_urls(title='Video Query', public=False))
+    path('admin/', admin.site.urls)
 ]

@@ -1,9 +1,9 @@
+from django.http import JsonResponse
 from rest_framework import viewsets
 from .serializers import *
 from .models import *
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -47,18 +47,45 @@ class DatasetViewSet(viewsets.ModelViewSet):
 
 class QueryViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows video queries to be viewed or edited.
+    API endpoint that allows queries to be viewed or edited.
+    <br/>
+    <b>queries/{id}/query_result</b>: GET latest query result based on query id
+    <br/>
+    <b>queries/{id}/matches</b>: GET latest matches based on query id
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
 
+    @detail_route(methods=['get'])
+    def query_result(self, request, pk):
+        return Response(QueryResultSerializer(Query.get_latestest_query_result_by_query_id(self, pk), many=False).data)
 
-class MatchedArrayViewSet(viewsets.ModelViewSet):
+    @detail_route(methods=['get'])
+    def matches(self, request, pk):
+        return Response(MatchSerializer(Query.get_latestest_matches_by_query_id(self, pk), many=True).data)
+
+
+class QueryResultViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows matched arrays to be viewed or edited.
+    API endpoint that allows query result to be viewed or edited.
     """
-    queryset = MatchedArray.objects.all()
-    serializer_class = MatchedArraySerializer
+    queryset = QueryResult.objects.all()
+    serializer_class = QueryResultSerializer
+
+    @detail_route(methods=['get'])
+    def matches(self, request, pk):
+        """
+        Get videos based on dataset id
+        """
+        return Response(Match.objects.filter(query_result_id=pk).values())
+
+
+class MatchViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows match to be viewed or edited.
+    """
+    queryset = Match.objects.all()
+    serializer_class = MatchSerializer
 
 
 class SignatureViewSet(viewsets.ModelViewSet):

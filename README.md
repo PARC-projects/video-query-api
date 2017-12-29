@@ -13,3 +13,8 @@ pip install django-cors-headers
 pip install Pygments
 ```
 
+Database
+
+- Create a database named "Video-Query"
+- Run migration `manage.py migrate`
+- For dev, load fixture `manage.py loaddata dev-init`

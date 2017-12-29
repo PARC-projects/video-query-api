@@ -5,5 +5,6 @@ from .models import *
 admin.site.register(Dataset)
 admin.site.register(Video)
 admin.site.register(Query)
-admin.site.register(MatchedArray)
+admin.site.register(QueryResult)
+admin.site.register(Match)
 admin.site.register(Signature)

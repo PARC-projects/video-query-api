@@ -1,0 +1,166 @@
+[
+  {
+    "model": "queries.queryResult",
+    "pk": 1,
+    "fields": {
+      "query": 1,
+      "round": 1,
+      "match_criterion": 0.8,
+      "weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.queryResult",
+    "pk": 2,
+    "fields": {
+      "query": 1,
+      "round": 2,
+      "match_criterion": 0.9,
+      "weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 1,
+    "fields": {
+      "query_result": 1,
+      "score": 1,
+      "is_match": true,
+      "reference_video": 1
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 2,
+    "fields": {
+      "query_result": 1,
+      "score": 0.75,
+      "is_match": false,
+      "reference_video": 2
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 3,
+    "fields": {
+      "query_result": 2,
+      "score": 0.86,
+      "is_match": false,
+      "reference_video": 3
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 4,
+    "fields": {
+      "query_result": 2,
+      "score": 1,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 5,
+    "fields": {
+      "query_result": 2,
+      "score": 1.1,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 6,
+    "fields": {
+      "query_result": 2,
+      "score": 0.7,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 7,
+    "fields": {
+      "query_result": 2,
+      "score": 0.91,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 8,
+    "fields": {
+      "query_result": 2,
+      "score": 0.95,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 9,
+    "fields": {
+      "query_result": 2,
+      "score": 0.66,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 10,
+    "fields": {
+      "query_result": 2,
+      "score": 1.5,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 11,
+    "fields": {
+      "query_result": 2,
+      "score": 0.56,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 12,
+    "fields": {
+      "query_result": 2,
+      "score": 1.11,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 13,
+    "fields": {
+      "query_result": 2,
+      "score": 0.1,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 14,
+    "fields": {
+      "query_result": 2,
+      "score": 0.94,
+      "is_match": true,
+      "reference_video": 4
+    }
+  }
+]

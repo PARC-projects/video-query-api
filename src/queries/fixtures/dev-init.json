@@ -1,0 +1,134 @@
+[
+  {
+    "model": "queries.dataset",
+    "pk": 1,
+    "fields": {
+      "name": "Dataset 1"
+    }
+  },
+  {
+    "model": "queries.dataset",
+    "pk": 2,
+    "fields": {
+      "name": "Dataset 2"
+    }
+  },
+  {
+    "model": "queries.dataset",
+    "pk": 3,
+    "fields": {
+      "name": "Dataset 3"
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 1,
+    "fields": {
+      "name": "Video 1-1",
+      "dataset": 1,
+      "path": ""
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 2,
+    "fields": {
+      "name": "Video 1-2",
+      "dataset": 1,
+      "path": ""
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 3,
+    "fields": {
+      "name": "Video 1-3",
+      "dataset": 1,
+      "path": ""
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 4,
+    "fields": {
+      "name": "Video 1-4",
+      "dataset": 1,
+      "path": ""
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 5,
+    "fields": {
+      "name": "Video 2-1",
+      "dataset": 2,
+      "path": ""
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 6,
+    "fields": {
+      "name": "Video 2-2",
+      "dataset": 2,
+      "path": ""
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 7,
+    "fields": {
+      "name": "Video 3-1",
+      "dataset": 3,
+      "path": ""
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 1,
+    "fields": {
+      "name": "Query 1",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:10",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 2,
+      "current_match_criterion": 0.8,
+      "current_weights": [1]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 2,
+    "fields": {
+      "name": "Query 2",
+      "dataset_to_query": 2,
+      "video": 4,
+      "reference_time": "00:00:10",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [1]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 3,
+    "fields": {
+      "name": "Query 3",
+      "dataset_to_query": 3,
+      "video": 6,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [1]
+    }
+  }
+]
