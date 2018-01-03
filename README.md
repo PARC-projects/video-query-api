@@ -17,4 +17,6 @@ Database
 
 - Create a database named "Video-Query"
 - Run migration `manage.py migrate`
+- Create a super user `manage.py createsuperuser`
 - For dev, load fixture `manage.py loaddata dev-init`
+- For dev, load fixture `manage.py loaddata dev-results`
