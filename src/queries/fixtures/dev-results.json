@@ -58,7 +58,7 @@
     "pk": 4,
     "fields": {
       "query_result": 2,
-      "score": 1,
+      "score": 0.97,
       "is_match": true,
       "reference_video": 4
     }
@@ -68,7 +68,7 @@
     "pk": 5,
     "fields": {
       "query_result": 2,
-      "score": 1.1,
+      "score": 1,
       "is_match": true,
       "reference_video": 4
     }
@@ -118,7 +118,7 @@
     "pk": 10,
     "fields": {
       "query_result": 2,
-      "score": 1.5,
+      "score": 0.98,
       "is_match": true,
       "reference_video": 4
     }
@@ -138,7 +138,7 @@
     "pk": 12,
     "fields": {
       "query_result": 2,
-      "score": 1.11,
+      "score": 0.86,
       "is_match": true,
       "reference_video": 4
     }
@@ -159,6 +159,86 @@
     "fields": {
       "query_result": 2,
       "score": 0.94,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 15,
+    "fields": {
+      "query_result": 2,
+      "score": 0.25,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 16,
+    "fields": {
+      "query_result": 2,
+      "score": 0.43,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 17,
+    "fields": {
+      "query_result": 2,
+      "score": 0.72,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 18,
+    "fields": {
+      "query_result": 2,
+      "score": 0.78,
+      "is_match": false,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 19,
+    "fields": {
+      "query_result": 2,
+      "score": 0.88,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 20,
+    "fields": {
+      "query_result": 2,
+      "score": 0.91,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 21,
+    "fields": {
+      "query_result": 2,
+      "score": 0.90,
+      "is_match": true,
+      "reference_video": 4
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 25,
+    "fields": {
+      "query_result": 2,
+      "score": 0.98,
       "is_match": true,
       "reference_video": 4
     }
