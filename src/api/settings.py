@@ -24,7 +24,9 @@ SECRET_KEY = '7t&me43@x1png_dy*ij9tzy)t6$o14@=s596wf5two+_8p0cke'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1'
+]
 
 # Application definition
 
@@ -99,8 +101,8 @@ DATABASES = {
         'NAME': os.environ['DB_NAME'],
         'USER': os.environ['DB_USER'],
         'PASSWORD': os.environ['DB_PASS'],
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'],
     }
 }
 
