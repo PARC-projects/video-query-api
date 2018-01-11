@@ -19,18 +19,21 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7t&me43@x1png_dy*ij9tzy)t6$o14@=s596wf5two+_8p0cke'
+SECRET_KEY = os.environ['API_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+DEBUG = os.environ.get("API_DEBUG", False)
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost'
 ]
 
-# Application definition
+if os.environ.get("API_ALLOWED_HOST"):
+    ALLOWED_HOSTS.append(os.environ.get("API_ALLOWED_HOST"))
 
+# Application definition
 INSTALLED_APPS = [
     'queries',
     'django.contrib.admin',
@@ -68,6 +71,19 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+# Security specific to middleware
+# TODO: Enable when https is up and running
+# CSRF_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'DENY'
+
+# check -deploy  concerns
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+# TODO: Enable when https is up and running
+# SESSION_COOKIE_SECURE = True
+# TODO: SECURE_HSTS_SECONDS
+# TODO: SECURE_SSL_REDIRECT
+
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200'
     'http://localhost:8001'
@@ -99,11 +115,11 @@ WSGI_APPLICATION = 'api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASS'],
-        'HOST': os.environ['DB_HOST'],
-        'PORT': os.environ['DB_PORT'],
+        'NAME': os.environ['API_DB_NAME'],
+        'USER': os.environ['API_DB_USER'],
+        'PASSWORD': os.environ['API_DB_PASS'],
+        'HOST': os.environ['API_DB_HOST'],
+        'PORT': os.environ['API_DB_PORT'],
     }
 }
 
