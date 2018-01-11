@@ -27,3 +27,4 @@ pip install pillow==5.0.0
 - os.environ['API_DB_HOST']
 - os.environ['API_DB_PORT']
 - os.environ['ALLOWED_HOST']
+- os.environ['API_CORS_ORIGIN_WHITELIST']

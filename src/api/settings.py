@@ -85,9 +85,16 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 # TODO: SECURE_SSL_REDIRECT
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:4200'
-    'http://localhost:8001'
+    'localhost:4200',
+    'localhost:8001'
 )
+
+if os.environ.get("API_CORS_ORIGIN_WHITELIST"):
+    l = list(CORS_ORIGIN_WHITELIST)
+    l.append(os.environ.get("API_CORS_ORIGIN_WHITELIST"))
+    CORS_ORIGIN_WHITELIST = tuple(l)
+
+# CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'api.urls'
 
