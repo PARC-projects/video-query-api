@@ -40,7 +40,8 @@
       "query_result": 1,
       "score": 0.75,
       "is_match": false,
-      "reference_video": 2
+      "reference_video": 2,
+      "reference_time": 100
     }
   },
   {
@@ -50,7 +51,8 @@
       "query_result": 2,
       "score": 0.86,
       "is_match": false,
-      "reference_video": 3
+      "reference_video": 3,
+      "reference_time": 500
     }
   },
   {
@@ -60,7 +62,8 @@
       "query_result": 2,
       "score": 0.97,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 26
     }
   },
   {
@@ -70,7 +73,8 @@
       "query_result": 2,
       "score": 1,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 852
     }
   },
   {
@@ -80,7 +84,8 @@
       "query_result": 2,
       "score": 0.7,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 425
     }
   },
   {
@@ -90,7 +95,8 @@
       "query_result": 2,
       "score": 0.91,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 97
     }
   },
   {
@@ -100,7 +106,8 @@
       "query_result": 2,
       "score": 0.95,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 628
     }
   },
   {
@@ -110,7 +117,8 @@
       "query_result": 2,
       "score": 0.66,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 710
     }
   },
   {
@@ -120,7 +128,8 @@
       "query_result": 2,
       "score": 0.98,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 333
     }
   },
   {
@@ -130,7 +139,8 @@
       "query_result": 2,
       "score": 0.56,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 444
     }
   },
   {
@@ -140,7 +150,8 @@
       "query_result": 2,
       "score": 0.86,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 10
     }
   },
   {
@@ -150,7 +161,8 @@
       "query_result": 2,
       "score": 0.1,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 109
     }
   },
   {
@@ -160,7 +172,8 @@
       "query_result": 2,
       "score": 0.94,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 289
     }
   },
   {
@@ -170,7 +183,8 @@
       "query_result": 2,
       "score": 0.25,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 165
     }
   },
   {
@@ -180,7 +194,8 @@
       "query_result": 2,
       "score": 0.43,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 522
     }
   },
   {
@@ -190,7 +205,8 @@
       "query_result": 2,
       "score": 0.72,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 600
     }
   },
   {
@@ -200,7 +216,8 @@
       "query_result": 2,
       "score": 0.78,
       "is_match": false,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 895
     }
   },
   {
@@ -210,7 +227,8 @@
       "query_result": 2,
       "score": 0.88,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 234
     }
   },
   {
@@ -220,7 +238,8 @@
       "query_result": 2,
       "score": 0.91,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 796
     }
   },
   {
@@ -230,7 +249,8 @@
       "query_result": 2,
       "score": 0.90,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 133
     }
   },
   {
@@ -240,7 +260,8 @@
       "query_result": 2,
       "score": 0.98,
       "is_match": true,
-      "reference_video": 4
+      "reference_video": 4,
+      "reference_time": 378
     }
   }
 ]

@@ -75,6 +75,7 @@ class Match(models.Model):
     score = models.FloatField(default=0)
     is_match = models.BooleanField(default=0)
     reference_video = models.ForeignKey(Video, related_name='reference_video', on_delete=models.PROTECT)
+    reference_time = models.PositiveIntegerField(default=0)
 
     class Meta:
         db_table = 'match'
