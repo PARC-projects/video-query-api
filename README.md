@@ -19,12 +19,19 @@ pip install pillow==5.0.0
 - For dev, load fixture `python manage.py loaddata dev-results`
 
 ## ENV Keys
-- os.environ['API_DEBUG']
-- os.environ['API_SECRET_KEY']
-- os.environ['API_DB_NAME']
-- os.environ['API_DB_USER']
-- os.environ['API_DB_PASS']
-- os.environ['API_DB_HOST']
-- os.environ['API_DB_PORT']
-- os.environ['ALLOWED_HOST']
-- os.environ['API_CORS_ORIGIN_WHITELIST']
+
+- 'API_DEBUG'
+  - dev = False
+- 'API_SECRET_KEY'
+  - dev = random number
+- 'API_DB_NAME'
+- 'API_DB_USER'
+- 'API_DB_PASS'
+- 'API_DB_HOST'
+  - dev = localhost
+- 'API_DB_PORT'
+  - dev = 5432
+- 'ALLOWED_HOST'
+  - dev = Can be omitted
+- 'API_CORS_ORIGIN_WHITELIST'
+  - dev = Can be omitted
