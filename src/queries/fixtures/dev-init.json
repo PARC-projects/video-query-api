@@ -96,7 +96,9 @@
       "reference_clip_image": "",
       "current_round": 2,
       "current_match_criterion": 0.8,
-      "current_weights": [1]
+      "current_weights": [
+        1
+      ]
     }
   },
   {
@@ -112,7 +114,9 @@
       "reference_clip_image": "",
       "current_round": 1,
       "current_match_criterion": 0.8,
-      "current_weights": [1]
+      "current_weights": [
+        1
+      ]
     }
   },
   {
@@ -128,7 +132,225 @@
       "reference_clip_image": "",
       "current_round": 1,
       "current_match_criterion": 0.8,
-      "current_weights": [1]
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 4,
+    "fields": {
+      "name": "Query 4",
+      "dataset_to_query": 3,
+      "video": 6,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 5,
+    "fields": {
+      "name": "Query 5",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 6,
+    "fields": {
+      "name": "Query 6",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 7,
+    "fields": {
+      "name": "Query 7",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 8,
+    "fields": {
+      "name": "Query 8",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 9,
+    "fields": {
+      "name": "Query 9",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 10,
+    "fields": {
+      "name": "Query 10",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 11,
+    "fields": {
+      "name": "Query 11",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 12,
+    "fields": {
+      "name": "Query 12",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 13,
+    "fields": {
+      "name": "Query 13",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 14,
+    "fields": {
+      "name": "Query 14",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.query",
+    "pk": 15,
+    "fields": {
+      "name": "Query 15",
+      "dataset_to_query": 1,
+      "video": 1,
+      "reference_time": "00:01:00",
+      "max_matches_for_review": 20,
+      "query_notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
+      "reference_clip_image": "",
+      "current_round": 1,
+      "current_match_criterion": 0.8,
+      "current_weights": [
+        1
+      ]
     }
   }
 ]
