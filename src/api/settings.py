@@ -73,16 +73,17 @@ MIDDLEWARE = [
 
 # Security specific to middleware
 # TODO: Enable when https is up and running
-# CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
 
 # check -deploy  concerns
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
-# TODO: Enable when https is up and running
-# SESSION_COOKIE_SECURE = True
 # TODO: SECURE_HSTS_SECONDS
-# TODO: SECURE_SSL_REDIRECT
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:4200',
