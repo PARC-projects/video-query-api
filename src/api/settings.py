@@ -56,8 +56,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated'
     ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100
+    'DEFAULT_PAGINATION_CLASS': 'queries.pagination.CustomPagination',
+    'PAGE_SIZE': 10
 }
 
 MIDDLEWARE = [
@@ -94,8 +94,6 @@ if os.environ.get("API_CORS_ORIGIN_WHITELIST"):
     l = list(CORS_ORIGIN_WHITELIST)
     l.append(os.environ.get("API_CORS_ORIGIN_WHITELIST"))
     CORS_ORIGIN_WHITELIST = tuple(l)
-
-# CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'api.urls'
 
