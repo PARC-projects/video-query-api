@@ -42,7 +42,7 @@ class Query(models.Model):
 
     class Meta:
         db_table = 'query'
-        ordering = ['-id']
+        ordering = ['name']
 
     def get_latestest_query_result_by_query_id(self, pk):
         """
