@@ -95,8 +95,6 @@ if os.environ.get("API_CORS_ORIGIN_WHITELIST"):
     l.append(os.environ.get("API_CORS_ORIGIN_WHITELIST"))
     CORS_ORIGIN_WHITELIST = tuple(l)
 
-# CORS_ORIGIN_ALLOW_ALL = True
-
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
