@@ -10,7 +10,7 @@ class CustomPagination(pagination.PageNumberPagination):
 
         nextPage = None;
         if self.page.has_next():
-            nextPage = self.page.previous_page_number()
+            nextPage = self.page.next_page_number()
 
         return Response({
             'pagination': {
