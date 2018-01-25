@@ -8,6 +8,7 @@ pip install djangorestframework==3.7.7
 pip install django-cors-headers==2.1.0
 pip install psycopg2==2.7.3.2
 pip install pillow==5.0.0
+pip install django-filter=1.1.0
 ```
 
 ## Database

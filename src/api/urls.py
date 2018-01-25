@@ -17,8 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from queries import views as query_views
-from rest_framework import renderers
-from rest_framework.documentation import include_docs_urls
 from rest_framework.authtoken import views
 
 router = routers.DefaultRouter()
@@ -31,9 +29,6 @@ router.register(r'query-results', query_views.QueryResultViewSet)
 router.register(r'matches', query_views.MatchViewSet)
 router.register(r'signatures', query_views.SignatureViewSet)
 
-# dataset_videos = query_views.DatasetViewSet.as_view({
-#     'get': 'videos'
-# }, renderer_classes=[renderers.StaticHTMLRenderer])
 
 urlpatterns = [
     path('', include(router.urls)),
