@@ -1,4 +1,6 @@
-from django.http import JsonResponse
+
+from rest_framework.filters import OrderingFilter
+from rest_framework.filters import SearchFilter
 from rest_framework import viewsets
 from .serializers import *
 from .models import *
@@ -55,6 +57,8 @@ class QueryViewSet(viewsets.ModelViewSet):
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
+    filter_backends = (SearchFilter,)
+    search_fields = ('name',)
 
     @detail_route(methods=['get'])
     def query_result(self, request, pk):
