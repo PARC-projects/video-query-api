@@ -30,6 +30,8 @@ class VideoViewSet(viewsets.ModelViewSet):
     """
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
+    filter_backends = (SearchFilter,)
+    search_fields = ('name',)
 
 
 class DatasetViewSet(viewsets.ModelViewSet):
@@ -38,6 +40,8 @@ class DatasetViewSet(viewsets.ModelViewSet):
     """
     queryset = Dataset.objects.all()
     serializer_class = DatasetSerializer
+    filter_backends = (SearchFilter,)
+    search_fields = ('name',)
 
     @detail_route(methods=['get'])
     def videos(self, request, pk):
