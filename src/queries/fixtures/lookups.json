@@ -1,0 +1,23 @@
+[
+  {
+    "model": "queries.processState",
+    "pk": 1,
+    "fields": {
+      "name": "Submitted"
+    }
+  },
+  {
+    "model": "queries.processState",
+    "pk": 2,
+    "fields": {
+      "name": "Processing"
+    }
+  },
+  {
+    "model": "queries.processState",
+    "pk": 3,
+    "fields": {
+      "name": "Processed"
+    }
+  }
+]

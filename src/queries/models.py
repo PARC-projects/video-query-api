@@ -28,6 +28,23 @@ class Video(models.Model):
         db_table = 'video'
 
 
+class ProcessState(models.Model):
+    # If "Submitted" = 1
+    # - UI shows "check back soon" state
+    # - ML service start a new process loop and sets
+    #   value "Processing" on completetion.
+    # If "Processing" = 2
+    # - UI shows "check back soon" state
+    # - ML processes query
+    # If "Processed" = 3
+    # - UI allows for resubmission of query
+    # - ML service does nothing
+    name = models.CharField(max_length=254, unique=True)
+
+    class Meta:
+        db_table = 'process_state'
+
+
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
     dataset_to_query = models.ForeignKey(Dataset, on_delete=models.PROTECT)
@@ -39,14 +56,6 @@ class Query(models.Model):
     current_round = models.PositiveIntegerField(default=1)
     current_match_criterion = models.FloatField(default=0.8)
     current_weights = ArrayField(models.FloatField(), null=True)
-    # If 1
-    # - UI shows "check back soon" state
-    # - ML service federates a new process loop and sets
-    #   value 0 on completetion.
-    # If 0
-    # - UI excepts revisions
-    # - ML service does nothing
-    process = models.BooleanField(default=1)
 
     class Meta:
         db_table = 'query'
@@ -88,7 +97,7 @@ class Match(models.Model):
     reference_time = models.PositiveIntegerField(default=0)
     # Holds state of user validation on UI.
     # null = they have not validated or invalidate the match
-    user_match = models.NullBooleanField()
+    user_match = models.NullBooleanField(default=None)
 
     class Meta:
         db_table = 'match'
@@ -110,3 +119,6 @@ class Signature(models.Model):
 
     class Meta:
         db_table = 'signature'
+
+
+
