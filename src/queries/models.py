@@ -56,6 +56,7 @@ class Query(models.Model):
     current_round = models.PositiveIntegerField(default=1)
     current_match_criterion = models.FloatField(default=0.8)
     current_weights = ArrayField(models.FloatField(), null=True)
+    process_state = models.ForeignKey(ProcessState, default=1, on_delete=models.PROTECT)
 
     class Meta:
         db_table = 'query'
