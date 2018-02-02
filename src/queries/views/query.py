@@ -3,7 +3,7 @@ from rest_framework.filters import SearchFilter
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
 from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
-from queries.models import Query
+from queries.models import Query, QueryResult, Match
 
 
 class QueryViewSet(viewsets.ModelViewSet):
@@ -21,8 +21,8 @@ class QueryViewSet(viewsets.ModelViewSet):
 
     @detail_route(methods=['get'])
     def query_result(self, request, pk):
-        return Response(QueryResultSerializer(Query.get_latestest_query_result_by_query_id(self, pk), many=False).data)
+        return Response(QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(self, pk), many=False).data)
 
     @detail_route(methods=['get'])
     def matches(self, request, pk):
-        return Response(MatchSerializer(Query.get_latestest_matches_by_query_id(self, pk), many=True).data)
+        return Response(MatchSerializer(Match.get_latestest_matches_by_query_id(self, pk), many=True).data)
