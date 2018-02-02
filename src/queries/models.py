@@ -11,14 +11,14 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
 
-
+# Identifies a collection of Videos
 class Dataset(models.Model):
     name = models.CharField(max_length=254, unique=True)
 
     class Meta:
         db_table = 'dataset'
 
-
+# Individual video used to as a reference of "se"search" against or reference
 class Video(models.Model):
     name = models.CharField(max_length=254, unique=True)
     dataset = models.ForeignKey(Dataset, related_name='videos', on_delete=models.PROTECT)
@@ -31,8 +31,7 @@ class Video(models.Model):
 class ProcessState(models.Model):
     # If "Submitted" = 1
     # - UI shows "check back soon" state
-    # - ML service start a new process loop and sets
-    #   value "Processing" on completetion.
+    # - ML service start a new process loop and sets value to "Processing".
     # If "Processing" = 2
     # - UI shows "check back soon" state
     # - ML processes query

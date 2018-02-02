@@ -16,25 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-from rest_framework import routers
-from queries import views as query_views
+from queries import urls
 from rest_framework.authtoken import views
-
-router = routers.DefaultRouter()
-# router.register(r'users', query_views.UserViewSet)
-# router.register(r'groups', query_views.GroupViewSet)
-router.register(r'videos', query_views.VideoViewSet)
-router.register(r'datasets', query_views.DatasetViewSet)
-router.register(r'queries', query_views.QueryViewSet)
-router.register(r'query-results', query_views.QueryResultViewSet)
-router.register(r'matches', query_views.MatchViewSet)
-router.register(r'signatures', query_views.SignatureViewSet)
-
 
 urlpatterns = [
     path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
-    path('', include(router.urls)),
     path('api-token-auth/', views.obtain_auth_token,  name='get_auth_token'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
+    path('', include(urls.router.urls))
 ]
