@@ -34,3 +34,8 @@ class Match(models.Model):
             return None
         else:
             return Match.objects.filter(query_result=result.id)
+
+
+    def patch_list_of_matches(matches):
+        
+        return matches

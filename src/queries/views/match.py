@@ -28,4 +28,5 @@ def match_list(request):
     """
     if request.method == 'PATCH':
         data = JSONParser().parse(request)
-        return JsonResponse(data, safe=False)
+        match = Match.patch_list_of_matches(data)
+        return JsonResponse(match, safe=False)
