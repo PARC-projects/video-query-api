@@ -1,3 +1,4 @@
+from django.conf.urls import url
 from rest_framework import routers
 from .views import *
 
@@ -10,3 +11,7 @@ router.register(r'queries', QueryViewSet)
 router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
 router.register(r'signatures', SignatureViewSet)
+
+urlpatterns = [
+    url(r'^matches_group/$', match_list),
+]
