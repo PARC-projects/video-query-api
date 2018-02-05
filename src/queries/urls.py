@@ -13,5 +13,5 @@ router.register(r'matches', MatchViewSet)
 router.register(r'signatures', SignatureViewSet)
 
 urlpatterns = [
-    url(r'^matches_list/$', match_list),
+    url(r'^matches-list/$', match_list),
 ]

@@ -16,6 +16,7 @@ class Match(models.Model):
     class Meta:
         db_table = 'match'
         ordering = ('-score',)
+
     def get_latestest_matches_by_query_id(self, pk):
         """
         Get latest matches based on query id
@@ -27,8 +28,11 @@ class Match(models.Model):
             return Match.objects.filter(query_result=result.id)
 
     def patch_list_of_matches(matches):
-        print(matches)
+        """
+        Guarded updates on user validation "is_match"
+        """
         for match in matches:
             match_entity = Match.objects.get(pk=match['id'])
-            print(match_entity.id)
+            print("match: ", match['id'])
+            print("entity: ", match_entity.id)
         return matches

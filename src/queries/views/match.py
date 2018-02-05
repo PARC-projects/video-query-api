@@ -1,8 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework import viewsets, status
+from rest_framework import viewsets
 from rest_framework.parsers import JSONParser
-from rest_framework.response import Response
 
 from queries.models import Match
 from queries.serializers import MatchSerializer
@@ -20,7 +19,6 @@ class MatchViewSet(viewsets.ModelViewSet):
     """
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
-
 
 
 @csrf_exempt
