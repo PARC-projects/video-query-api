@@ -17,7 +17,8 @@ class Match(models.Model):
         db_table = 'match'
         ordering = ('-score',)
 
-    def get_latestest_matches_by_query_id(self, pk):
+    @staticmethod
+    def get_latestest_matches_by_query_id(pk):
         """
         Get latest matches based on query id
         """
