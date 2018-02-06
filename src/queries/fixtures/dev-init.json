@@ -98,7 +98,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -116,7 +117,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -134,7 +136,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -152,7 +155,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -170,7 +174,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -188,7 +193,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -206,7 +212,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -224,7 +231,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -242,7 +250,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -260,7 +269,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -278,7 +288,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -296,7 +307,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -314,7 +326,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -332,7 +345,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   },
   {
@@ -350,7 +364,8 @@
       "current_match_criterion": 0.8,
       "current_weights": [
         1
-      ]
+      ],
+      "process_state": 3
     }
   }
 ]

@@ -4,9 +4,9 @@ from rest_framework.response import Response
 
 class CustomPagination(pagination.PageNumberPagination):
     def get_paginated_response(self, data):
-        previousPage = None;
+        previous_page = None;
         if self.page.has_previous():
-            previousPage = self.page.previous_page_number()
+            previous_page = self.page.previous_page_number()
 
         nextPage = None;
         if self.page.has_next():
@@ -15,7 +15,7 @@ class CustomPagination(pagination.PageNumberPagination):
         return Response({
             'pagination': {
                 'count': self.page.paginator.count,
-                'previousPage': previousPage,
+                'previousPage': previous_page,
                 'currentPage': self.page.number,
                 'nextPage': nextPage,
                 'lastPage': self.page.paginator.num_pages
