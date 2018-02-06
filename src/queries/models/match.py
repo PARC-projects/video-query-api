@@ -33,6 +33,6 @@ class Match(models.Model):
         """
         for match in matches:
             match_entity = Match.objects.get(pk=match['id'])
-            print("match: " + str(match['id']) + "-" + str(match['user_match']) +
-                  " entity: " + str(match_entity.id) + "-" + str(match_entity.user_match))
+            match_entity.user_match = match['user_match'];
+            match_entity.save()
         return matches
