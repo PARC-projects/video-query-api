@@ -1,5 +1,5 @@
 from django.db import models
-from queries.models import QueryResult, Video
+from queries.models import QueryResult, Video, Query
 
 
 class Match(models.Model):
@@ -28,12 +28,17 @@ class Match(models.Model):
         else:
             return Match.objects.filter(query_result=result.id)
 
-    def patch_list_of_matches(matches):
+    @staticmethod
+    def patch_list_of_matches(matches, query_id):
         """
-        Guarded updates on user validation "is_match"
+        Guarded updates on user validation "user_match"
+        Process switch = Submitted = 1
         """
+        # TODO: wrap in atomic transaction
         for match in matches:
             match_entity = Match.objects.get(pk=match['id'])
             match_entity.user_match = match['user_match'];
             match_entity.save()
-        return matches
+
+        # TODO: switch 1 to enum
+        Query.update_process_state_based_on_query_id(query_id, 1)

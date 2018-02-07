@@ -20,5 +20,11 @@ class Query(models.Model):
         db_table = 'query'
         ordering = ['name']
 
-
-
+    @staticmethod
+    def update_process_state_based_on_query_id(query_id, process_state):
+        """
+        Update processing state on Query using a query_result_id as reference
+        """
+        query = Query.objects.get(pk=query_id)
+        query.process_state_id = process_state
+        query.save()
