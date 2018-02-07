@@ -31,5 +31,10 @@ def match_list(request):
     """
     if request.method == 'PATCH':
         data = JSONParser().parse(request)
-        Match.patch_list_of_matches(data)
+
+        # No need to process transaction if we don't have matches
+        if len(data) < 1:
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
+        Match.patch_list_of_matches(data['matches'], data['query_id'])
         return Response(status=status.HTTP_204_NO_CONTENT)

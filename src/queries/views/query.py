@@ -21,7 +21,7 @@ class QueryViewSet(viewsets.ModelViewSet):
 
     @detail_route(methods=['get'])
     def query_result(self, request, pk):
-        return Response(QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(self, pk), many=False).data)
+        return Response(QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data)
 
     @detail_route(methods=['get'])
     def matches(self, request, pk):
