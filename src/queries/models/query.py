@@ -1,11 +1,11 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
-from queries.models import Dataset, Video, ProcessState
+from queries.models import SearchSet, Video, ProcessState
 
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    dataset_to_query = models.ForeignKey(Dataset, on_delete=models.PROTECT)
+    search_set_to_query = models.ForeignKey(SearchSet, on_delete=models.PROTECT)
     video = models.ForeignKey(Video, on_delete=models.PROTECT)
     reference_time = models.TimeField(default='00:00:00')
     max_matches_for_review = models.PositiveIntegerField(default=20)
