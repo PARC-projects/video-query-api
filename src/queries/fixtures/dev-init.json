@@ -1,20 +1,20 @@
 [
   {
-    "model": "queries.dataset",
+    "model": "queries.search_set",
     "pk": 1,
     "fields": {
       "name": "Dataset 1"
     }
   },
   {
-    "model": "queries.dataset",
+    "model": "queries.search_set",
     "pk": 2,
     "fields": {
       "name": "Dataset 2"
     }
   },
   {
-    "model": "queries.dataset",
+    "model": "queries.search_set",
     "pk": 3,
     "fields": {
       "name": "Dataset 3"

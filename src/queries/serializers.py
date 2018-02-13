@@ -15,9 +15,9 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class DatasetSerializer(serializers.ModelSerializer):
+class SearchSetSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Dataset
+        model = SearchSet
         fields = '__all__'
 
 
