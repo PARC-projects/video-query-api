@@ -20,4 +20,4 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         Get videos based on dataset id
         """
-        return Response(Video.objects.filter(dataset_id=pk).values())
+        return Response(Video.objects.filter(search_sets=pk).values())
