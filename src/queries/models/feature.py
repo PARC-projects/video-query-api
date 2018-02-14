@@ -3,7 +3,7 @@ from django.contrib.postgres.fields import ArrayField
 from queries.models import Video
 
 
-class Signature(models.Model):
+class Feature(models.Model):
     video = models.ForeignKey(Video, on_delete=models.PROTECT)
     snippet = models.PositiveIntegerField()
     signature = ArrayField(models.FloatField())
