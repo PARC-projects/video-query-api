@@ -5,4 +5,4 @@ from .process_state import *
 from .query import *
 from .query_result import *
 from .match import *
-from .signature import *
+from .feature import *

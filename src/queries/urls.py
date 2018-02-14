@@ -10,7 +10,7 @@ router.register(r'search-sets', SearchSetViewSet)
 router.register(r'queries', QueryViewSet)
 router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
-router.register(r'signatures', SignatureViewSet)
+router.register(r'signatures', FeatureViewSet)
 
 urlpatterns = [
     url(r'^matches-list/$', match_list),
