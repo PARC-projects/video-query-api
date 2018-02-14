@@ -1,11 +1,11 @@
 from rest_framework import viewsets
 from queries.serializers import SignatureSerializer
-from queries.models import Signature
+from queries.models import Feature
 
 
-class SignatureViewSet(viewsets.ModelViewSet):
+class FeatureViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows signatures to be viewed or edited.
     """
-    queryset = Signature.objects.all()
+    queryset = Feature.objects.all()
     serializer_class = SignatureSerializer
