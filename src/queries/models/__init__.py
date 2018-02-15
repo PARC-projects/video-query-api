@@ -6,3 +6,4 @@ from .query import *
 from .query_result import *
 from .match import *
 from .feature import *
+from .dnn_stream import *
