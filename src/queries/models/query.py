@@ -9,7 +9,7 @@ class Query(models.Model):
     video = models.ForeignKey(Video, on_delete=models.PROTECT)
     reference_time = models.TimeField(default='00:00:00')
     max_matches_for_review = models.PositiveIntegerField(default=20)
-    query_notes = models.TextField(null=True)
+    notes = models.TextField(null=True)
     reference_clip_image = models.ImageField(null=True)
     current_round = models.PositiveIntegerField(default=1)
     current_match_criterion = models.FloatField(default=0.8)
