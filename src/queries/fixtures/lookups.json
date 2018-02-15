@@ -19,5 +19,29 @@
     "fields": {
       "name": "Processed"
     }
+  },
+  {
+    "model": "queries.dnnStream",
+    "pk": 1,
+    "fields": {
+      "type": "rgb",
+      "max_number_of_splits": 3
+    }
+  },
+  {
+    "model": "queries.dnnStream",
+    "pk": 2,
+    "fields": {
+      "type": "optical flow",
+      "max_number_of_splits": 3
+    }
+  },
+  {
+    "model": "queries.dnnStream",
+    "pk": 3,
+    "fields": {
+      "type": "warped optical flow",
+      "max_number_of_splits": 3
+    }
   }
 ]
