@@ -4,7 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/queries/fixtures/dev-init.json" line="362" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed52c8b-0864-4afd-a240-a7d4c18f3bad" name="Default" comment="" />
+    <list default="true" id="9ed52c8b-0864-4afd-a240-a7d4c18f3bad" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/queries/models/video_clip.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,11 +65,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feature.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="video.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/queries/models/video.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video_clip.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/queries/models/video_clip.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="query.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/queries/models/query.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="query_result.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/queries/models/query_result.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -103,7 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>4200</find>
       <find>rest_framework.authtoken</find>
       <find>id</find>
       <find>for</find>
@@ -133,6 +177,7 @@
       <find>group</find>
       <find>dataset_to_query_id</find>
       <find>dataset</find>
+      <find>notes</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -151,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/api/templates/rest_framework/api.html" />
         <option value="$PROJECT_DIR$/src/templates/rest_framework/api.html" />
         <option value="$PROJECT_DIR$/src/queries/signals.py" />
         <option value="$PROJECT_DIR$/src/fixture.json" />
@@ -202,6 +246,7 @@
         <option value="$PROJECT_DIR$/src/queries/models/dnn_stream.py" />
         <option value="$PROJECT_DIR$/src/queries/admin.py" />
         <option value="$PROJECT_DIR$/src/queries/models/__init__.py" />
+        <option value="$PROJECT_DIR$/src/queries/models/video_clip.py" />
       </list>
     </option>
   </component>
@@ -275,18 +320,18 @@
     <property name="editorconfig.notification" value="ignore" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\source\video-query-api\src\queries\models" />
-      <recent name="C:\source\video-query-api\src\queries" />
-      <recent name="C:\source\video-query-api\src\queries\views" />
-      <recent name="C:\source\video-query-api\src\static" />
-      <recent name="C:\source\video-query-api\src\queries\fixtures" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\source\video-query-api\src\templates" />
       <recent name="C:\source\video-query-api\src\static" />
       <recent name="C:\source\video-query-api\src\queries" />
       <recent name="C:\source\video-query-api\src\queries\models" />
+      <recent name="C:\source\video-query-api\src\queries\fixtures" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\source\video-query-api\src\queries\models" />
+      <recent name="C:\source\video-query-api\src\queries" />
+      <recent name="C:\source\video-query-api\src\queries\views" />
+      <recent name="C:\source\video-query-api\src\static" />
       <recent name="C:\source\video-query-api\src\queries\fixtures" />
     </key>
   </component>
@@ -722,13 +767,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/templates/robots.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/virtualenvs/video-query-api/Lib/site-packages/rest_framework/routers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -856,16 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/queries/models/query_result.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/queries/views/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -898,16 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/queries/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -991,16 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/queries/models/video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/queries/views/feature.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1021,14 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/queries/models/auth_token.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1077,11 +1077,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/query_result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/auth_token.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/video_clip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
