@@ -1,15 +1,17 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
+
+from queries.models import VideoClip
 
 
 class Feature(models.Model):
-    # id bigint NOT NULL DEFAULT nextval('features_id_seq'::regclass),
-    # video_clip_id bigint NOT NULL,
-    # cnn_stream character varying COLLATE pg_catalog."default" NOT NULL,
-    # cnn_stream_split smallint NOT NULL,
-    # feature_name character varying(80) COLLATE pg_catalog."default" NOT NULL,
-    # cnn_weights_file_uri character varying(256) COLLATE pg_catalog."default" NOT NULL,
-    # feature double precision[] NOT NULL,
-
+    video_clip = models.ForeignKey(VideoClip, on_delete=models.PROTECT)
+    dnn_stream = models.TextField()
+    dnn_stream_split = models.PositiveSmallIntegerField()
+    name = models.CharField(max_length=80)
+    weights_uri = models.CharField(max_length=4096)
+    dnn_spec_uri = models.CharField(max_length=4096)
+    features = ArrayField(ArrayField(models.FloatField()))
 
     class Meta:
-        db_table = 'signature'
+        db_table = 'feature'

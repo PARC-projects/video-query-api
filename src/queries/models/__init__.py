@@ -2,9 +2,9 @@ from .auth_token import *
 from .search_set import *
 from .video import *
 from .video_clip import *
+from .feature import *
 from .process_state import *
 from .query import *
 from .query_result import *
 from .match import *
-from .feature import *
 from .dnn_stream import *
