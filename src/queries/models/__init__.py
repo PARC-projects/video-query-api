@@ -1,6 +1,7 @@
 from .auth_token import *
 from .search_set import *
 from .video import *
+from .video_clip import *
 from .process_state import *
 from .query import *
 from .query_result import *
