@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/queries/fixtures/dev-init.json" line="362" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ed52c8b-0864-4afd-a240-a7d4c18f3bad" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/queries/models/dnn_stream.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/queries/admin.py" afterPath="$PROJECT_DIR$/src/queries/admin.py" />
-      <change beforePath="$PROJECT_DIR$/src/queries/models/__init__.py" afterPath="$PROJECT_DIR$/src/queries/models/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/src/queries/models/feature.py" afterPath="$PROJECT_DIR$/src/queries/models/feature.py" />
-    </list>
+    <list default="true" id="9ed52c8b-0864-4afd-a240-a7d4c18f3bad" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/queries/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -68,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feature.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="feature.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -1023,14 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/queries/models/process_state.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1088,6 +1074,14 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
