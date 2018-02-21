@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ed52c8b-0864-4afd-a240-a7d4c18f3bad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/video-query-api.iml" afterPath="$PROJECT_DIR$/.idea/video-query-api.iml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/queries/models/dnn_stream.py" afterPath="$PROJECT_DIR$/src/queries/models/dnn_stream.py" />
       <change beforePath="$PROJECT_DIR$/src/queries/models/feature.py" afterPath="$PROJECT_DIR$/src/queries/models/feature.py" />
-      <change beforePath="$PROJECT_DIR$/src/queries/models/video_clip.py" afterPath="$PROJECT_DIR$/src/queries/models/video_clip.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +34,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="match.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="match.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/queries/models/match.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="48" />
+            <state relative-caret-position="315">
+              <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dnn_stream.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/queries/models/dnn_stream.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,6 +119,16 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="fetorres" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="video-query-api" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -154,9 +181,9 @@
         <option value="$PROJECT_DIR$/src/queries/models/__init__.py" />
         <option value="$PROJECT_DIR$/src/queries/models/query.py" />
         <option value="$PROJECT_DIR$/src/queries/fixtures/lookups.json" />
-        <option value="$PROJECT_DIR$/src/queries/models/feature.py" />
         <option value="$PROJECT_DIR$/src/queries/models/dnn_stream.py" />
         <option value="$PROJECT_DIR$/src/queries/models/video_clip.py" />
+        <option value="$PROJECT_DIR$/src/queries/models/feature.py" />
       </list>
     </option>
   </component>
@@ -189,7 +216,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scratches">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+            <path>
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+              <item name="com.intellij.database" type="61db50fb:ScratchProjectViewPane$MyPsiNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,7 +255,7 @@
               <item name="video-query-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="queries" type="462c0819:PsiDirectoryNode" />
-              <item name="fixtures" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="video-query-api" type="b2602c69:ProjectViewProjectNode" />
@@ -221,18 +263,56 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="queries" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="match.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="video-query-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="video-query-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="queries" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="match.py" type="8704e2dd:PyFileNode" />
+              <item name="Match" type="dd8bbb05:PyElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="video-query-api" type="cbb8eebc:String" user="video-query-api" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="video-query-api" type="cbb8eebc:String" user="video-query-api" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="video-query-api" type="cbb8eebc:String" user="video-query-api" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="queries" type="cbb8eebc:String" user="queries" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="video-query-api" type="cbb8eebc:String" user="video-query-api" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="queries" type="cbb8eebc:String" user="queries" />
+              <item name="models" type="cbb8eebc:String" user="models" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="editorconfig.notification" value="ignore" />
   </component>
@@ -585,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517867703856</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="modified dnn_stream.py, feature.py and video_clip.py to include UNIQUE constraints, error messages for those constraints, and help text (a form of documentation even if it is never used in the app).">
+      <created>1519246230994</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519246230994</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -661,7 +748,8 @@
     <MESSAGE value="Migrate Video FK" />
     <MESSAGE value="Add cors to local dev environment" />
     <MESSAGE value="Add list PATCH route to matches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add list PATCH route to matches" />
+    <MESSAGE value="modified dnn_stream.py, feature.py and video_clip.py to include UNIQUE constraints, error messages for those constraints, and help text (a form of documentation even if it is never used in the app)." />
+    <option name="LAST_COMMIT_MESSAGE" value="modified dnn_stream.py, feature.py and video_clip.py to include UNIQUE constraints, error messages for those constraints, and help text (a form of documentation even if it is never used in the app)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -943,16 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/queries/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -969,31 +1047,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/queries/models/dnn_stream.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/queries/models/video_clip.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/queries/models/match.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="48" />
+        <state relative-caret-position="315">
+          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/feature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/queries/models/dnn_stream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

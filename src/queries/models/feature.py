@@ -5,7 +5,6 @@ from queries.models import VideoClip, DnnStream
 
 
 class Feature(models.Model):
-    id = models.BigIntegerField(primary_key=True)
     video_clip = models.ForeignKey(VideoClip, on_delete=models.PROTECT,
                                    help_text='id in the video_clips table for the clip corresponding to this row')
     dnn_stream = models.ForeignKey(DnnStream, on_delete=models.PROTECT,
