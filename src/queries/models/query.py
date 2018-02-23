@@ -28,3 +28,13 @@ class Query(models.Model):
         query = Query.objects.get(pk=query_id)
         query.process_state_id = process_state
         query.save()
+
+    @staticmethod
+    def get_latest_query_ready_for_compute_similarity():
+        query = Query.objects.get(process_state=1)
+        return query
+
+    @staticmethod
+    def get_latest_query_ready_for_new_compute_similarity():
+        query = Query.objects.get(process_state=2)
+        return query
