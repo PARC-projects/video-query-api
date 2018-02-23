@@ -3,19 +3,26 @@
     "model": "queries.processState",
     "pk": 1,
     "fields": {
-      "name": "Submitted"
+      "name": "ComputeNew"
     }
   },
   {
     "model": "queries.processState",
     "pk": 2,
     "fields": {
-      "name": "Processing"
+      "name": "ComputeRevision"
     }
   },
   {
     "model": "queries.processState",
     "pk": 3,
+    "fields": {
+      "name": "Processing"
+    }
+  },
+  {
+    "model": "queries.processState",
+    "pk": 4,
     "fields": {
       "name": "Processed"
     }

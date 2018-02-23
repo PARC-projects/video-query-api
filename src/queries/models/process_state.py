@@ -2,15 +2,25 @@ from django.db import models
 
 
 class ProcessState(models.Model):
-    # If "Submitted" = 1
-    # - UI shows "check back soon" state
-    # - ML service start a new process loop and sets value to "Processing".
-    # If "Processing" = 2
-    # - UI shows "check back soon" state
-    # - ML processes query
-    # If "Processed" = 3
-    # - UI allows for resubmission of query
-    # - ML service does nothing
+    """
+        if 1: ComputeNew
+            UI - New query was submitted and initial set of matches need to be computed.
+            Daemon - Will grab latest query in this state
+            ML - Will be told to execute against this query
+        if 2: ComputeRevision
+            UI - A revision has been submitted and weights need to be optimized
+            Daemon - Will grab latest query in this state
+            ML - If similarities are not cached, will need to recompute them.
+                    When similarities are cached, optimize weights
+        if 3: Processing
+            UI - show "check back soon" state
+            Daemon - nothing
+            ML - is processing
+        if 4: Processed
+            UI - Allows for re-submission of query
+            Daemon - nothing
+            ML - Sets to this state when done processing
+    """
     name = models.CharField(max_length=254, unique=True)
 
     class Meta:
