@@ -28,3 +28,15 @@ class Query(models.Model):
         query = Query.objects.get(pk=query_id)
         query.process_state_id = process_state
         query.save()
+
+    @staticmethod
+    def get_latest_query_ready_for_compute_similarity():
+        # TODO: Should order by last modified
+        query = Query.objects.filter(process_state=2).order_by('id').first()
+        return query
+
+    @staticmethod
+    def get_latest_query_ready_for_new_compute_similarity():
+        # TODO: Should order by last modified
+        query = Query.objects.filter(process_state=1).order_by('id').first()
+        return query

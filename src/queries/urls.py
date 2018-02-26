@@ -10,8 +10,9 @@ router.register(r'search-sets', SearchSetViewSet)
 router.register(r'queries', QueryViewSet)
 router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
-router.register(r'signatures', FeatureViewSet)
 
 urlpatterns = [
     url(r'^matches-list/$', match_list),
+    url(r'^query-state/new-compute-similarity', new_compute_similarity, name='new_compute_similarity'),
+    url(r'^query-state/compute-similarity', compute_similarity, name='compute_similarity'),
 ]
