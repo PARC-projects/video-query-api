@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+from django.db.models import DateTimeField
 from queries.models import SearchSet, Video, ProcessState
 
 
@@ -15,6 +16,7 @@ class Query(models.Model):
     current_match_criterion = models.FloatField(default=0.8)
     current_weights = ArrayField(models.FloatField(), null=True)
     process_state = models.ForeignKey(ProcessState, default=1, on_delete=models.PROTECT)
+    last_modified = DateTimeField(auto_now=True, editable=False, null=False, blank=False)
 
     class Meta:
         db_table = 'query'
