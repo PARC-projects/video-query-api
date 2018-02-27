@@ -12,9 +12,9 @@ class VideoClip(models.Model):
 
     class Meta:
         db_table = 'video_clip'
-        unique_together = (('video', 'clip', 'clip_duration'),)
-        error_messages = {
+        unique_together = (('video', 'clip', 'duration'),)
+        models.error_messages = {
             NON_FIELD_ERRORS: {
-                'unique_together': "(video, clip, clip_duration) in row of video_clips table is not unique.",
+                'unique_together': "(video, clip, duration) in row of video_clips table is not unique.",
             }
         }

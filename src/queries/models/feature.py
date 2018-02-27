@@ -22,10 +22,10 @@ class Feature(models.Model):
 
     class Meta:
         db_table = 'feature'
-        unique_together = (('video_clip', 'dnn_stream', 'dnn_stream_split', 'feature_name'),)
-        error_messages = {
+        unique_together = (('video_clip', 'dnn_stream', 'dnn_stream_split', 'name'),)
+        models.error_messages = {
             NON_FIELD_ERRORS: {
-                'unique_together': "(video_clip, dnn_stream, dnn_stream_split, feature_name) in row of "
+                'unique_together': "(video_clip, dnn_stream, dnn_stream_split, name) in row of "
                                    "features table is not unique.",
             }
         }
