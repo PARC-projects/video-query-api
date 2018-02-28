@@ -39,7 +39,7 @@ class Feature(models.Model):
 
     class Meta:
         db_table = 'feature',
-        unique_together = (('video_clip', 'dnn_stream', 'dnn_stream_split', 'name'),)
+        unique_together = ('video_clip', 'dnn_stream', 'dnn_stream_split', 'name')
         models.error_messages = {
             NON_FIELD_ERRORS: {
                 'unique_together': "(video_clip, dnn_stream, dnn_stream_split, name) is not unique.",

@@ -1,5 +1,6 @@
+from django.core.exceptions import NON_FIELD_ERRORS
 from django.db import models
-from queries.models import Video, NON_FIELD_ERRORS
+from queries.models import Video
 
 
 class VideoClip(models.Model):
@@ -11,10 +12,10 @@ class VideoClip(models.Model):
 
     class Meta:
         db_table = 'video_clip',
-        unique_together = (('video', 'clip', 'duration'),)
+        unique_together = ('video', 'clip', 'duration')
         models.error_messages = {
             NON_FIELD_ERRORS: {
-                'unique_together': "(video, clip, duration) in row of video_clips table is not unique.",
+                'unique_together': "(video, clip, duration) is not unique.",
             }
         }
 
