@@ -12,6 +12,7 @@ class Feature(models.Model):
     )
     dnn_stream = models.ForeignKey(
         DnnStream,
+        to_field='type',
         on_delete=models.PROTECT,
         help_text='DNN stream name from dnn_streams table signifying which of the streams in the multi-stream DNN this '
                   'row belongs.'
