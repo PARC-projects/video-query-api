@@ -9,3 +9,6 @@ class Video(models.Model):
 
     class Meta:
         db_table = 'video'
+
+    def __str__(self):
+        return self.name

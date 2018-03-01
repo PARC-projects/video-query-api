@@ -152,3 +152,6 @@ ENV/
 
 /.idea/httpRequests
 src/dump.json
+secrets.sh
+/.idea
+secrets.sh

@@ -1,3 +1,4 @@
+from django.core.exceptions import NON_FIELD_ERRORS
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from queries.models import VideoClip, DnnStream
@@ -11,6 +12,7 @@ class Feature(models.Model):
     )
     dnn_stream = models.ForeignKey(
         DnnStream,
+        to_field='type',
         on_delete=models.PROTECT,
         help_text='DNN stream name from dnn_streams table signifying which of the streams in the multi-stream DNN this '
                   'row belongs.'
@@ -38,3 +40,9 @@ class Feature(models.Model):
 
     class Meta:
         db_table = 'feature'
+        unique_together = ('video_clip', 'dnn_stream', 'dnn_stream_split', 'name')
+        models.error_messages = {
+            NON_FIELD_ERRORS: {
+                'unique_together': "(video_clip, dnn_stream, dnn_stream_split, name) is not unique."
+            }
+        }
