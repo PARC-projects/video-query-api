@@ -150,5 +150,7 @@ ENV/
 # mypy
 .mypy_cache/
 
-/.idea/httpRequests
+# User defined
+/.idea
 src/dump.json
+secrets.sh
