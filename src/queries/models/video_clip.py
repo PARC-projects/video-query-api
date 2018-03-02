@@ -19,3 +19,5 @@ class VideoClip(models.Model):
             }
         }
 
+    def __str__(self):
+        return self.video.name + ', clip #' + str(self.clip)
