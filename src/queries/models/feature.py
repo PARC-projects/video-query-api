@@ -33,9 +33,9 @@ class Feature(models.Model):
         null=True,
         help_text='Location of the spec for the DNN model, i.e. a prototxt file for Caffe models.'
     )
-    features = ArrayField(
-        ArrayField(models.FloatField()),
-        help_text='feature vector'
+    feature_vector = ArrayField(
+        models.FloatField(),
+        help_text='feature vector from DNN model inference'
     )
 
     class Meta:
