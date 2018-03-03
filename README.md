@@ -14,6 +14,7 @@ pip install django-filter=1.1.0
 ## Database
 
 - Create a database named "Video-Query"
+- verify ENV Keys below (e.g. source secrets.sh is what FT is using on his Mac)
 - Run migration `python manage.py migrate`
 - Create a super user `python manage.py createsuperuser`
 - For all deployment, load fixture `python manage.py loaddata lookups`
