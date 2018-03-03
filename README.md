@@ -37,3 +37,13 @@ pip install django-filter=1.1.0
   - dev = Can be omitted
 - API_CORS_ORIGIN_WHITELIST
   - dev = Can be omitted
+
+For example, execute the following:
+  - Mac: 
+  ```bash
+  source secrets.sh
+  ```
+  - Linux: 
+  ```bash
+  bash secrets.sh
+  ```
