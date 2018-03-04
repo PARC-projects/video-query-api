@@ -15,10 +15,11 @@ pip install django-filter=1.1.0
 
 - Create a database named "Video-Query"
 - Run migration `python manage.py migrate`
+- Make migrations `python manage.py makemigrations` if needed (if unsure, do this)
+- Run migrations again `python manage.py migrate` after makemigrations
 - Create a super user `python manage.py createsuperuser`
-- For all deployment, load fixture `python manage.py loaddata lookups`
-- For dev, load fixture `python manage.py loaddata dev-init`
-- For dev, load fixture `python manage.py loaddata dev-results`
+- For all deployments, load fixture `python manage.py loaddata 1-lookups`
+- For dev, load fixtures `python manage.py loaddata 2-dev-search-set 3-dev-video 4-dev-query 5-dev-results`
 
 ## ENV Keys
 
@@ -37,3 +38,7 @@ pip install django-filter=1.1.0
   - dev = Can be omitted
 - API_CORS_ORIGIN_WHITELIST
   - dev = Can be omitted
+
+For example, execute the following:
+  - Mac: `source secrets.sh`
+  - Linux: `bash secrets.sh`

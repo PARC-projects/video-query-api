@@ -153,4 +153,3 @@ ENV/
 # User defined
 /.idea
 src/dump.json
-secrets.sh
