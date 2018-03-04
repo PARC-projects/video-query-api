@@ -18,7 +18,7 @@ pip install django-filter=1.1.0
 - Make migrations `python manage.py makemigrations` if needed (if unsure, do this)
 - Run migrations again `python manage.py migrate` after makemigrations
 - Create a super user `python manage.py createsuperuser`
-- For all deployment, load fixture `python manage.py loaddata 1-lookups`
+- For all deployments, load fixture `python manage.py loaddata 1-lookups`
 - For dev, load fixtures `python manage.py loaddata 2-dev-search-set 3-dev-video 4-dev-query 5-dev-results`
 
 ## ENV Keys
