@@ -1,44 +1,36 @@
 # Video Query API
 
-## Dependencies
+> Supporting API for the Video Query project. 
 
-```bash
-pip install Django==2.0.1
-pip install djangorestframework==3.7.7
-pip install django-cors-headers==2.1.0
-pip install psycopg2==2.7.3.2
-pip install pillow==5.0.0
-pip install django-filter=1.1.0
-```
+## Description
 
-## Database
+This API serves as a data access layer for the Video Query project. All request made from the 
+[Client](https://github.com/fetorres/video-query) portion of the Video Query project are made to various endpoints 
+supplied by this API. 
 
-- Create a database named "Video-Query"
-- Run migration `python manage.py migrate`
-- Make migrations `python manage.py makemigrations` if needed (if unsure, do this)
-- Run migrations again `python manage.py migrate` after makemigrations
-- Create a super user `python manage.py createsuperuser`
-- For all deployments, load fixture `python manage.py loaddata 1-lookups`
-- For dev, load fixtures `python manage.py loaddata 2-dev-search-set 3-dev-video 4-dev-query 5-dev-results`
+For more information about project, please visit [some-end-point](some-end-point), or the following related links.
 
-## ENV Keys
+- [Video Query Client](https://github.com/fetorres/video-query)
+- [Video Query Algorithms](https://github.com/fetorres/video-query-algorithms)
 
-- API_DEBUG
-  - dev = False
-- API_SECRET_KEY
-  - dev = random number
-- API_DB_NAME
-- API_DB_USER
-- API_DB_PASS
-- API_DB_HOST
-  - dev = localhost
-- API_DB_PORT
-  - dev = 5432
-- ALLOWED_HOST
-  - dev = Can be omitted
-- API_CORS_ORIGIN_WHITELIST
-  - dev = Can be omitted
+## Installation
 
-For example, execute the following:
-  - Mac: `source secrets.sh`
-  - Linux: `bash secrets.sh`
+- [Overview]()
+- [Dependencies]()
+- [Database]()
+- [Environment Keys]()
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull 
+requests to us.
+
+## Credits
+
+Include a section for credits in order to highlight and link to the authors of this project. 
+TBD - Up to Frank?
+
+## License
+
+This project is licensed under the **TBD License** - see the [LICENSE.md](LICENSE.md) file for details.
+
