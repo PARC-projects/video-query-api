@@ -8,7 +8,7 @@ This API serves as a data access layer for the Video Query project. All request 
 [Client](https://github.com/fetorres/video-query) portion of the Video Query project are made to various endpoints 
 supplied by this API. 
 
-For more information about project, please visit [some-end-point](some-end-point), or the following related links.
+For an overview of the Video Query project please visit [some-end-point](some-end-point) or the following related links.
 
 - [Video Query Client](https://github.com/fetorres/video-query)
 - [Video Query Algorithms](https://github.com/fetorres/video-query-algorithms)
