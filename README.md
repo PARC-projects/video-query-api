@@ -1,9 +1,5 @@
 # Video Query API
 
-> Supporting API for the Video Query project. 
-
-## Description
-
 This API serves as a data access layer for the Video Query project. All request made from the 
 [Client](https://github.com/fetorres/video-query) portion of the Video Query project are made to various endpoints 
 supplied by this API. 
