@@ -11,7 +11,7 @@ demonstrating the expected behavior that is not occurring.
 
 #### **Do you have questions about the source code?**
 
-* Ask any question about how to use Ruby on Rails in the [Issues](https://github.com/fetorres/video-query-api/issues).
+* Ask any question about how to use Video Query Api in the [Issues](https://github.com/fetorres/video-query-api/issues).
 
 #### **Do you intend to add a new feature or change an existing one?**
 
