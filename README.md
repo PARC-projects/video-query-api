@@ -11,10 +11,11 @@ For an overview of the Video Query project please visit [some-end-point](some-en
 
 ## Installation
 
-- [Overview](https://github.com/fetorres/video-query-api/wiki/Installation#overview)
-- [Dependencies](https://github.com/fetorres/video-query-api/wiki/Installation#dependecies)
-- [Database](https://github.com/fetorres/video-query-api/wiki/Installation#database)
-- [Environment Keys](https://github.com/fetorres/video-query-api/wiki/Installation#environment-variables)
+- [Setup](https://github.com/fetorres/video-query-api/wiki/Setup)
+  - [Dependecies](https://github.com/fetorres/video-query-api/wiki/Setup#dependencies)
+  - [Environment Variables](https://github.com/fetorres/video-query-api/wiki/Setup#environment-variables)
+- [Database](https://github.com/fetorres/video-query-api/wiki/Database)
+
 
 ## Contributing
 
@@ -29,4 +30,3 @@ TBD - Up to Frank?
 ## License
 
 This project is licensed under the **TBD License** - see the [LICENSE.md](LICENSE.md) file for details.
-
