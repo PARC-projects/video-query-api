@@ -12,7 +12,7 @@ For an overview of the Video Query project please visit [some-end-point](some-en
 ## Installation
 
 - [Setup](https://github.com/fetorres/video-query-api/wiki/Setup)
-  - [Dependecies](https://github.com/fetorres/video-query-api/wiki/Setup#dependencies)
+  - [Dependencies](https://github.com/fetorres/video-query-api/wiki/Setup#dependencies)
   - [Environment Variables](https://github.com/fetorres/video-query-api/wiki/Setup#environment-variables)
 - [Database](https://github.com/fetorres/video-query-api/wiki/Database)
 
