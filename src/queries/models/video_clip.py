@@ -1,6 +1,6 @@
 from django.core.exceptions import NON_FIELD_ERRORS
 from django.db import models
-from queries.models import Video
+from . import Video
 
 
 class VideoClip(models.Model):

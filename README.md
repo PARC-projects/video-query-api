@@ -23,8 +23,12 @@ requests to us.
 
 ## Credits
 
-Include a section for credits in order to highlight and link to the authors of this project. 
-TBD - Up to Frank?
+Include a citation for a paper when we publish one.  For now:
+If you find this repository useful, please cite 
+https://github.com/fetorres/video-query-api/ 
+Authors:
+Frank Torres
+Chad Ramos
 
 ## License
 

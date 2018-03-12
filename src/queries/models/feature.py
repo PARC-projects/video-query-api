@@ -1,7 +1,7 @@
 from django.core.exceptions import NON_FIELD_ERRORS
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
-from queries.models import VideoClip, DnnStream
+from . import VideoClip, DnnStream
 
 
 class Feature(models.Model):

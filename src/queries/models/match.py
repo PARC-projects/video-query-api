@@ -1,14 +1,10 @@
 from django.db import models
-from queries.models import QueryResult, Video, Query
+from . import QueryResult, Query
 
 
 class Match(models.Model):
     query_result = models.ForeignKey(QueryResult, on_delete=models.PROTECT)
     score = models.FloatField(default=0)
-    # TODO: Remove and get from Match.score vs QueryResults.match_criterion
-    is_match = models.BooleanField(default=0)
-    reference_video = models.ForeignKey(Video, related_name='reference_video', on_delete=models.PROTECT)
-    reference_time = models.PositiveIntegerField(default=0)
     # Holds state of user validation on UI.
     # null = they have not validated or invalidate the match
     user_match = models.NullBooleanField(default=None)
@@ -18,7 +14,7 @@ class Match(models.Model):
         ordering = ('-score',)
 
     @staticmethod
-    def get_latestest_matches_by_query_id(pk):
+    def get_latest_matches_by_query_id(pk):
         """
         Get latest matches based on query id
         """
@@ -37,8 +33,25 @@ class Match(models.Model):
         # TODO: wrap in atomic transaction
         for match in matches:
             match_entity = Match.objects.get(pk=match['id'])
-            match_entity.user_match = match['user_match'];
+            match_entity.user_match = match['user_match']
             match_entity.save()
 
         # TODO: switch 1 to enum
         Query.update_process_state_based_on_query_id(query_id, 1)
+
+    @property
+    def query_id(self):
+        return QueryResult.objects.values_list('query', flat=True).get(id=self.query_result)
+
+    @property
+    def reference_video(self):
+        return Query.objects.values_list('video', flat=True).get(id=self.query_id)
+
+    @property
+    def reference_time(self):
+        return Query.objects.values_list('reference_time', flat=True).get(id=self.query_id)
+
+    @property
+    def is_match(self):
+        match_criterion = QueryResult.objects.values_list('match_criterion', flat=True).get(id=self.query_result)
+        return self.score >= match_criterion

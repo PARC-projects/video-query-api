@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from django.db.models import DateTimeField
-from queries.models import SearchSet, Video, ProcessState
+from . import SearchSet, Video, ProcessState
 
 
 class Query(models.Model):
