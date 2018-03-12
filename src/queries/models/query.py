@@ -34,11 +34,11 @@ class Query(models.Model):
     @staticmethod
     def get_latest_query_ready_for_compute_similarity():
         # TODO: Should order by last modified
-        query = Query.objects.filter(process_state=2).order_by('id').first()
+        query = Query.objects.filter(process_state=2).order_by('last_modified').first()
         return query
 
     @staticmethod
     def get_latest_query_ready_for_new_compute_similarity():
         # TODO: Should order by last modified
-        query = Query.objects.filter(process_state=1).order_by('id').first()
+        query = Query.objects.filter(process_state=1).order_by('last_modified').first()
         return query
