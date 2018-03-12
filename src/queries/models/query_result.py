@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
-from queries.models import Query
+from . import Query
 
 
 class QueryResult(models.Model):

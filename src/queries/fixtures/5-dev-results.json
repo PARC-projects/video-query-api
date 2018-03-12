@@ -28,10 +28,7 @@
     "pk": 1,
     "fields": {
       "score": 1.0,
-      "is_match": true,
-      "reference_time": 100,
-      "query_result": 1,
-      "reference_video": 4
+      "query_result": 1
     }
   },
   {
@@ -39,10 +36,7 @@
     "pk": 2,
     "fields": {
       "score": 0.89,
-      "is_match": true,
-      "reference_time": 50,
-      "query_result": 1,
-      "reference_video": 4
+      "query_result": 1
     }
   },
   {
@@ -50,10 +44,7 @@
     "pk": 3,
     "fields": {
       "score": 0.88,
-      "is_match": true,
-      "reference_time": 70,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -61,10 +52,7 @@
     "pk": 4,
     "fields": {
       "score": 0.86,
-      "is_match": true,
-      "reference_time": 60,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -72,10 +60,7 @@
     "pk": 5,
     "fields": {
       "score": 0.86,
-      "is_match": true,
-      "reference_time": 290,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -83,10 +68,7 @@
     "pk": 6,
     "fields": {
       "score": 0.83,
-      "is_match": true,
-      "reference_time": 30,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -94,10 +76,7 @@
     "pk": 7,
     "fields": {
       "score": 0.83,
-      "is_match": true,
-      "reference_time": 110,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -105,10 +84,7 @@
     "pk": 8,
     "fields": {
       "score": 0.82,
-      "is_match": true,
-      "reference_time": 310,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -116,10 +92,7 @@
     "pk": 9,
     "fields": {
       "score": 0.82,
-      "is_match": true,
-      "reference_time": 40,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -127,10 +100,7 @@
     "pk": 10,
     "fields": {
       "score": 0.76,
-      "is_match": false,
-      "reference_time": 620,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -138,10 +108,7 @@
     "pk": 11,
     "fields": {
       "score": 0.75,
-      "is_match": false,
-      "reference_time": 320,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -149,10 +116,7 @@
     "pk": 12,
     "fields": {
       "score": 0.75,
-      "is_match": false,
-      "reference_time": 500,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -160,10 +124,7 @@
     "pk": 13,
     "fields": {
       "score": 0.74,
-      "is_match": false,
-      "reference_time": 1020,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -171,10 +132,7 @@
     "pk": 14,
     "fields": {
       "score": 0.74,
-      "is_match": false,
-      "reference_time": 520,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -182,10 +140,7 @@
     "pk": 15,
     "fields": {
       "score": 0.74,
-      "is_match": false,
-      "reference_time": 390,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -193,10 +148,7 @@
     "pk": 16,
     "fields": {
       "score": 0.74,
-      "is_match": false,
-      "reference_time": 570,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -204,10 +156,7 @@
     "pk": 17,
     "fields": {
       "score": 0.73,
-      "is_match": true,
-      "reference_time": 90,
-      "query_result": 1,
-      "reference_video": 4
+      "query_result": 1
     }
   },
   {
@@ -215,10 +164,7 @@
     "pk": 18,
     "fields": {
       "score": 0.7,
-      "is_match": false,
-      "reference_time": 120,
-      "query_result": 1,
-      "reference_video": 4
+      "query_result": 1
     }
   },
   {
@@ -226,10 +172,7 @@
     "pk": 19,
     "fields": {
       "score": 1,
-      "is_match": true,
-      "reference_time": 100,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   },
   {
@@ -237,10 +180,7 @@
     "pk": 20,
     "fields": {
       "score": 0.89,
-      "is_match": true,
-      "reference_time": 50,
-      "query_result": 2,
-      "reference_video": 4
+      "query_result": 2
     }
   }
 ]
