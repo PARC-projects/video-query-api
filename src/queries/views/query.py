@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from rest_framework import viewsets
 from rest_framework.filters import SearchFilter
 from rest_framework.decorators import detail_route
@@ -13,6 +14,10 @@ class QueryViewSet(viewsets.ModelViewSet):
     <b>queries/{id}/query_result</b>: GET latest query result based on query id
     <br/>
     <b>queries/{id}/matches</b>: GET latest matches based on query id
+    <br/>
+    <b>queries/{id}/compute_new_state</b>: GET query state that represents a new query ready to get its similarities computed
+    <br/>
+    <b>queries/{id}/compute_revised_state</b>: GET query state that represents a query ready to get its similarities revised
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
@@ -21,8 +26,22 @@ class QueryViewSet(viewsets.ModelViewSet):
 
     @detail_route(methods=['get'])
     def query_result(self, request, pk):
+        """
+        GET Latest QueryResult base on Query Id
+        :param request:
+        :param pk: Query Id
+        :return: QueryResult
+        """
         return Response(QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data)
 
     @detail_route(methods=['get'])
     def matches(self, request, pk):
+        """
+        GET latest Match(s) based on Query Id
+        :param request:
+        :param pk: Query Id
+        :return: Match[]
+        """
         return Response(MatchSerializer(Match.get_latestest_matches_by_query_id(pk), many=True).data)
+
+

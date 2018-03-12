@@ -11,3 +11,10 @@ class QueryResult(models.Model):
 
     class Meta:
         db_table = 'query_result'
+
+    @staticmethod
+    def get_latestest_query_result_by_query_id(pk):
+        """
+        Get latest query result based on query id
+        """
+        return QueryResult.objects.filter(query_id=pk).last()
