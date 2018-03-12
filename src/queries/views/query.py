@@ -14,6 +14,10 @@ class QueryViewSet(viewsets.ModelViewSet):
     <b>queries/{id}/query_result</b>: GET latest query result based on query id
     <br/>
     <b>queries/{id}/matches</b>: GET latest matches based on query id
+    <br/>
+    <b>queries/{id}/compute_new_state</b>: GET query state that represents a new query ready to get its similarities computed
+    <br/>
+    <b>queries/{id}/compute_revised_state</b>: GET query state that represents a query ready to get its similarities revised
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
@@ -41,7 +45,7 @@ class QueryViewSet(viewsets.ModelViewSet):
         return Response(MatchSerializer(Match.get_latestest_matches_by_query_id(pk), many=True).data)
 
     @detail_route(methods=['get'])
-    def new_matches(self, request, pk):
+    def compute_new_state(self, request, pk):
         """
         GET query state that represents a new query ready to get its similarities computed
         Polled by broker in algorithm project
@@ -49,11 +53,17 @@ class QueryViewSet(viewsets.ModelViewSet):
         :param pk:
         :return:
         """
-        query = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data
-        return JsonResponse(query)
+        query = QuerySerializer(Query.get_latest_query_ready_for_new_compute_similarity(), many=False).data
+        results = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data
+        return JsonResponse({
+            "query_id": pk,
+            "video_id": query["video"],
+            "reference_time": query["reference_time"],
+            "results": results
+        })
 
     @detail_route(methods=['get'])
-    def revised_matches(self, request, pk):
+    def compute_revised_state(self, request, pk):
         """
         GET query state that represents a  query ready to get its similarities revised
         Polled by broker in algorithm project
@@ -61,9 +71,13 @@ class QueryViewSet(viewsets.ModelViewSet):
         :param pk: Query Id
         :return:
         """
-        query = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data
+        query = QuerySerializer(Query.get_latest_query_ready_for_compute_similarity(), many=False).data
+        results = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data
         matches = MatchSerializer(Match.get_latestest_matches_by_query_id(pk), many=True).data
         return JsonResponse({
-            "query": query,
+            "query_id": pk,
+            "video_id": query["video"],
+            "reference_time": query["reference_time"],
+            "results": results,
             "matches": matches
         })
