@@ -12,5 +12,7 @@ router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
 
 urlpatterns = [
-    url(r'^matches-list/$', match_list)
+    url(r'^matches-list/$', match_list),
+    url(r'^query-state/compute-new', compute_new_state, name='compute_new_state'),
+    url(r'^query-state/compute-revised', compute_revised_state, name='compute_revised_state'),
 ]

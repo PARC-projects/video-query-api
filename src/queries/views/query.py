@@ -3,8 +3,8 @@ from rest_framework import viewsets
 from rest_framework.filters import SearchFilter
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer, VideoSerializer
-from queries.models import Query, QueryResult, Match, Video
+from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
+from queries.models import Query, QueryResult, Match
 
 
 class QueryViewSet(viewsets.ModelViewSet):
@@ -44,40 +44,4 @@ class QueryViewSet(viewsets.ModelViewSet):
         """
         return Response(MatchSerializer(Match.get_latestest_matches_by_query_id(pk), many=True).data)
 
-    @detail_route(methods=['get'])
-    def compute_new_state(self, request, pk):
-        """
-        GET query state that represents a new query ready to get its similarities computed
-        Polled by broker in algorithm project
-        :param request:
-        :param pk:
-        :return:
-        """
-        query = QuerySerializer(Query.get_latest_query_ready_for_new_compute_similarity(), many=False).data
-        results = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data
-        return JsonResponse({
-            "query_id": pk,
-            "video_id": query["video"],
-            "reference_time": query["reference_time"],
-            "results": results
-        })
 
-    @detail_route(methods=['get'])
-    def compute_revised_state(self, request, pk):
-        """
-        GET query state that represents a  query ready to get its similarities revised
-        Polled by broker in algorithm project
-        :param request:
-        :param pk: Query Id
-        :return:
-        """
-        query = QuerySerializer(Query.get_latest_query_ready_for_compute_similarity(), many=False).data
-        results = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data
-        matches = MatchSerializer(Match.get_latestest_matches_by_query_id(pk), many=True).data
-        return JsonResponse({
-            "query_id": pk,
-            "video_id": query["video"],
-            "reference_time": query["reference_time"],
-            "results": results,
-            "matches": matches
-        })
