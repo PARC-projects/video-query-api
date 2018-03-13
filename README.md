@@ -33,4 +33,15 @@ Chad Ramos
 
 ## License
 
-This project is licensed under the **TBD License** - see the [LICENSE.md](LICENSE.md) file for details.
+Copyright (C) 2018 Palo Alto Research Center, Inc.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 3 as published by
+the Free Software Foundation - see the [LICENSE.md](LICENSE.md) file for details.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+
+If this license does not meet your needs, please submit an Issue on github with 
+your contact information and institution, so we can discuss how to meet your needs.
