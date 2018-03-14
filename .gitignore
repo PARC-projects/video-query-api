@@ -153,3 +153,4 @@ ENV/
 # User defined
 /.idea
 src/dump.json
+.vscode
