@@ -38,7 +38,7 @@ def compute_revised_state(request):
     query = QuerySerializer(Query.get_latest_query_ready_for_compute_similarity(), many=False).data
     print(query)
     results = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(query["id"]), many=False).data
-    matches = MatchSerializer(Match.get_latestest_matches_by_query_id(query["id"]), many=True).data
+    matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
     return JsonResponse({
         "query_id": query["id"],
         "video_id": query["video"],
