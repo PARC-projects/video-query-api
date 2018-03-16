@@ -43,7 +43,8 @@ class QuerySerializer(serializers.ModelSerializer):
 class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Match
-        fields = '__all__'
+        fields = (
+            'id', 'query_result', 'score', 'user_match', 'query_id', 'reference_video_id', 'reference_time', 'is_match')
 
 
 class QueryResultSerializer(serializers.ModelSerializer):

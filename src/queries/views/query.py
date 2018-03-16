@@ -42,6 +42,6 @@ class QueryViewSet(viewsets.ModelViewSet):
         :param pk: Query Id
         :return: Match[]
         """
-        return Response(MatchSerializer(Match.get_latestest_matches_by_query_id(pk), many=True).data)
+        return Response(MatchSerializer(Match.get_latest_matches_by_query_id(pk), many=True).data)
 
 
