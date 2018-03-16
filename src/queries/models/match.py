@@ -41,10 +41,10 @@ class Match(models.Model):
 
     @property
     def query_id(self):
-        return QueryResult.objects.values_list('query', flat=True).get(id=self.query_result)
+        return QueryResult.objects.values_list('query', flat=True).get(id=self.query_result_id)
 
     @property
-    def reference_video(self):
+    def reference_video_id(self):
         return Query.objects.values_list('video', flat=True).get(id=self.query_id)
 
     @property
@@ -53,5 +53,5 @@ class Match(models.Model):
 
     @property
     def is_match(self):
-        match_criterion = QueryResult.objects.values_list('match_criterion', flat=True).get(id=self.query_result)
+        match_criterion = QueryResult.objects.values_list('match_criterion', flat=True).get(id=self.query_result_id)
         return self.score >= match_criterion
