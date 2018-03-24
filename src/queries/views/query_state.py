@@ -4,17 +4,6 @@ from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSer
 from queries.models import Query, QueryResult, Match, Video
 
 
-# @api_view(['GET'])
-# def compute_similarity(request):
-#     # TODO: Account for empty response
-#     return Response(QuerySerializer(Query.get_latest_query_ready_for_compute_similarity(), many=False).data)
-#
-#
-# @api_view(['GET'])
-# def new_compute_similarity(request):
-#     # TODO: Account for empty response
-#     return Response(QuerySerializer(Query.get_latest_query_ready_for_new_compute_similarity(), many=False).data)
-
 @api_view(['GET'])
 def compute_new_state(request):
     """
