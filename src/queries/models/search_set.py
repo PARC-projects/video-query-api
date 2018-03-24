@@ -1,7 +1,6 @@
 from django.db import models
 from . import Video, VideoClip
 
-
 """
 Identifies a collection of videos to search, and the clip duration for the search.
 Only one clip duration is allowed because the similarity algorithm has only been
@@ -25,3 +24,9 @@ class SearchSet(models.Model):
         id_of_videos = self.videos.all().values_list('id', flat=True)
         video_clip_objects = VideoClip.objects.filter(video__in=id_of_videos, duration=self.duration)
         return video_clip_objects.values_list('id', flat=True)
+
+    def get_videos_based_on_search_set_id(self):
+        """
+        Get a list of videos based on search set id
+        :return: video[]
+        """

@@ -18,6 +18,7 @@ class SearchSetViewSet(viewsets.ModelViewSet):
     @detail_route(methods=['get'])
     def videos(self, request, pk):
         """
-        Get videos based on dataset id
+        Get videos based on search set id
         """
-        return Response(Video.objects.filter(search_sets=pk).values())
+        return Response(SearchSet.get_videos_based_on_search_set_id())
+        # return Response(Video.objects.filter(search_sets=pk).values())
