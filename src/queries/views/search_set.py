@@ -2,8 +2,9 @@ from rest_framework import viewsets
 from rest_framework.filters import SearchFilter
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from queries.serializers import SearchSetSerializer
-from queries.models import SearchSet, Video
+
+from src.queries.models import SearchSet
+from src.queries.serializers import SearchSetSerializer
 
 
 class SearchSetViewSet(viewsets.ModelViewSet):
