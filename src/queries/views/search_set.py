@@ -9,6 +9,12 @@ from queries.models import SearchSet
 class SearchSetViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows datasets to be viewed or edited.
+    <br/>
+    <br/>
+    <b>search-set/{id}/videos</b>
+    <ul>
+        <li>GET: Get videos based on search set id.</li>
+    </ul>
     """
     queryset = SearchSet.objects.all()
     serializer_class = SearchSetSerializer
