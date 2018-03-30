@@ -9,7 +9,7 @@
       "reference_time": "00:01:10",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 2,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -29,7 +29,7 @@
       "reference_time": "00:00:10",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 2,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -49,7 +49,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -69,7 +69,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -89,7 +89,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -109,7 +109,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -129,7 +129,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -149,7 +149,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -169,7 +169,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -189,7 +189,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -209,7 +209,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -229,7 +229,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -249,7 +249,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -269,7 +269,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
@@ -289,7 +289,7 @@
       "reference_time": "00:01:00",
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
-      "reference_clip_image": "",
+      "reference_clip_image": "mock",
       "current_round": 1,
       "current_match_criterion": 0.8,
       "current_weights": [
