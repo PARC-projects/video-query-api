@@ -18,11 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from queries import urls
-from rest_framework.authtoken import views
+
 
 urlpatterns = [
     path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
-    path('api-token-auth/', views.obtain_auth_token,  name='get_auth_token'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
     path('', include(urls.router.urls)),
