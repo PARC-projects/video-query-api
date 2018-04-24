@@ -11,6 +11,7 @@ The code and documentation for the Client and Algorithms are at
 For an overview of the Video Query project please see the reference [TBD arxiv pdf](https://arxiv.org/).
 
 ## Wiki
+For detailed instruction on how to run and utilize this repository, please have a look at our Wiki
 
 - [Home](https://github.com/PARC-projects/video-query-api/wiki/Home)
   - [Running the API server](https://github.com/PARC-projects/video-query-api/wiki/Home#running-the-api-server)
