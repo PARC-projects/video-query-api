@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework import routers
-from views.auth_token import AuthTokenView
+from .views.auth_token import AuthTokenView
 from .views import *
 
 router = routers.DefaultRouter()

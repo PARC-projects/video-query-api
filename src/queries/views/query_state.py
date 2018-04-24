@@ -20,8 +20,8 @@ def compute_new_state(request):
             "video_id": query["video"],
             "reference_time": query["reference_time"]
         })
-    
-    return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT);
+
+    return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
 
 
 @api_view(['GET'])
@@ -43,4 +43,4 @@ def compute_revised_state(request):
             "matches": matches
         })
 
-    return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT);
+    return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)
