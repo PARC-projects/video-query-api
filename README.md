@@ -1,16 +1,20 @@
 # Video Query API
 
 This API serves as a data access layer for the Video Query project. All request made from the
-[Client](https://github.com/fetorres/video-query) portion of the Video Query project are made to various endpoints
-supplied by this API.
+[Client](https://github.com/PARC-projects/video-query) portion of the Video Query project are made to various endpoints
+supplied by this API.  This API uses code in Video Query Algorithms as needed.
+The code and documentation for the Client and Algorithms are at
 
-For an overview of the Video Query project please visit [some-end-point](some-end-point) or the following related links.
+- [Video Query Client](https://github.com/PARC-projects/video-query)
+- [Video Query Algorithms](https://github.com/PARC-projects/video-query-algorithms)
 
-- [Video Query Client](https://github.com/fetorres/video-query)
-- [Video Query Algorithms](https://github.com/fetorres/video-query-algorithms)
+For an overview of the Video Query project please see the reference [TBD arxiv pdf](https://arxiv.org/).
 
-## Installation
+## Wiki
+For detailed instruction on how to run and utilize this repository, please have a look at our Wiki
 
+- [Home](https://github.com/PARC-projects/video-query-api/wiki/Home)
+  - [Running the API server](https://github.com/PARC-projects/video-query-api/wiki/Home#running-the-api-server)
 - [Setup](https://github.com/fetorres/video-query-api/wiki/Setup)
   - [Dependencies](https://github.com/fetorres/video-query-api/wiki/Setup#dependencies)
   - [Environment Variables](https://github.com/fetorres/video-query-api/wiki/Setup#environment-variables)
@@ -30,19 +34,19 @@ If you find this repository useful, please cite
 ### Authors
 
 - [Frank Torres](https://github.com/fetorres)
-- [Chad Ramos](https://github.com/fetorres)
+- [Chad Ramos](https://github.com/chad-ramos)
 
 ## License
 
 Copyright (C) 2018 Palo Alto Research Center, Inc.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License version 3 as published by
-the Free Software Foundation - see the [LICENSE.md](LICENSE.md) file for details.
+This program is free software for non-commercial uses: you can redistribute it and/or modify
+it under the terms of the Aladdin Free Public License - see the [LICENSE.md](LICENSE.md) file for details.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 If this license does not meet your needs, please submit an Issue on github with
-your contact information and institution, so we can discuss how to meet your needs.
+your contact information and institution, or email engage@parc.com, so we can discuss how to meet your needs.
+
