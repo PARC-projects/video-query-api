@@ -17,8 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-from queries import urls
 from rest_framework.documentation import include_docs_urls
+
+from queries import urls
+
 
 urlpatterns = [
     path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
@@ -26,5 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(urls.router.urls)),
     url(r'^', include(urls.urlpatterns)),
-    url(r'^docs/', include_docs_urls(title='Video Query'))
+    url(r'^docs/', include_docs_urls(title='Video Query', public="false"))
 ]
