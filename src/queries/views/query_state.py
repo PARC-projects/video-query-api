@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
-from queries.models import Query, QueryResult, Match, SearchSet
+from queries.models import Query, QueryResult, Match, SearchSet, VideoClip
 from rest_framework import status
 
 
@@ -16,12 +16,13 @@ def compute_new_state(request):
     query = QuerySerializer(Query.get_latest_query_ready_for_new_compute_similarity(), many=False).data
     if 'id' in query:
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
-        ref_clip = int(query["reference_time"].total_seconds / clip_duration) + 1
+        ref_time = Query.objects.get(id=query["id"]).reference_time
+        ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
+        ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
-            "reference_time": query["reference_time"],
-            "ref_clip_id":ref_clip
+            "ref_clip_id":ref_clip_id
         })
 
     return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
@@ -39,12 +40,13 @@ def compute_revised_state(request):
                                         many=False).data
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
-        ref_clip = int(query["reference_time"].total_seconds / clip_duration) + 1
+        ref_time = Query.objects.get(id=query["id"]).reference_time
+        ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
+        ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
-            "reference_time": query["reference_time"],
-            "ref_clip_id": ref_clip,
+            "ref_clip_id": ref_clip_id,
             "result": results,
             "matches": matches
         })
