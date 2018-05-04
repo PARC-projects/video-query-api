@@ -11,6 +11,7 @@ router.register(r'search-sets', SearchSetViewSet)
 router.register(r'queries', QueryViewSet)
 router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
+router.register(r'features', FeatureViewSet)
 
 
 urlpatterns = [
