@@ -32,7 +32,7 @@ class Query(models.Model):
         query.save()
 
     @staticmethod
-    def get_latest_query_ready_for_compute_similarity():
+    def get_latest_query_ready_for_revision():
         """
         Get latest query ready for revision
         :return: Query
@@ -40,7 +40,7 @@ class Query(models.Model):
         return Query.objects.filter(process_state=2).order_by('last_modified').first()
 
     @staticmethod
-    def get_latest_query_ready_for_new_compute_similarity():
+    def get_latest_query_ready_for_new_matches():
         """
         Get latest query ready for new matches to be computed
         :return: Query

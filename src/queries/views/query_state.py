@@ -13,7 +13,7 @@ def compute_new_state(request):
     GET query state that represents a new query ready to get its similarities computed
     Polled by broker in algorithm project
     """
-    query = QuerySerializer(Query.get_latest_query_ready_for_new_compute_similarity(), many=False).data
+    query = QuerySerializer(Query.get_latest_query_ready_for_new_matches(), many=False).data
     if 'id' in query:
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
         ref_time = Query.objects.get(id=query["id"]).reference_time
@@ -34,7 +34,7 @@ def compute_revised_state(request):
     GET query state that represents a  query ready to get its similarities revised
     Polled by broker in algorithm project
     """
-    query = QuerySerializer(Query.get_latest_query_ready_for_compute_similarity(), many=False).data
+    query = QuerySerializer(Query.get_latest_query_ready_for_revision(), many=False).data
     if 'id' in query:
         results = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(query["id"]),
                                         many=False).data
