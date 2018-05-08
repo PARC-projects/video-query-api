@@ -1,29 +1,37 @@
 from rest_framework import viewsets
+from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
-from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from queries.serializers import SearchSetSerializer
+
 from queries.models import SearchSet
+from queries.serializers import SearchSetSerializer
 
 
 class SearchSetViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows datasets to be viewed or edited.
-    <br/>
-    <br/>
-    <b>search-set/{id}/videos</b>
-    <ul>
-        <li>GET: Get videos based on search set id.</li>
-    </ul>
+    create:
+    Create a new search set instance.
+
+    retrieve:
+    Return the given search set.
+
+    list:
+    Return a list of all the existing search sets.
+
+    update:
+    Update a given search set as whole.
+
+    partial_update:
+    Update a set of parameters of a search set.
     """
     queryset = SearchSet.objects.all()
     serializer_class = SearchSetSerializer
     filter_backends = (SearchFilter,)
     search_fields = ('name',)
 
-    @detail_route(methods=['get'])
+    @action(methods=['get'])
     def videos(self, request, pk):
         """
-        Get videos based on search set id
+        GET videos based on search set id
         """
         return Response(SearchSet.get_videos_based_on_search_set_id(pk))

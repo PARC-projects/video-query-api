@@ -1,7 +1,8 @@
 from django.conf.urls import url
 from rest_framework import routers
-from .views.auth_token import AuthTokenView
+
 from .views import *
+from .views.auth_token import AuthTokenView
 
 router = routers.DefaultRouter()
 # router.register(r'users', query_views.UserViewSet)
@@ -12,7 +13,6 @@ router.register(r'queries', QueryViewSet)
 router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
 router.register(r'features', FeatureViewSet)
-
 
 urlpatterns = [
     url('api-token-auth/', AuthTokenView.as_view()),
