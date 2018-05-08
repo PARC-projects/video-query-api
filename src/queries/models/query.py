@@ -6,7 +6,7 @@ from . import SearchSet, Video, ProcessState
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    search_set_to_query = models.ForeignKey(SearchSet, on_delete=models.PROTECT)
+    search_set_to_query = models.ForeignKey(SearchSet, on_delete=models.PROTECT, editable=False)
     video = models.ForeignKey(Video, on_delete=models.PROTECT)
     reference_time = models.DurationField(default='00:00:00')
     max_matches_for_review = models.PositiveIntegerField(default=20)
@@ -32,7 +32,7 @@ class Query(models.Model):
         query.save()
 
     @staticmethod
-    def get_latest_query_ready_for_compute_similarity():
+    def get_latest_query_ready_for_revision():
         """
         Get latest query ready for revision
         :return: Query
@@ -40,7 +40,7 @@ class Query(models.Model):
         return Query.objects.filter(process_state=2).order_by('last_modified').first()
 
     @staticmethod
-    def get_latest_query_ready_for_new_compute_similarity():
+    def get_latest_query_ready_for_new_matches():
         """
         Get latest query ready for new matches to be computed
         :return: Query
