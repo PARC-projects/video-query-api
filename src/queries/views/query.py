@@ -29,14 +29,14 @@ class QueryViewSet(viewsets.ModelViewSet):
     filter_backends = (SearchFilter,)
     search_fields = ('name',)
 
-    @action(methods=['get'])
+    @action(methods=['get'], detail=True)
     def query_result(self, request, pk):
         """
         GET Latest QueryResult base on Query Id
         """
         return Response(QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data)
 
-    @action(methods=['get'])
+    @action(methods=['get'], detail=True)
     def matches(self, request, pk):
         """
         GET latest Match(s) based on Query Id

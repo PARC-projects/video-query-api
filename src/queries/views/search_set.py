@@ -29,7 +29,7 @@ class SearchSetViewSet(viewsets.ModelViewSet):
     filter_backends = (SearchFilter,)
     search_fields = ('name',)
 
-    @action(methods=['get'])
+    @action(methods=['get'], detail=True)
     def videos(self, request, pk):
         """
         GET videos based on search set id

@@ -26,7 +26,7 @@ class QueryResultViewSet(viewsets.ModelViewSet):
     queryset = QueryResult.objects.all()
     serializer_class = QueryResultSerializer
 
-    @action(methods=['get'])
+    @action(methods=['get'], detail=True)
     def matches(self, request, pk):
         """
         GET matches based on query id.
