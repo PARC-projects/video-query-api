@@ -1,6 +1,7 @@
 from rest_framework import viewsets
-from queries.serializers import SignatureSerializer
+
 from queries.models import Feature
+from queries.serializers import SignatureSerializer
 
 
 class FeatureViewSet(viewsets.ModelViewSet):

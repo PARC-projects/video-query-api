@@ -1,9 +1,10 @@
 from rest_framework import viewsets
+from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
-from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from queries.serializers import SearchSetSerializer
+
 from queries.models import SearchSet
+from queries.serializers import SearchSetSerializer
 
 
 class SearchSetViewSet(viewsets.ModelViewSet):
@@ -28,7 +29,7 @@ class SearchSetViewSet(viewsets.ModelViewSet):
     filter_backends = (SearchFilter,)
     search_fields = ('name',)
 
-    @detail_route(methods=['get'])
+    @action(methods=['get'])
     def videos(self, request, pk):
         """
         GET videos based on search set id

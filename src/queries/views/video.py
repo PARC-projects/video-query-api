@@ -1,7 +1,8 @@
 from rest_framework import viewsets
 from rest_framework.filters import SearchFilter
-from queries.serializers import VideoSerializer
+
 from queries.models import Video
+from queries.serializers import VideoSerializer
 
 
 class VideoViewSet(viewsets.ModelViewSet):

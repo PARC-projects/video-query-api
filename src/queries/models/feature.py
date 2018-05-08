@@ -1,6 +1,7 @@
+from django.contrib.postgres.fields import ArrayField
 from django.core.exceptions import NON_FIELD_ERRORS
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
+
 from . import VideoClip, DnnStream
 
 

@@ -1,10 +1,10 @@
 from django.http import JsonResponse
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
 from queries.models import Query, QueryResult, Match, SearchSet, VideoClip
-from rest_framework import status
+from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
 
 
 @api_view(['GET'])

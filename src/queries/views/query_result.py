@@ -1,8 +1,10 @@
 from rest_framework import viewsets
-from rest_framework.decorators import detail_route
+from rest_framework.decorators import action
 from rest_framework.response import Response
-from queries.serializers import QueryResultSerializer
+
 from queries.models import QueryResult, Match
+from queries.serializers import QueryResultSerializer
+
 
 class QueryResultViewSet(viewsets.ModelViewSet):
     """
@@ -24,7 +26,7 @@ class QueryResultViewSet(viewsets.ModelViewSet):
     queryset = QueryResult.objects.all()
     serializer_class = QueryResultSerializer
 
-    @detail_route(methods=['get'])
+    @action(methods=['get'])
     def matches(self, request, pk):
         """
         GET matches based on query id.
