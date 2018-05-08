@@ -10,13 +10,20 @@ from queries.serializers import MatchSerializer
 
 class MatchViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows match to be viewed or edited.
-    <br/>
-    <br/>
-    <b>matches_list</b>
-    <ul>
-        <li>PATCH: Update a collection of matches</li>
-    </ul>
+    create:
+    Create a new match instance.
+
+    retrieve:
+    Return the given match.
+
+    list:
+    Return a list of all the existing matches.
+
+    update:
+    Update a given match as whole.
+
+    partial_update:
+    Update a set of parameters of a given match.
     """
     queryset = Match.objects.all()
     serializer_class = MatchSerializer
@@ -26,7 +33,7 @@ class MatchViewSet(viewsets.ModelViewSet):
 @api_view(['PATCH'])
 def match_list(request):
     """
-    API endpoint to perform list based operations on matches
+    Update a set of parameters of a given match in a collection (partial_updates).
     """
     if request.method == 'PATCH':
         data = JSONParser().parse(request)

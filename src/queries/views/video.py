@@ -6,7 +6,20 @@ from queries.models import Video
 
 class VideoViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows videos to be viewed or edited.
+    create:
+    Create a new video instance.
+
+    retrieve:
+    Return the given video.
+
+    list:
+    Return a list of all the existing videos.
+
+    update:
+    Update a given video as whole.
+
+    partial_update:
+    Update a set of parameters of a video.
     """
     queryset = Video.objects.all()
     serializer_class = VideoSerializer

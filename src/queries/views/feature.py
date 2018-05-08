@@ -5,7 +5,20 @@ from queries.models import Feature
 
 class FeatureViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows signatures to be viewed or edited.
+    create:
+    Create a new feature instance.
+
+    retrieve:
+    Return the given feature.
+
+    list:
+    Return a list of all the existing features.
+
+    update:
+    Update a given feature as whole.
+
+    partial_update:
+    Update a set of parameters of a given feature.
     """
     queryset = Feature.objects.all()
     serializer_class = SignatureSerializer

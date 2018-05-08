@@ -6,7 +6,20 @@ from queries.models import QueryResult, Match
 
 class QueryResultViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows query result to be viewed or edited.
+    create:
+    Create a new query result instance.
+
+    retrieve:
+    Return the given query result.
+
+    list:
+    Return a list of all the existing query results.
+
+    update:
+    Update a given query result as whole.
+
+    partial_update:
+    Update a set of parameters of a given query result.
     """
     queryset = QueryResult.objects.all()
     serializer_class = QueryResultSerializer
@@ -14,6 +27,6 @@ class QueryResultViewSet(viewsets.ModelViewSet):
     @detail_route(methods=['get'])
     def matches(self, request, pk):
         """
-        Get videos based on dataset id
+        GET matches based on query id.
         """
         return Response(Match.objects.filter(query_result_id=pk).values())

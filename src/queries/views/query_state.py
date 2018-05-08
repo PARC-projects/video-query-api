@@ -9,9 +9,15 @@ from rest_framework import status
 
 @api_view(['GET'])
 def compute_new_state(request):
-    """
-    GET query state that represents a new query ready to get its similarities computed
-    Polled by broker in algorithm project
+    """ GET - Get query state that represents a new query ready to get its similarities computed.
+    <ul>
+        <li>Polled by broker in algorithm project.</li>
+        <li>
+            <a href="https://github.com/PARC-projects/video-query-api/blob/master/src/queries/models/process_state.py">
+                Processing State
+            </a> == 1
+        </li>
+    </ul>
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_new_compute_similarity(), many=False).data
     if 'id' in query:
@@ -22,7 +28,7 @@ def compute_new_state(request):
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
-            "ref_clip_id":ref_clip_id
+            "ref_clip_id": ref_clip_id
         })
 
     return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
@@ -30,9 +36,15 @@ def compute_new_state(request):
 
 @api_view(['GET'])
 def compute_revised_state(request):
-    """
-    GET query state that represents a  query ready to get its similarities revised
-    Polled by broker in algorithm project
+    """ GET - Get query state that represents a query ready to get its similarities revised.
+    <ul>
+        <li>Polled by broker in algorithm project.</li>
+        <li>
+            <a href="https://github.com/PARC-projects/video-query-api/blob/master/src/queries/models/process_state.py">
+                Processing State
+            </a> == 2
+        </li>
+    </ul>
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_compute_similarity(), many=False).data
     if 'id' in query:

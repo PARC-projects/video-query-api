@@ -8,15 +8,20 @@ from queries.models import Query, QueryResult, Match
 
 class QueryViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows queries to be viewed or edited.
-    <br/>
-    <b>queries/{id}/query_result</b>: GET latest query result based on query id
-    <br/>
-    <b>queries/{id}/matches</b>: GET latest matches based on query id
-    <br/>
-    <b>queries/{id}/compute_new_state</b>: GET query state that represents a new query ready to get its similarities computed
-    <br/>
-    <b>queries/{id}/compute_revised_state</b>: GET query state that represents a query ready to get its similarities revised
+    create:
+    Create a new query instance.
+
+    retrieve:
+    Return the given query.
+
+    list:
+    Return a list of all the existing queries.
+
+    update:
+    Update a given query as whole.
+
+    partial_update:
+    Update a set of parameters of a given query.
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
@@ -27,9 +32,6 @@ class QueryViewSet(viewsets.ModelViewSet):
     def query_result(self, request, pk):
         """
         GET Latest QueryResult base on Query Id
-        :param request:
-        :param pk: Query Id
-        :return: QueryResult
         """
         return Response(QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(pk), many=False).data)
 
@@ -37,9 +39,6 @@ class QueryViewSet(viewsets.ModelViewSet):
     def matches(self, request, pk):
         """
         GET latest Match(s) based on Query Id
-        :param request:
-        :param pk: Query Id
-        :return: Match[]
         """
         return Response(MatchSerializer(Match.get_latest_matches_by_query_id(pk), many=True).data)
 
