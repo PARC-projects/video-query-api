@@ -35,3 +35,10 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         GET videos based on search set id
         """
         return Response(SearchSet.get_videos_based_on_search_set_id(pk))
+
+    @action(methods=['get'], detail=True)
+    def features(self, request, pk):
+        """
+        GET features based on search set id
+        """
+        return Response(SearchSet.get_features_based_on_search_set_id(pk))
