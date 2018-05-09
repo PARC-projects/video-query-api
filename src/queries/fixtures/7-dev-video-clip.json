@@ -1,0 +1,182 @@
+[
+  {
+    "model": "queries.videoClip",
+    "pk": 1,
+    "fields": {
+      "video": 1,
+      "clip": 1,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 2,
+    "fields": {
+      "video": 1,
+      "clip": 2,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 3,
+    "fields": {
+      "video": 1,
+      "clip": 3,
+      "duration": 10
+    }
+  },
+    {
+    "model": "queries.videoClip",
+    "pk": 4,
+    "fields": {
+      "video": 2,
+      "clip": 1,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 5,
+    "fields": {
+      "video": 2,
+      "clip": 2,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 6,
+    "fields": {
+      "video": 2,
+      "clip": 3,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 7,
+    "fields": {
+      "video": 3,
+      "clip": 1,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 8,
+    "fields": {
+      "video": 3,
+      "clip": 2,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 9,
+    "fields": {
+      "video": 3,
+      "clip": 3,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 10,
+    "fields": {
+      "video": 3,
+      "clip": 4,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 11,
+    "fields": {
+      "video": 4,
+      "clip": 1,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 12,
+    "fields": {
+      "video": 4,
+      "clip": 2,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 13,
+    "fields": {
+      "video": 4,
+      "clip": 3,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 14,
+    "fields": {
+      "video": 5,
+      "clip": 1,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 15,
+    "fields": {
+      "video": 5,
+      "clip": 2,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 16,
+    "fields": {
+      "video": 5,
+      "clip": 3,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 17,
+    "fields": {
+      "video": 5,
+      "clip": 4,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 18,
+    "fields": {
+      "video": 6,
+      "clip": 1,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 19,
+    "fields": {
+      "video": 6,
+      "clip": 2,
+      "duration": 10
+    }
+  },
+  {
+    "model": "queries.videoClip",
+    "pk": 20,
+    "fields": {
+      "video": 7,
+      "clip": 1,
+      "duration": 10
+    }
+  }
+]
