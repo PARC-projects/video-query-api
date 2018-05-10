@@ -25,11 +25,13 @@ def compute_new_state(request):
         ref_time = Query.objects.get(id=query["id"]).reference_time
         ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
         ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+        search_set = SearchSet.objects.get(query=query["id"]).id
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
             "ref_clip": ref_clip,
-            "ref_clip_id": ref_clip_id
+            "ref_clip_id": ref_clip_id,
+            "search_set": search_set
         })
 
     return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
@@ -56,13 +58,15 @@ def compute_revised_state(request):
         ref_time = Query.objects.get(id=query["id"]).reference_time
         ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
         ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+        search_set = SearchSet.objects.get(query=query["id"]).id
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
             "ref_clip": ref_clip,
             "ref_clip_id": ref_clip_id,
             "result": results,
-            "matches": matches
+            "matches": matches,
+            "search_set": search_set
         })
 
     return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)

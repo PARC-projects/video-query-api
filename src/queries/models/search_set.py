@@ -37,11 +37,3 @@ class SearchSet(models.Model):
         :return: video[]
         """
         return Video.objects.filter(searchset__id=pk).values()
-
-    @staticmethod
-    def get_features_based_on_search_set_id(pk):
-        """
-        Get a list of features based on search set id
-        :return: features[]
-        """
-        return Feature.objects.filter(video_clip__video__searchset__in=pk).values()
