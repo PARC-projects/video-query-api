@@ -29,11 +29,3 @@ class SearchSet(models.Model):
         id_of_videos = self.videos.all().values_list('id', flat=True)
         video_clip_objects = VideoClip.objects.filter(video__in=id_of_videos, duration=self.duration)
         return video_clip_objects.values_list('id', flat=True)
-
-    @staticmethod
-    def get_videos_based_on_search_set_id(pk):
-        """
-        Get a list of videos based on search set id
-        :return: video[]
-        """
-        return Video.objects.filter(searchset__id=pk).values()

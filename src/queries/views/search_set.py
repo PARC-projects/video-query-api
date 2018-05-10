@@ -3,7 +3,7 @@ from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from rest_framework.response import Response
 
-from queries.models import SearchSet, Feature
+from queries.models import SearchSet, Feature, Video
 from queries.serializers import SearchSetSerializer
 
 
@@ -35,7 +35,7 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         GET videos based on search set id
         """
-        return Response(SearchSet.get_videos_based_on_search_set_id(pk))
+        return Response(Video.objects.filter(searchset__id=pk).values())
 
     @action(methods=['get'], detail=True)
     def features(self, request, pk):
