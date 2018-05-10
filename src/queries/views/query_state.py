@@ -28,6 +28,7 @@ def compute_new_state(request):
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
+            "ref_clip": ref_clip,
             "ref_clip_id": ref_clip_id
         })
 
@@ -58,6 +59,7 @@ def compute_revised_state(request):
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
+            "ref_clip": ref_clip,
             "ref_clip_id": ref_clip_id,
             "result": results,
             "matches": matches
