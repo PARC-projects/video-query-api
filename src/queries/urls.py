@@ -13,6 +13,7 @@ router.register(r'queries', QueryViewSet)
 router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
 router.register(r'features', FeatureViewSet)
+router.register(r'video-clips', VideoClipViewSet)
 
 urlpatterns = [
     url('api-token-auth/', AuthTokenView.as_view()),
