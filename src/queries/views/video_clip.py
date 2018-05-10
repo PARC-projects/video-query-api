@@ -34,6 +34,6 @@ class VideoClipViewSet(viewsets.ModelViewSet):
     @action(methods=['get'], detail=True)
     def features(self, request, pk):
         """
-        GET features based on search set id
+        GET features based on video clip id
         """
         return Response(Feature.objects.filter(video_clip_id=pk).values())
