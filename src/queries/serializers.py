@@ -58,3 +58,8 @@ class SignatureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feature
         fields = '__all__'
+
+class VideoClipSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VideoClip
+        fields = '__all__'
