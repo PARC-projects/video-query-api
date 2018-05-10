@@ -15,12 +15,14 @@ class VideoClipViewSet(viewsets.ModelViewSet):
 
     list:
     Return a list of all the existing video clips.
+    Search term: video name, clip number
 
     update:
     Update a given video clip as whole.
 
     partial_update:
     Update a set of parameters of a video clip.
+
     """
     queryset = VideoClip.objects.all()
     serializer_class = VideoClipSerializer
