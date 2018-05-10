@@ -15,6 +15,7 @@ class VideoViewSet(viewsets.ModelViewSet):
 
     list:
     Return a list of all the existing videos.
+    Search by video name
 
     update:
     Update a given video as whole.

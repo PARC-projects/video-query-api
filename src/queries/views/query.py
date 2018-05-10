@@ -17,6 +17,7 @@ class QueryViewSet(viewsets.ModelViewSet):
 
     list:
     Return a list of all the existing queries.
+    Search term: query name
 
     update:
     Update a given query as whole.

@@ -17,6 +17,7 @@ class SearchSetViewSet(viewsets.ModelViewSet):
 
     list:
     Return a list of all the existing search sets.
+    Search term: search set name
 
     update:
     Update a given search set as whole.
