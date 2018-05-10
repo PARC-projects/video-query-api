@@ -3,7 +3,7 @@ from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from rest_framework.response import Response
 
-from queries.models import SearchSet
+from queries.models import SearchSet, Feature
 from queries.serializers import SearchSetSerializer
 
 
@@ -16,7 +16,7 @@ class SearchSetViewSet(viewsets.ModelViewSet):
     Return the given search set.
 
     list:
-    Return a list of all the existing search sets.
+    Return a list of all the existing search sets. <br/>
     Search term: search set name
 
     update:
@@ -42,4 +42,4 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         GET features based on search set id
         """
-        return Response(SearchSet.get_features_based_on_search_set_id(pk))
+        return Response(Feature.objects.filter(video_clip__video__searchset__in=pk).values())
