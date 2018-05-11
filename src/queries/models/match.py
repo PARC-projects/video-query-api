@@ -1,6 +1,6 @@
 from django.db import models
 
-from . import QueryResult, Query
+from . import QueryResult, Query, VideoClip
 
 
 class Match(models.Model):
@@ -9,6 +9,7 @@ class Match(models.Model):
     # Holds state of user validation on UI.
     # null = they have not validated or invalidate the match
     user_match = models.NullBooleanField(default=None)
+    video_clip = models.ForeignKey(VideoClip, on_delete=models.PROTECT)
 
     class Meta:
         db_table = 'match'
