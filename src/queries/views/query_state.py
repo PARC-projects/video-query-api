@@ -26,12 +26,16 @@ def compute_new_state(request):
         ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
         ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
         search_set = SearchSet.objects.get(query=query["id"]).id
+        number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
+        current_round = Query.objects.get(id=query["id"]).current_round
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
             "ref_clip": ref_clip,
             "ref_clip_id": ref_clip_id,
-            "search_set": search_set
+            "search_set": search_set,
+            "number_of_matches_to_review": number_of_matches,
+            "current_round": current_round
         })
 
     return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
@@ -59,6 +63,8 @@ def compute_revised_state(request):
         ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
         ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
         search_set = SearchSet.objects.get(query=query["id"]).id
+        number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
+        current_round = Query.objects.get(id=query["id"]).current_round
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
@@ -66,7 +72,9 @@ def compute_revised_state(request):
             "ref_clip_id": ref_clip_id,
             "result": results,
             "matches": matches,
-            "search_set": search_set
+            "search_set": search_set,
+            "number_of_matches_to_review": number_of_matches,
+            "current_round": current_round
         })
 
     return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)

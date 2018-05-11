@@ -28,7 +28,8 @@
     "pk": 1,
     "fields": {
       "score": 1.0,
-      "query_result": 1
+      "query_result": 1,
+      "video_clip": 1
     }
   },
   {
@@ -36,7 +37,8 @@
     "pk": 2,
     "fields": {
       "score": 0.89,
-      "query_result": 1
+      "query_result": 1,
+      "video_clip": 2
     }
   },
   {
@@ -44,7 +46,8 @@
     "pk": 3,
     "fields": {
       "score": 0.88,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 3
     }
   },
   {
@@ -52,7 +55,8 @@
     "pk": 4,
     "fields": {
       "score": 0.86,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 4
     }
   },
   {
@@ -60,7 +64,8 @@
     "pk": 5,
     "fields": {
       "score": 0.86,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 5
     }
   },
   {
@@ -68,7 +73,8 @@
     "pk": 6,
     "fields": {
       "score": 0.83,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 6
     }
   },
   {
@@ -76,7 +82,8 @@
     "pk": 7,
     "fields": {
       "score": 0.83,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 7
     }
   },
   {
@@ -84,7 +91,8 @@
     "pk": 8,
     "fields": {
       "score": 0.82,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 8
     }
   },
   {
@@ -92,7 +100,8 @@
     "pk": 9,
     "fields": {
       "score": 0.82,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 9
     }
   },
   {
@@ -100,7 +109,8 @@
     "pk": 10,
     "fields": {
       "score": 0.76,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 10
     }
   },
   {
@@ -108,7 +118,8 @@
     "pk": 11,
     "fields": {
       "score": 0.75,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 11
     }
   },
   {
@@ -116,7 +127,8 @@
     "pk": 12,
     "fields": {
       "score": 0.75,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 10
     }
   },
   {
@@ -124,7 +136,8 @@
     "pk": 13,
     "fields": {
       "score": 0.74,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 9
     }
   },
   {
@@ -132,7 +145,8 @@
     "pk": 14,
     "fields": {
       "score": 0.74,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 8
     }
   },
   {
@@ -140,7 +154,8 @@
     "pk": 15,
     "fields": {
       "score": 0.74,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 7
     }
   },
   {
@@ -148,7 +163,8 @@
     "pk": 16,
     "fields": {
       "score": 0.74,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 6
     }
   },
   {
@@ -156,7 +172,8 @@
     "pk": 17,
     "fields": {
       "score": 0.73,
-      "query_result": 1
+      "query_result": 1,
+      "video_clip": 5
     }
   },
   {
@@ -164,7 +181,8 @@
     "pk": 18,
     "fields": {
       "score": 0.7,
-      "query_result": 1
+      "query_result": 1,
+      "video_clip": 4
     }
   },
   {
@@ -172,7 +190,8 @@
     "pk": 19,
     "fields": {
       "score": 1,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 3
     }
   },
   {
@@ -180,7 +199,8 @@
     "pk": 20,
     "fields": {
       "score": 0.89,
-      "query_result": 2
+      "query_result": 2,
+      "video_clip": 2
     }
   }
 ]

@@ -9,8 +9,10 @@
 </a>
 
   </a>
-  <a class="navbar-brand" rel="nofollow" href="docs/">
-  <small> > Documentation <small/>
-</a>
+  {% if user.is_authenticated %}
+    <a class="navbar-brand" rel="nofollow" href="docs/">
+    <small> > Documentation <small/>
+    </a>
+  {% endif %}
 
 {% endblock %}
