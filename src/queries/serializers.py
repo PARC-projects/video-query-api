@@ -5,6 +5,8 @@ from .models import *
 
 
 class UserSerializer(serializers.ModelSerializer):
+    # snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())
+
     class Meta:
         model = User
         fields = '__all__'
@@ -45,7 +47,9 @@ class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Match
         fields = (
-            'id', 'query_result', 'score', 'user_match', 'video_clip', 'query_id', 'reference_video_id', 'reference_time', 'is_match')
+            'id', 'query_result', 'score', 'user_match', 'video_clip', 'query_id', 'reference_video_id',
+            'reference_time', 'is_match'
+        )
 
 
 class QueryResultSerializer(serializers.ModelSerializer):
@@ -58,6 +62,7 @@ class SignatureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feature
         fields = '__all__'
+
 
 class VideoClipSerializer(serializers.ModelSerializer):
     class Meta:

@@ -27,5 +27,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(urls.router.urls)),
     url(r'^', include(urls.urlpatterns)),
-    url(r'^docs/', include_docs_urls(title='Video Query', public="false"))
+    url(r'^docs/', include_docs_urls(title='Video Query', public=False))
 ]
