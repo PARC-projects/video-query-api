@@ -10,7 +10,8 @@ from queries.serializers import VideoClipSerializer
 class VideoClipViewSet(viewsets.ModelViewSet):
     """
     create:
-    Create a new video clip instance.
+    Create a new video clip instance.<br/>
+    (video, clip, duration) set must be unique.
 
     retrieve:
     Return the given video clip.
