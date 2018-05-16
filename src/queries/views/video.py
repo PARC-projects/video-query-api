@@ -1,5 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
 
 from queries.models import Video
 from queries.serializers import VideoSerializer
@@ -15,7 +16,7 @@ class VideoViewSet(viewsets.ModelViewSet):
 
     list:
     Return a list of all the existing videos.<br/>
-    Search term: video name
+    Search term: video name and/or video path
 
     update:
     Update a given video as whole.
@@ -25,5 +26,6 @@ class VideoViewSet(viewsets.ModelViewSet):
     """
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
-    filter_backends = (SearchFilter,)
-    search_fields = ('name',)
+    filter_backends = (SearchFilter, DjangoFilterBackend)
+    search_fields = ('name', 'path')
+    filter_fields = ('name', 'path')

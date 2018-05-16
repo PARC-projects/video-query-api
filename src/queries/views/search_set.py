@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
 
 from queries.models import SearchSet, Feature, Video
@@ -27,8 +28,9 @@ class SearchSetViewSet(viewsets.ModelViewSet):
     """
     queryset = SearchSet.objects.all()
     serializer_class = SearchSetSerializer
-    filter_backends = (SearchFilter,)
+    filter_backends = (SearchFilter, DjangoFilterBackend)
     search_fields = ('name',)
+    filter_fields = ('name',)
 
     @action(methods=['get'], detail=True)
     def videos(self, request, pk):
