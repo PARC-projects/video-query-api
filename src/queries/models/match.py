@@ -1,6 +1,6 @@
 from django.db import models
 
-from . import QueryResult, Query, VideoClip
+from . import QueryResult, Query, VideoClip, Video
 
 
 class Match(models.Model):
@@ -48,6 +48,12 @@ class Match(models.Model):
     @property
     def reference_video_id(self):
         return Query.objects.values_list('video', flat=True).get(id=self.query_id)
+
+    @property
+    def match_video_path(self):
+        video_id = VideoClip.objects.values_list('video', flat=True).get(id=self.video_clip_id)
+        print(video_id);
+        return Video.objects.values_list('path', flat=True).get(id=video_id)
 
     @property
     def reference_time(self):
