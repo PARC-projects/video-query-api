@@ -54,7 +54,7 @@ class QueryResultSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class SignatureSerializer(serializers.ModelSerializer):
+class FeatureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feature
         fields = '__all__'

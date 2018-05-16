@@ -50,7 +50,7 @@
     "fields": {
       "video_clip": 1,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -65,7 +65,7 @@
     "fields": {
       "video_clip": 1,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -80,7 +80,7 @@
     "fields": {
       "video_clip": 1,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -140,7 +140,7 @@
     "fields": {
       "video_clip": 2,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -155,7 +155,7 @@
     "fields": {
       "video_clip": 2,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -170,7 +170,7 @@
     "fields": {
       "video_clip": 2,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -230,7 +230,7 @@
     "fields": {
       "video_clip": 3,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -245,7 +245,7 @@
     "fields": {
       "video_clip": 3,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -260,7 +260,7 @@
     "fields": {
       "video_clip": 3,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -320,7 +320,7 @@
     "fields": {
       "video_clip": 4,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -335,7 +335,7 @@
     "fields": {
       "video_clip": 4,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -350,7 +350,7 @@
     "fields": {
       "video_clip": 4,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -410,7 +410,7 @@
     "fields": {
       "video_clip": 5,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -425,7 +425,7 @@
     "fields": {
       "video_clip": 5,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -440,7 +440,7 @@
     "fields": {
       "video_clip": 5,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -500,7 +500,7 @@
     "fields": {
       "video_clip": 6,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -515,7 +515,7 @@
     "fields": {
       "video_clip": 6,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -530,7 +530,7 @@
     "fields": {
       "video_clip": 6,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -590,7 +590,7 @@
     "fields": {
       "video_clip": 7,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -605,7 +605,7 @@
     "fields": {
       "video_clip": 7,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -620,7 +620,7 @@
     "fields": {
       "video_clip": 7,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -680,7 +680,7 @@
     "fields": {
       "video_clip": 8,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -695,7 +695,7 @@
     "fields": {
       "video_clip": 8,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -710,7 +710,7 @@
     "fields": {
       "video_clip": 8,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -770,7 +770,7 @@
     "fields": {
       "video_clip": 9,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -785,7 +785,7 @@
     "fields": {
       "video_clip": 9,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -800,7 +800,7 @@
     "fields": {
       "video_clip": 9,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -860,7 +860,7 @@
     "fields": {
       "video_clip": 10,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -875,7 +875,7 @@
     "fields": {
       "video_clip": 10,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -890,7 +890,7 @@
     "fields": {
       "video_clip": 10,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -950,7 +950,7 @@
     "fields": {
       "video_clip": 11,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -965,7 +965,7 @@
     "fields": {
       "video_clip": 11,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -980,7 +980,7 @@
     "fields": {
       "video_clip": 11,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1040,7 +1040,7 @@
     "fields": {
       "video_clip": 12,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1055,7 +1055,7 @@
     "fields": {
       "video_clip": 12,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1070,7 +1070,7 @@
     "fields": {
       "video_clip": 12,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1130,7 +1130,7 @@
     "fields": {
       "video_clip": 13,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1145,7 +1145,7 @@
     "fields": {
       "video_clip": 13,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1160,7 +1160,7 @@
     "fields": {
       "video_clip": 13,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1220,7 +1220,7 @@
     "fields": {
       "video_clip": 14,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1235,7 +1235,7 @@
     "fields": {
       "video_clip": 14,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1250,7 +1250,7 @@
     "fields": {
       "video_clip": 14,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1310,7 +1310,7 @@
     "fields": {
       "video_clip": 15,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1325,7 +1325,7 @@
     "fields": {
       "video_clip": 15,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1340,7 +1340,7 @@
     "fields": {
       "video_clip": 15,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1400,7 +1400,7 @@
     "fields": {
       "video_clip": 16,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1415,7 +1415,7 @@
     "fields": {
       "video_clip": 16,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1430,7 +1430,7 @@
     "fields": {
       "video_clip": 16,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1490,7 +1490,7 @@
     "fields": {
       "video_clip": 17,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1505,7 +1505,7 @@
     "fields": {
       "video_clip": 17,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1520,7 +1520,7 @@
     "fields": {
       "video_clip": 17,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1580,7 +1580,7 @@
     "fields": {
       "video_clip": 18,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1595,7 +1595,7 @@
     "fields": {
       "video_clip": 18,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1610,7 +1610,7 @@
     "fields": {
       "video_clip": 18,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1670,7 +1670,7 @@
     "fields": {
       "video_clip": 19,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1685,7 +1685,7 @@
     "fields": {
       "video_clip": 19,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1700,7 +1700,7 @@
     "fields": {
       "video_clip": 19,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1760,7 +1760,7 @@
     "fields": {
       "video_clip": 20,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 1,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1775,7 +1775,7 @@
     "fields": {
       "video_clip": 20,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 2,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",
@@ -1790,7 +1790,7 @@
     "fields": {
       "video_clip": 20,
       "name": "global_pool",
-      "dnn_stream": "warped optical flow",
+      "dnn_stream": "warped_optical_flow",
       "dnn_stream_split": 3,
       "dnn_weights_uri": "dummy_weights_uri",
       "dnn_spec_uri": "dummy_spec_uri",

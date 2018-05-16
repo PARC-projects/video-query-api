@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
 
 from queries.models import Query, QueryResult, Match
@@ -27,8 +28,9 @@ class QueryViewSet(viewsets.ModelViewSet):
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
-    filter_backends = (SearchFilter,)
+    filter_backends = (SearchFilter, DjangoFilterBackend)
     search_fields = ('name',)
+    filter_fields = ('name',)
 
     @action(methods=['get'], detail=True)
     def query_result(self, request, pk):

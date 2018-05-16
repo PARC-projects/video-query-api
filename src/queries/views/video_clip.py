@@ -1,5 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -29,8 +30,9 @@ class VideoClipViewSet(viewsets.ModelViewSet):
     """
     queryset = VideoClip.objects.all()
     serializer_class = VideoClipSerializer
-    filter_backends = (SearchFilter,)
-    search_fields = ('video__name', 'clip')
+    filter_backends = (SearchFilter, DjangoFilterBackend)
+    search_fields = ('video__name', '=clip', '=duration')
+    filter_fields = ('video__name', 'clip', 'duration')
 
     @action(methods=['get'], detail=True)
     def features(self, request, pk):

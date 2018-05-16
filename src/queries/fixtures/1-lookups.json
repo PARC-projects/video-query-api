@@ -39,7 +39,7 @@
     "model": "queries.dnnStream",
     "pk": 2,
     "fields": {
-      "type": "optical flow",
+      "type": "optical_flow",
       "max_number_of_splits": 3
     }
   },
@@ -47,7 +47,7 @@
     "model": "queries.dnnStream",
     "pk": 3,
     "fields": {
-      "type": "warped optical flow",
+      "type": "warped_optical_flow",
       "max_number_of_splits": 3
     }
   }
