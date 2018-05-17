@@ -24,7 +24,11 @@ def compute_new_state(request):
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
         ref_time = Query.objects.get(id=query["id"]).reference_time
         ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
-        ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+        try:
+            ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+        except VideoClip.DoesNotExist:
+            return Response("An invalid new query was found: ref clip number is invalid",
+                            status=status.HTTP_204_NO_CONTENT)
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
         current_round = Query.objects.get(id=query["id"]).current_round
@@ -61,7 +65,11 @@ def compute_revised_state(request):
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
         ref_time = Query.objects.get(id=query["id"]).reference_time
         ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
-        ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+        try:
+            ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+        except VideoClip.DoesNotExist:
+            return Response("An invalid new query was found: ref clip number is invalid",
+                            status=status.HTTP_204_NO_CONTENT)
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
         current_round = Query.objects.get(id=query["id"]).current_round
