@@ -14,7 +14,7 @@ class QueryResult(models.Model):
         db_table = 'query_result'
 
     @staticmethod
-    def get_latestest_query_result_by_query_id(pk):
+    def get_latest_query_result_by_query_id(pk):
         """
         Get latest query result based on query id
         """

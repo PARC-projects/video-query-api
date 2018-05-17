@@ -59,7 +59,7 @@ def compute_revised_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_revision(), many=False).data
     if 'id' in query:
-        results = QueryResultSerializer(QueryResult.get_latestest_query_result_by_query_id(query["id"]),
+        results = QueryResultSerializer(QueryResult.get_latest_query_result_by_query_id(query["id"]),
                                         many=False).data
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration

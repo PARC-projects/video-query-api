@@ -1,6 +1,6 @@
 from django.db import models
 
-from . import QueryResult, Query, VideoClip
+from . import QueryResult, Query, VideoClip, Video
 
 
 class Match(models.Model):
@@ -32,26 +32,50 @@ class Match(models.Model):
         Guarded updates on user validation "user_match"
         Process switch = Submitted = 1
         """
-        # TODO: wrap in atomic transaction
+        # TODO: CHAD - wrap in atomic transaction
         for match in matches:
             match_entity = Match.objects.get(pk=match['id'])
             match_entity.user_match = match['user_match']
             match_entity.save()
 
-        # TODO: switch 1 to enum
+        # TODO: CHAD - switch 1 to enum
         Query.update_process_state_based_on_query_id(query_id, 1)
 
     @property
     def query_id(self):
         return QueryResult.objects.values_list('query', flat=True).get(id=self.query_result_id)
 
+    # TODO: CHAD: Check with Frank to see where he is using this.
     @property
     def reference_video_id(self):
         return Query.objects.values_list('video', flat=True).get(id=self.query_id)
 
+    # TODO: CHAD: Check with Frank to see where he is using this.
     @property
     def reference_time(self):
         return Query.objects.values_list('reference_time', flat=True).get(id=self.query_id)
+
+    @property
+    def match_video_path(self):
+        """
+        TODO: CHAD - Consider perf of multiple calls to VideoClip.
+        Used on UI to show video for match (../existing-query)
+        :return:
+        Location of video this match is associated with.
+        """
+        video_id = VideoClip.objects.values_list('video', flat=True).get(id=self.video_clip_id)
+        return Video.objects.values_list('path', flat=True).get(id=video_id)
+
+    @property
+    def match_video_start_time(self):
+        """
+        TODO: CHAD - Consider perf of multiple calls to VideoClip.
+        Used on UI to calc reference time for matching video (../existing-query)
+        :return:
+        Location of video this match is associated with.
+        """
+        clip = VideoClip.objects.get(id=self.video_clip_id)
+        return clip.duration * clip.clip
 
     @property
     def is_match(self):
