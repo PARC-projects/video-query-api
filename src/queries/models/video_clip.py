@@ -11,7 +11,7 @@ class VideoClip(models.Model):
         help_text='Id in the video table for the video corresponding to this clip'
     )
     clip = models.PositiveIntegerField(
-        help_text='clip number, positive integer'
+        help_text='clip number, positive integer.  Each video is divided into clips 1, 2, 3, ...'
     )
     duration = models.PositiveIntegerField(
         default=10,
