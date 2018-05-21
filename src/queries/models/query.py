@@ -7,7 +7,7 @@ from . import SearchSet, Video, ProcessState
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
-    search_set_to_query = models.ForeignKey(SearchSet, on_delete=models.PROTECT, editable=False)
+    search_set_to_query = models.ForeignKey(SearchSet, on_delete=models.PROTECT)
     video = models.ForeignKey(Video, on_delete=models.PROTECT)
     reference_time = models.DurationField(default='00:00:00')
     max_matches_for_review = models.PositiveIntegerField(default=20)
