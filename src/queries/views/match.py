@@ -34,6 +34,7 @@ class MatchViewSet(viewsets.ModelViewSet):
 def match_list(request):
     """
     Update a set of parameters of a given match in a collection (partial_updates).
+    This is reached by submitting revisions on the existing query page
     """
     if request.method == 'PATCH':
         data = JSONParser().parse(request)

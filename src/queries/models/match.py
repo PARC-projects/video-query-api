@@ -30,7 +30,8 @@ class Match(models.Model):
     def patch_list_of_matches(matches, query_id):
         """
         Guarded updates on user validation "user_match"
-        Process switch = Submitted = 1
+        ComputeRevision = 2
+        This is reached by submitting revisions on the existing query page
         """
         # TODO: CHAD - wrap in atomic transaction
         for match in matches:
@@ -38,8 +39,8 @@ class Match(models.Model):
             match_entity.user_match = match['user_match']
             match_entity.save()
 
-        # TODO: CHAD - switch 1 to enum
-        Query.update_process_state_based_on_query_id(query_id, 1)
+        # TODO: CHAD - switch to enum
+        Query.update_process_state_based_on_query_id(query_id, 2)
 
     @property
     def query_id(self):
