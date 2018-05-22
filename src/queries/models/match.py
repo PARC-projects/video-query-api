@@ -45,6 +45,16 @@ class Match(models.Model):
     def query_id(self):
         return QueryResult.objects.values_list('query', flat=True).get(id=self.query_result_id)
 
+    # TODO: CHAD: Check with Frank to see where he is using this.
+    @property
+    def reference_video_id(self):
+        return Query.objects.values_list('video', flat=True).get(id=self.query_id)
+
+    # TODO: CHAD: Check with Frank to see where he is using this.
+    @property
+    def reference_time(self):
+        return Query.objects.values_list('reference_time', flat=True).get(id=self.query_id)
+
     @property
     def match_video_path(self):
         """
