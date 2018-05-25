@@ -20,6 +20,9 @@ class ProcessState(models.Model):
             UI - Allows for re-submission of query
             Daemon - nothing
             ML - Sets to this state when done processing
+        if 5: Error state
+            The query is invalid, e.g. there is no video clip in the database for
+            the specified reference time.
     """
     name = models.CharField(max_length=254, unique=True)
 
