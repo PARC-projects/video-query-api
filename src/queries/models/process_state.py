@@ -24,7 +24,7 @@ class ProcessState(models.Model):
             The query is invalid, e.g. there is no video clip in the database for
             the specified reference time.
     """
-    name = models.CharField(max_length=254, unique=True)
+    name = models.CharField(max_length=254, unique=True, editable=False)
 
     class Meta:
         db_table = 'process_state'
