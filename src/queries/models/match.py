@@ -20,7 +20,7 @@ class Match(models.Model):
         """
         Get latest matches based on query id
         """
-        result = QueryResult.objects.filter(query_id=pk).last()
+        result = QueryResult.get_latest_query_result_by_query_id(pk)
         if result is None:
             return None
         else:
