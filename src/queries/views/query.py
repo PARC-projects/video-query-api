@@ -37,7 +37,7 @@ class QueryViewSet(viewsets.ModelViewSet):
         """
         GET Latest QueryResult base on Query Id
         """
-        return Response(QueryResultSerializer(QueryResult.get_latest_query_result_by_query_id(pk), many=False).data)
+        return Response(QueryResult.get_latest_query_result_by_query_id(pk))
 
     @action(methods=['get'], detail=True)
     def matches(self, request, pk):

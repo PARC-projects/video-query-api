@@ -24,7 +24,7 @@ class Match(models.Model):
         if result is None:
             return None
         else:
-            return Match.objects.filter(query_result=result.id)
+            return Match.objects.filter(query_result=result["id"])
 
     @staticmethod
     def patch_list_of_matches(matches, query_id):
