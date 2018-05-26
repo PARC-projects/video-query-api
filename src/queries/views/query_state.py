@@ -32,7 +32,8 @@ def compute_new_state(request):
                             status=status.HTTP_204_NO_CONTENT)
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
-        current_round = Query.objects.get(id=query["id"]).current_round
+        current_result = Query.objects.get(id=query["id"]).current_result
+        current_round = QueryResult.get(id=current_result).round
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
@@ -74,7 +75,8 @@ def compute_revised_state(request):
                             status=status.HTTP_204_NO_CONTENT)
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
-        current_round = Query.objects.get(id=query["id"]).current_round
+        current_result = Query.objects.get(id=query["id"]).current_result
+        current_round = QueryResult.get(id=current_result).round
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
