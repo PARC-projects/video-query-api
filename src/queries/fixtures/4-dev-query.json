@@ -10,7 +10,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 2,
       "process_state": 4,
       "last_modified": "2018-01-01 01:01:01+03:00"
     }
@@ -26,7 +25,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 4,
       "process_state": 2,
       "last_modified": "2018-01-01 02:01:01+03:00"
     }
@@ -42,7 +40,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 5,
       "process_state": 1,
       "last_modified": "2018-01-01 03:01:01+03:00"
     }
@@ -58,7 +55,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 6,
       "process_state": 1,
       "last_modified": "2018-01-01 04:01:01+03:00"
     }
@@ -74,7 +70,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 7,
       "process_state": 1,
       "last_modified": "2018-01-01 05:01:01+03:00"
     }
@@ -90,7 +85,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 8,
       "process_state": 1,
       "last_modified": "2018-01-01 06:01:01+03:00"
     }
@@ -106,7 +100,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 9,
       "process_state": 1,
       "last_modified": "2018-01-01 07:01:01+03:00"
     }
@@ -122,7 +115,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 10,
       "process_state": 1,
       "last_modified": "2018-01-01 08:01:01+03:00"
     }
@@ -138,7 +130,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 11,
       "process_state": 1,
       "last_modified": "2018-01-01 09:01:01+03:00"
     }
@@ -154,7 +145,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 12,
       "process_state": 1,
       "last_modified": "2018-01-01 10:01:01+03:00"
     }
@@ -170,7 +160,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 13,
       "process_state": 1,
       "last_modified": "2018-01-01 11:01:01+03:00"
     }
@@ -186,7 +175,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 14,
       "process_state": 1,
       "last_modified": "2018-01-01 12:01:01+03:00"
     }
@@ -202,7 +190,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 15,
       "process_state": 1,
       "last_modified": "2018-01-01 13:01:01+03:00"
     }
@@ -218,7 +205,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 16,
       "process_state": 1,
       "last_modified": "2018-01-01 14:01:01+03:00"
     }
@@ -234,7 +220,6 @@
       "max_matches_for_review": 20,
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut pellentesque diam. Fusce efficitur odio vitae dui luctus tincidunt. Fusce vel quam et risus volutpat venenatis sit amet euismod ante. Curabitur rutrum elementum massa, eu interdum lectus consectetur tempor. Ut quis turpis rhoncus, porta orci in, tristique risus.",
       "reference_clip_image": "mock",
-      "current_result": 17,
       "process_state": 1,
       "last_modified": "2018-01-01 15:01:01+03:00"
     }

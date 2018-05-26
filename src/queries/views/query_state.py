@@ -32,8 +32,7 @@ def compute_new_state(request):
                             status=status.HTTP_204_NO_CONTENT)
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
-        current_result = Query.objects.get(id=query["id"]).current_result
-        current_round = QueryResult.get(id=current_result).round
+        current_round = QueryResult.get_latest_query_result_by_query_id(query["id"])
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
@@ -61,8 +60,8 @@ def compute_revised_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_revision(), many=False).data
     if 'id' in query:
-        results = QueryResultSerializer(QueryResult.get_latest_query_result_by_query_id(query["id"]),
-                                        many=False).data
+        print(query["id"])
+        results = QueryResult.get_latest_query_result_by_query_id(query["id"])
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
         ref_time = Query.objects.get(id=query["id"]).reference_time
@@ -75,18 +74,15 @@ def compute_revised_state(request):
                             status=status.HTTP_204_NO_CONTENT)
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
-        current_result = Query.objects.get(id=query["id"]).current_result
-        current_round = QueryResult.get(id=current_result).round
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
             "ref_clip": ref_clip,
             "ref_clip_id": ref_clip_id,
-            "result": results,
+            "prior_result": results,
             "matches": matches,
             "search_set": search_set,
             "number_of_matches_to_review": number_of_matches,
-            "current_round": current_round
         })
 
     return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)

@@ -25,4 +25,4 @@ class QueryResult(models.Model):
         """
         Get latest query result based on query id
         """
-        return QueryResult.objects.filter(query_id=pk).order_by('-round')[0]
+        return QueryResult.objects.filter(query_id=pk).order_by('-round').values()[0]

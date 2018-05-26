@@ -1,8 +1,7 @@
-from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.db.models import DateTimeField
 
-from . import SearchSet, Video, ProcessState, QueryResult
+from . import SearchSet, Video, ProcessState
 
 
 class Query(models.Model):
@@ -13,7 +12,6 @@ class Query(models.Model):
     max_matches_for_review = models.PositiveIntegerField(default=20)
     notes = models.TextField(null=True)
     reference_clip_image = models.ImageField(null=True)
-    current_result = models.ForeignKey(QueryResult, on_delete=models.PROTECT)
     process_state = models.ForeignKey(ProcessState, default=1, on_delete=models.PROTECT)
     last_modified = DateTimeField(auto_now=True, editable=False, null=False, blank=False)
 
