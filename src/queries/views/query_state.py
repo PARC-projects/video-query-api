@@ -21,11 +21,10 @@ def compute_new_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_new_matches(), many=False).data
     if 'id' in query:
-        clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
         ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
-            ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
-        except VideoClip.DoesNotExist:
+            ref_clip_id = Query.objects.get(id=query["id"]).reference_clip_pk
+        except Query.DoesNotExist:
             Query.objects.filter(id=query["id"]).update(process_state=5)
             return Response("An invalid new query was found: ref clip number is invalid",
                             status=status.HTTP_204_NO_CONTENT)
@@ -61,11 +60,10 @@ def compute_revised_state(request):
     if 'id' in query:
         results = QueryResult.get_latest_query_result_by_query_id(query["id"])
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
-        clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
         ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
-            ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
-        except VideoClip.DoesNotExist:
+            ref_clip_id = Query.objects.get(id=query["id"]).reference_clip_pk
+        except Query.DoesNotExist:
             Query.objects.filter(id=query["id"]).update(process_state=5)
             return Response("An invalid new query was found: ref clip number is invalid",
                             status=status.HTTP_204_NO_CONTENT)
