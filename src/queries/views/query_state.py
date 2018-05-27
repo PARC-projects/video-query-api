@@ -28,7 +28,6 @@ def compute_new_state(request):
             ref_clip_id = None
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
-        results = QueryResult.get_latest_query_result_by_query_id(query["id"])
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
@@ -36,7 +35,6 @@ def compute_new_state(request):
             "ref_clip_id": ref_clip_id,
             "search_set": search_set,
             "number_of_matches_to_review": number_of_matches,
-            "tuning_update": results
         })
 
     return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
