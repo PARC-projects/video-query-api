@@ -24,10 +24,8 @@ def compute_new_state(request):
         ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
             ref_clip_id = Query.objects.get(id=query["id"]).reference_clip_pk
-        except Query.DoesNotExist:
-            Query.objects.filter(id=query["id"]).update(process_state=5)
-            return Response("An invalid new query was found: ref clip number is invalid",
-                            status=status.HTTP_204_NO_CONTENT)
+        except VideoClip.DoesNotExist:
+            ref_clip_id = None
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
         results = QueryResult.get_latest_query_result_by_query_id(query["id"])
@@ -63,10 +61,8 @@ def compute_revised_state(request):
         ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
             ref_clip_id = Query.objects.get(id=query["id"]).reference_clip_pk
-        except Query.DoesNotExist:
-            Query.objects.filter(id=query["id"]).update(process_state=5)
-            return Response("An invalid new query was found: ref clip number is invalid",
-                            status=status.HTTP_204_NO_CONTENT)
+        except VideoClip.DoesNotExist:
+            ref_clip_id = None
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
         return JsonResponse({

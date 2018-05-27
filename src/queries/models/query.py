@@ -52,7 +52,9 @@ class Query(models.Model):
     def reference_clip_pk(self):
         ref_clip = VideoClip.objects\
             .get(video_id=self.video_id, clip=self.reference_clip_number, duration=self.clip_duration)
-        return ref_clip.id
+        if ref_clip:
+            return ref_clip.id
+        return None
 
     @property
     def clip_duration(self):
