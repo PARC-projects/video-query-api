@@ -14,7 +14,9 @@ class QueryViewSet(viewsets.ModelViewSet):
     Create a new query instance.
 
     retrieve:
-    Return the given query.
+    Return the given query. <br/>
+    A query's video is divided into clips 1, 2, 3, ... <br/>
+    Reference clip number is the clip containing the reference time.
 
     list:
     Return a list of all the existing queries. <br/>

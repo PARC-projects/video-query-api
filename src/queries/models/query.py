@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import DateTimeField
 
-from . import SearchSet, Video, ProcessState
+from . import SearchSet, Video, ProcessState, VideoClip
 
 
 class Query(models.Model):
@@ -46,5 +46,14 @@ class Query(models.Model):
 
     @property
     def reference_clip_number(self):
-        clip_duration = SearchSet.objects.values_list('duration', flat=True).get(id=self.search_set_to_query_id)
-        return int(self.reference_time.total_seconds() / clip_duration) + 1
+        return int(self.reference_time.total_seconds() / self.clip_duration) + 1
+
+    @property
+    def reference_clip_pk(self):
+        ref_clip = VideoClip.objects\
+            .get(video_id=self.video_id, clip=self.reference_clip_number, duration=self.clip_duration)
+        return ref_clip.id
+
+    @property
+    def clip_duration(self):
+        return SearchSet.objects.values_list('duration', flat=True).get(id=self.search_set_to_query_id)
