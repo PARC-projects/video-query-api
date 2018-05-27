@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from queries.models import Query, QueryResult, Match, SearchSet, VideoClip
-from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
+from queries.serializers import QuerySerializer, MatchSerializer
 
 
 @api_view(['GET'])
@@ -22,7 +22,7 @@ def compute_new_state(request):
     query = QuerySerializer(Query.get_latest_query_ready_for_new_matches(), many=False).data
     if 'id' in query:
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
-        ref_clip = Query.objects.get(id=query["id"]).reference_clip
+        ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
             ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
         except VideoClip.DoesNotExist:
@@ -62,7 +62,7 @@ def compute_revised_state(request):
         results = QueryResult.get_latest_query_result_by_query_id(query["id"])
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
         clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
-        ref_clip = Query.objects.get(id=query["id"]).reference_clip
+        ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
             ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
         except VideoClip.DoesNotExist:
