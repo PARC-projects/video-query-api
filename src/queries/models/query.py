@@ -45,7 +45,6 @@ class Query(models.Model):
         return Query.objects.filter(process_state=1).order_by('last_modified').first()
 
     @property
-    def reference_clip(self):
+    def reference_clip_number(self):
         clip_duration = SearchSet.objects.values_list('duration', flat=True).get(id=self.search_set_to_query_id)
-        clip_number = int(self.reference_time.total_seconds() / clip_duration) + 1
-        return clip_number
+        return int(self.reference_time.total_seconds() / clip_duration) + 1

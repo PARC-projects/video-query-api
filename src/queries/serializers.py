@@ -40,7 +40,10 @@ SearchSetSerializer.videos = VideoSerializer(many=True, read_only=True)
 class QuerySerializer(serializers.ModelSerializer):
     class Meta:
         model = Query
-        fields = '__all__'
+        fields = (
+            'id', 'name', 'search_set_to_query', 'video', 'reference_time', 'max_matches_for_review',
+            'notes', 'reference_clip_image', 'process_state', 'last_modified', 'reference_clip_number'
+        )
 
 
 class MatchSerializer(serializers.ModelSerializer):
