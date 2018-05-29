@@ -24,6 +24,31 @@
     }
   },
   {
+    "model": "queries.queryResult",
+    "pk": 3,
+    "fields": {
+      "query": 2,
+      "round": 1,
+      "match_criterion": 0.8,
+      "weights": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "queries.queryResult",
+    "pk": 4,
+    "fields": {
+      "query": 2,
+      "round": 2,
+      "match_criterion": 0.9,
+      "weights": [
+        1
+      ]
+    }
+  },
+
+  {
     "model": "queries.match",
     "pk": 1,
     "fields": {

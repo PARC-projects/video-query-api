@@ -14,7 +14,9 @@ class QueryViewSet(viewsets.ModelViewSet):
     Create a new query instance.
 
     retrieve:
-    Return the given query.
+    Return the given query. <br/>
+    A query's video is divided into clips 1, 2, 3, ... <br/>
+    Reference clip number is the clip containing the reference time.
 
     list:
     Return a list of all the existing queries. <br/>
@@ -37,7 +39,7 @@ class QueryViewSet(viewsets.ModelViewSet):
         """
         GET Latest QueryResult base on Query Id
         """
-        return Response(QueryResultSerializer(QueryResult.get_latest_query_result_by_query_id(pk), many=False).data)
+        return Response(QueryResult.get_latest_query_result_by_query_id(pk))
 
     @action(methods=['get'], detail=True)
     def matches(self, request, pk):

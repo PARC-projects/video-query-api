@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from queries.models import Query, QueryResult, Match, SearchSet, VideoClip
-from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
+from queries.serializers import QuerySerializer, MatchSerializer
 
 
 @api_view(['GET'])
@@ -21,17 +21,13 @@ def compute_new_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_new_matches(), many=False).data
     if 'id' in query:
-        clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
-        ref_time = Query.objects.get(id=query["id"]).reference_time
-        ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
+        ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
-            ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+            ref_clip_id = Query.objects.get(id=query["id"]).reference_clip_pk
         except VideoClip.DoesNotExist:
-            return Response("An invalid new query was found: ref clip number is invalid",
-                            status=status.HTTP_204_NO_CONTENT)
+            ref_clip_id = None
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
-        current_round = Query.objects.get(id=query["id"]).current_round
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
@@ -39,7 +35,6 @@ def compute_new_state(request):
             "ref_clip_id": ref_clip_id,
             "search_set": search_set,
             "number_of_matches_to_review": number_of_matches,
-            "current_round": current_round
         })
 
     return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
@@ -59,30 +54,24 @@ def compute_revised_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_revision(), many=False).data
     if 'id' in query:
-        results = QueryResultSerializer(QueryResult.get_latest_query_result_by_query_id(query["id"]),
-                                        many=False).data
+        results = QueryResult.get_latest_query_result_by_query_id(query["id"])
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
-        clip_duration = SearchSet.objects.get(id=query["search_set_to_query"]).duration
-        ref_time = Query.objects.get(id=query["id"]).reference_time
-        ref_clip = int(ref_time.total_seconds() / clip_duration) + 1
+        ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
         try:
-            ref_clip_id = VideoClip.objects.get(clip=ref_clip, video=query["video"], duration=clip_duration).id
+            ref_clip_id = Query.objects.get(id=query["id"]).reference_clip_pk
         except VideoClip.DoesNotExist:
-            return Response("An invalid new query was found: ref clip number is invalid",
-                            status=status.HTTP_204_NO_CONTENT)
+            ref_clip_id = None
         search_set = SearchSet.objects.get(query=query["id"]).id
         number_of_matches = Query.objects.get(id=query["id"]).max_matches_for_review
-        current_round = Query.objects.get(id=query["id"]).current_round
         return JsonResponse({
             "query_id": query["id"],
             "video_id": query["video"],
             "ref_clip": ref_clip,
             "ref_clip_id": ref_clip_id,
-            "result": results,
-            "matches": matches,
             "search_set": search_set,
             "number_of_matches_to_review": number_of_matches,
-            "current_round": current_round
+            "tuning_update": results,
+            "matches": matches,
         })
 
     return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)

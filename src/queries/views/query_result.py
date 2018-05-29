@@ -4,6 +4,8 @@ from rest_framework.response import Response
 
 from queries.models import QueryResult, Match
 from queries.serializers import QueryResultSerializer
+from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 class QueryResultViewSet(viewsets.ModelViewSet):
@@ -25,6 +27,9 @@ class QueryResultViewSet(viewsets.ModelViewSet):
     """
     queryset = QueryResult.objects.all()
     serializer_class = QueryResultSerializer
+    filter_backends = (SearchFilter, DjangoFilterBackend)
+    search_fields = ('name',)
+    filter_fields = ('query', 'round')
 
     @action(methods=['get'], detail=True)
     def matches(self, request, pk):

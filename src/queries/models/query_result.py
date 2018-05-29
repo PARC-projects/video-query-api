@@ -1,5 +1,6 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django.core.exceptions import NON_FIELD_ERRORS
 
 from . import Query
 
@@ -12,10 +13,16 @@ class QueryResult(models.Model):
 
     class Meta:
         db_table = 'query_result'
+        unique_together = ('query', 'round')
+        models.error_messages = {
+            NON_FIELD_ERRORS: {
+                'unique_together': "(query, round) is not unique in query_results table."
+            }
+        }
 
     @staticmethod
     def get_latest_query_result_by_query_id(pk):
         """
         Get latest query result based on query id
         """
-        return QueryResult.objects.filter(query_id=pk).last()
+        return QueryResult.objects.filter(query_id=pk).order_by('-round').values()[0]

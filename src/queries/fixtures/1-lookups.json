@@ -28,6 +28,13 @@
     }
   },
   {
+    "model": "queries.processState",
+    "pk": 5,
+    "fields": {
+      "name": "Invalid Query record"
+    }
+  },
+  {
     "model": "queries.dnnStream",
     "pk": 1,
     "fields": {

@@ -20,11 +20,11 @@ class Match(models.Model):
         """
         Get latest matches based on query id
         """
-        result = QueryResult.objects.filter(query_id=pk).last()
+        result = QueryResult.get_latest_query_result_by_query_id(pk)
         if result is None:
             return None
         else:
-            return Match.objects.filter(query_result=result.id)
+            return Match.objects.filter(query_result=result["id"])
 
     @staticmethod
     def patch_list_of_matches(matches, query_id):
@@ -76,7 +76,7 @@ class Match(models.Model):
         Location of video this match is associated with.
         """
         clip = VideoClip.objects.get(id=self.video_clip_id)
-        return clip.duration * clip.clip
+        return clip.duration * (clip.clip - 1)
 
     @property
     def is_match(self):
