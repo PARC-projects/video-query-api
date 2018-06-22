@@ -2,7 +2,7 @@
 
 This repository is one of three in the Video Query project. The home page for the Video Query project is at
 
-#### <a align=center>[Video Query Home](https://github.com/PARC-projects/video-query-home)</a>
+#### [Video Query Home](https://github.com/PARC-projects/video-query-home)
 
 This API serves as a data access layer for the Video Query project. All request made from the
 [Client](https://github.com/PARC-projects/video-query-client-web) portion of the Video Query project are made to various endpoints
