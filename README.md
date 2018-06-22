@@ -1,24 +1,25 @@
 # Video Query API
 
+The home page for the Video Query project is at
+
+#### [Video Query Home](https://github.com/PARC-projects/video-query-home)
+
 This API serves as a data access layer for the Video Query project. All request made from the
-[Client](https://github.com/PARC-projects/video-query) portion of the Video Query project are made to various endpoints
-supplied by this API.  This API uses code in Video Query Algorithms as needed.
+[Client](https://github.com/PARC-projects/video-query-client-web) portion of the Video Query project are made to various endpoints
+supplied by this API.  This API uses code in [Video Query Algorithms](https://github.com/PARC-projects/video-query-algorithms) as needed.
 The code and documentation for the Client and Algorithms are at
 
-- [Video Query Client](https://github.com/PARC-projects/video-query)
+- [Video Query Client](https://github.com/PARC-projects/video-query-client-web)
 - [Video Query Algorithms](https://github.com/PARC-projects/video-query-algorithms)
 
-For an overview of the Video Query project please see the reference [TBD arxiv pdf](https://arxiv.org/).
+For further information about the Video Query project, please go to [Video Query Home](https://github.com/PARC-projects/video-query-home).
 
 ## Wiki
 For detailed instruction on how to run and utilize this repository, please have a look at our Wiki
 
-- [Home](https://github.com/PARC-projects/video-query-api/wiki/Home)
-  - [Running the API server](https://github.com/PARC-projects/video-query-api/wiki/Home#running-the-api-server)
-- [Setup](https://github.com/fetorres/video-query-api/wiki/Setup)
-  - [Dependencies](https://github.com/fetorres/video-query-api/wiki/Setup#dependencies)
-  - [Environment Variables](https://github.com/fetorres/video-query-api/wiki/Setup#environment-variables)
-- [Database](https://github.com/fetorres/video-query-api/wiki/Database)
+- [API](https://github.com/PARC-projects/video-query-home/wiki/Api)
+  - [Setup](https://github.com/PARC-projects/video-query-home/wiki/Api-Setup)
+  - [Database](https://github.com/PARC-projects/video-query-home/wiki/Api-Database)
 
 ## Contributing
 
@@ -29,12 +30,14 @@ requests to us.
 
 Include a citation for a paper when we publish one.  For now:
 If you find this repository useful, please cite
-[https://github.com/fetorres/video-query-api/](https://github.com/fetorres/video-query-api/).
+[https://github.com/PARC-projects/video-query-home](https://github.com/PARC-projects/video-query-home).
 
-### Authors
-
+#### Project team
+Software development:
 - [Frank Torres](https://github.com/fetorres)
 - [Chad Ramos](https://github.com/chad-ramos)
+
+Algorithm development by Frank Torres, Matthew Shreve, Gaurang Ganguli and Hoda Eldardiry.
 
 ## License
 
