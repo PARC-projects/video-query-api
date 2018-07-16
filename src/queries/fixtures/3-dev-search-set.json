@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "Search Set 1",
+      "useDynamicTargetAdjustment": false,
       "videos": [
         1, 2, 3
       ]
@@ -14,6 +15,7 @@
     "pk": 2,
     "fields": {
       "name": "Search Set 2",
+      "useDynamicTargetAdjustment": false,
       "videos": [
          4
       ]
@@ -24,6 +26,7 @@
     "pk": 3,
     "fields": {
       "name": "Search Set 3",
+      "useDynamicTargetAdjustment": true,
       "videos": [
         5, 6, 7
       ]
