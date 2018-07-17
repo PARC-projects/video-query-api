@@ -108,5 +108,16 @@
         2, 3
       ]
     }
+  },
+  {
+    "model": "queries.searchSet",
+    "pk": 11,
+    "fields": {
+      "name": "Search Set 11",
+      "useDynamicTargetAdjustment": false,
+      "videos": [
+        2, 3, 5, 4
+      ]
+    }
   }
 ]
