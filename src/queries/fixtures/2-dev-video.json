@@ -54,5 +54,37 @@
       "name": "Video 3-1",
       "path": "sample.mp4"
     }
+  },
+  {
+    "model": "queries.video",
+    "pk": 8,
+    "fields": {
+      "name": "Video 4-1",
+      "path": "sample.mp4"
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 9,
+    "fields": {
+      "name": "Video 4-2",
+      "path": "sample.mp4"
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 10,
+    "fields": {
+      "name": "Video 4-3",
+      "path": "sample.mp4"
+    }
+  },
+  {
+    "model": "queries.video",
+    "pk": 11,
+    "fields": {
+      "name": "Video 4-4",
+      "path": "sample.mp4"
+    }
   }
 ]

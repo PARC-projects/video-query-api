@@ -1,6 +1,6 @@
 from django.db import models
 
-from queries.models import Video, VideoClip, Feature
+from queries.models import Video, VideoClip
 
 """
 Identifies a collection of videos to search, and the clip duration for the search.
@@ -19,8 +19,10 @@ class SearchSet(models.Model):
     # Many to many relationship between Search Set and Video (search_set_videos)
     videos = models.ManyToManyField(Video)
     # Duration of video to use
-    # TODO: will be replaced by FK
     duration = models.PositiveIntegerField(default=10)
+    # Let the algorithms know whether to “average” the features of all validated matches in each round and have that be
+    # the new reference.
+    useDynamicTargetAdjustment = models.BooleanField();
 
     class Meta:
         db_table = 'search_set'

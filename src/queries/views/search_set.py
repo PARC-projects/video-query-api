@@ -37,7 +37,15 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         GET videos based on search set id
         """
-        return Response(Video.objects.filter(searchset__id=pk).values())
+
+        if 'searchTerm' in request.query_params:
+            return Response(
+                Video.objects
+                .filter(searchset__id=pk)
+                .filter(name__icontains=request.query_params['searchTerm']).values()
+            )
+        else:
+            return Response(Video.objects.filter(searchset__id=pk).values())
 
     @action(methods=['get'], detail=True)
     def features(self, request, pk):

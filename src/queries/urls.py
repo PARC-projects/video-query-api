@@ -20,5 +20,5 @@ urlpatterns = [
     url('api-token-auth/', AuthTokenView.as_view()),
     url(r'^matches-list/$', match_list),
     url(r'^query-state/compute-new', compute_new_state, name='compute_new_state'),
-    url(r'^query-state/compute-revised', compute_revised_state, name='compute_revised_state'),
+    url(r'^query-state/compute-revised', compute_revised_state, name='compute_revised_state')
 ]
