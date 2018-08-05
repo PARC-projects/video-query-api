@@ -14,6 +14,10 @@ class Query(models.Model):
     reference_clip_image = models.ImageField(null=True)
     process_state = models.ForeignKey(ProcessState, default=1, on_delete=models.PROTECT)
     last_modified = DateTimeField(auto_now=True, editable=False, null=False, blank=False)
+    # Let the algorithms know whether to “average” the features of all validated matches in each round and have that be
+    # the new reference.
+    use_dynamic_target_adjustment = models.BooleanField(default=False)
+
 
     class Meta:
         db_table = 'query'

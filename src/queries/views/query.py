@@ -11,12 +11,14 @@ from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSer
 class QueryViewSet(viewsets.ModelViewSet):
     """
     create:
-    Create a new query instance.
+    Create a new query instance. <br/>
+    A query's video is divided into clips 1, 2, 3, ... <br/>
+    Reference clip number is the clip containing the reference time. <br/>
+    Dynamic target adjustment is when the target features are adjusted to
+    an average for the population of validated matches in each round.
 
     retrieve:
     Return the given query. <br/>
-    A query's video is divided into clips 1, 2, 3, ... <br/>
-    Reference clip number is the clip containing the reference time.
 
     list:
     Return a list of all the existing queries. <br/>
