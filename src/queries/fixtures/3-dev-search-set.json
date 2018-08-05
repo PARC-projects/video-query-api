@@ -4,7 +4,6 @@
     "pk": 1,
     "fields": {
       "name": "Search Set 1",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         1, 2, 3
       ]
@@ -15,7 +14,6 @@
     "pk": 2,
     "fields": {
       "name": "Search Set 2",
-      "useDynamicTargetAdjustment": false,
       "videos": [
          4
       ]
@@ -26,7 +24,6 @@
     "pk": 3,
     "fields": {
       "name": "Search Set 3",
-      "useDynamicTargetAdjustment": true,
       "videos": [
         5, 6, 7
       ]
@@ -37,7 +34,6 @@
     "pk": 4,
     "fields": {
       "name": "Search Set 4",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         5, 7
       ]
@@ -48,7 +44,6 @@
     "pk": 5,
     "fields": {
       "name": "Search Set 5",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         7
       ]
@@ -59,7 +54,6 @@
     "pk": 6,
     "fields": {
       "name": "Search Set 6",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         4, 6, 7
       ]
@@ -70,7 +64,6 @@
     "pk": 7,
     "fields": {
       "name": "Search Set 7",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         4
       ]
@@ -81,7 +74,6 @@
     "pk": 8,
     "fields": {
       "name": "Search Set 8",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         6, 7
       ]
@@ -92,7 +84,6 @@
     "pk": 9,
     "fields": {
       "name": "Search Set 9",
-      "useDynamicTargetAdjustment": true,
       "videos": [
         5,  4
       ]
@@ -103,7 +94,6 @@
     "pk": 10,
     "fields": {
       "name": "Search Set 10",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         2, 3
       ]
@@ -114,7 +104,6 @@
     "pk": 11,
     "fields": {
       "name": "Search Set 11",
-      "useDynamicTargetAdjustment": false,
       "videos": [
         2, 3, 5, 4
       ]

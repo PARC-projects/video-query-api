@@ -20,9 +20,6 @@ class SearchSet(models.Model):
     videos = models.ManyToManyField(Video)
     # Duration of video to use
     duration = models.PositiveIntegerField(default=10)
-    # Let the algorithms know whether to “average” the features of all validated matches in each round and have that be
-    # the new reference.
-    useDynamicTargetAdjustment = models.BooleanField();
 
     class Meta:
         db_table = 'search_set'
