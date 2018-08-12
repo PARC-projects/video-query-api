@@ -1,5 +1,6 @@
+from django.http import JsonResponse
 from rest_framework import viewsets
-from rest_framework.decorators import action
+from rest_framework.decorators import action, api_view
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
@@ -55,3 +56,17 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         duration = SearchSet.objects.get(pk=pk).duration
         return Response(Feature.objects.filter(video_clip__video__searchset=pk,
                         video_clip__duration=duration).values())
+
+    @action(methods=['get'], detail=True)
+    def all(self, request):
+        """
+        GET all search sets i.e. bypass pagination
+        """
+        return Response(SearchSet.objects.all().values())
+
+    @api_view(['GET'])
+    def search_sets_all(request):
+        results = SearchSetSerializer(SearchSet.objects.all(), many=True).data;
+        return JsonResponse({
+            "results": results
+        })
