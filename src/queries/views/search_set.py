@@ -64,9 +64,9 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         return Response(SearchSet.objects.all().values())
 
-    @api_view(['GET'])
-    def search_sets_all(request):
-        results = SearchSetSerializer(SearchSet.objects.all(), many=True).data;
-        return JsonResponse({
-            "results": results
-        })
+@api_view(['GET'])
+def search_sets_all(request):
+    results = SearchSetSerializer(SearchSet.objects.all(), many=True).data;
+    return JsonResponse({
+        "results": results
+    })
