@@ -21,7 +21,7 @@ def compute_new_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_new_matches(), many=False).data
     if 'id' in query:
-        return JsonResponse(_get_base_info(query))
+        return JsonResponse(_get_base_state_entity(query))
     else:
         return Response("No new queries were found.", status=status.HTTP_204_NO_CONTENT)
 
@@ -51,7 +51,7 @@ def compute_revised_state(request):
 
 
 @api_view(['GET'])
-def finalized_state(request):
+def compute_finalized_state(request):
     """ GET - Get query state that represents a query ready to be finalized
     <ul>
         <li>Polled by broker in algorithm project.</li>
@@ -62,13 +62,10 @@ def finalized_state(request):
         </li>
     </ul>
     """
-    query = QuerySerializer(Query.get_latest_query_ready_for_revision(), many=False).data
+    query = QuerySerializer(Query.get_latest_query_ready_for_finalize(), many=False).data
     if 'id' in query:
-        results = QueryResult.get_latest_query_result_by_query_id(query["id"])
-        matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
+        # TODO: Frank - augment with any additional data needed.
         base = _get_base_state_entity(query)
-        base["tuning_update"] = results
-        base["matches"] = matches
         return JsonResponse(base)
     else:
         return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)
