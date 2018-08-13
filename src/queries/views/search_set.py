@@ -54,8 +54,8 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         GET features based on search set id
         """
         duration = SearchSet.objects.get(pk=pk).duration
-        return Response(Feature.objects.filter(video_clip__video__searchset__in=pk).
-                        filter(video_clip__duration=duration).values())
+        return Response(Feature.objects.filter(video_clip__video__searchset=pk,
+                        video_clip__duration=duration).values())
 
     @action(methods=['get'], detail=True)
     def all(self, request):
@@ -63,7 +63,6 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         GET all search sets i.e. bypass pagination
         """
         return Response(SearchSet.objects.all().values())
-
 
 @api_view(['GET'])
 def search_sets_all(request):
