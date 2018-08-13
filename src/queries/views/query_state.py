@@ -42,7 +42,7 @@ def compute_revised_state(request):
     if 'id' in query:
         results = QueryResult.get_latest_query_result_by_query_id(query["id"])
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
-        base = _get_base_info(query)
+        base = _get_base_state_entity(query)
         base["tuning_update"] = results
         base["matches"] = matches
         return JsonResponse(base)
@@ -50,7 +50,33 @@ def compute_revised_state(request):
         return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)
 
 
-def _get_base_info(query):
+@api_view(['GET'])
+def finalized_state(request):
+    """ GET - Get query state that represents a query ready to be finalized
+    <ul>
+        <li>Polled by broker in algorithm project.</li>
+        <li>
+            <a href="https://github.com/PARC-projects/video-query-api/blob/master/src/queries/models/process_state.py">
+                Processing State
+            </a> == 6
+        </li>
+    </ul>
+    """
+    query = QuerySerializer(Query.get_latest_query_ready_for_revision(), many=False).data
+    if 'id' in query:
+        results = QueryResult.get_latest_query_result_by_query_id(query["id"])
+        matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
+        base = _get_base_state_entity(query)
+        base["tuning_update"] = results
+        base["matches"] = matches
+        return JsonResponse(base)
+    else:
+        return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)
+
+
+def _get_base_state_entity(query):
+    """ Get meta information that supports a State entity being sent downstream to algo-calc
+    """
     ref_clip = Query.objects.get(id=query["id"]).reference_clip_number
     try:
         ref_clip_id = Query.objects.get(id=query["id"]).reference_clip_pk
@@ -66,5 +92,5 @@ def _get_base_info(query):
         "ref_clip_id": ref_clip_id,
         "search_set": search_set,
         "number_of_matches_to_review": number_of_matches,
-        "dynamic_target_adjustment": dynamic_target_adjustment,
+        "dynamic_target_adjustment": dynamic_target_adjustment
     }
