@@ -23,6 +23,11 @@ class ProcessState(models.Model):
         if 5: Error state
             The query is invalid, e.g. there is no video clip in the database for
             the specified reference time.
+        if 6: Finalized
+            User has marked query as Finalized from UI.
+            Broker passes state to algo pipeline.
+            Algo pipeline produces finalized assets.
+
     """
     name = models.CharField(max_length=254, unique=True, editable=False)
 

@@ -48,6 +48,15 @@ class Query(models.Model):
         """
         return Query.objects.filter(process_state=1).order_by('last_modified').first()
 
+    @staticmethod
+    def get_latest_query_ready_for_finalize():
+        """
+        Get latest query ready to be finalized
+        :return: Query
+        """
+        return Query.objects.filter(process_state=6).order_by('last_modified').first()
+
+
     @property
     def reference_clip_number(self):
         return int(self.reference_time.total_seconds() / self.clip_duration) + 1

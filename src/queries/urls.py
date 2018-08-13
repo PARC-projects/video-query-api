@@ -19,6 +19,7 @@ router.register(r'video-clips', VideoClipViewSet)
 urlpatterns = [
     url('api-token-auth/', AuthTokenView.as_view()),
     url(r'^matches-list/$', match_list),
+    url(r'^query-state/compute-finalize', compute_finalized_state, name='compute_finalized_state'),
     url(r'^query-state/compute-new', compute_new_state, name='compute_new_state'),
     url(r'^query-state/compute-revised', compute_revised_state, name='compute_revised_state'),
     url(r'^search-sets-all', search_sets_all, name='search_sets_all')
