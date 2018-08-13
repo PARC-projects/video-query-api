@@ -31,7 +31,7 @@ class MatchViewSet(viewsets.ModelViewSet):
     serializer_class = MatchSerializer
     filter_backends = (SearchFilter, DjangoFilterBackend)
     search_fields = ('name',)
-    filter_fields = ('query_result', 'query_result__query', 'query_result__round', 'video_clip')
+    filter_fields = ('query_result', 'query_result__query', 'query_result__round', 'video_clip', 'user_match')
 
 
 @csrf_exempt

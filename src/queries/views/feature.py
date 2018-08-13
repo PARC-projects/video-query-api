@@ -26,4 +26,4 @@ class FeatureViewSet(viewsets.ModelViewSet):
     serializer_class = FeatureSerializer
     filter_backends = (SearchFilter, DjangoFilterBackend)
     search_fields = ('video_clip', 'dnn_stream__name',)
-    filter_fields = ('video_clip', 'dnn_stream', 'dnn_stream_split',)
+    filter_fields = ('video_clip', 'dnn_stream', 'dnn_stream_split','video_clip__video__name',)
