@@ -38,7 +38,7 @@
     "model": "queries.processState",
     "pk": 6,
     "fields": {
-      "name": "ProcessFinalized"
+      "name": "Submitted to be Finalized"
     }
   },
   {
