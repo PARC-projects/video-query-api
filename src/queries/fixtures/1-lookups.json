@@ -38,6 +38,13 @@
     "model": "queries.processState",
     "pk": 6,
     "fields": {
+      "name": "ProcessFinalized"
+    }
+  },
+  {
+    "model": "queries.processState",
+    "pk": 7,
+    "fields": {
       "name": "Finalized"
     }
   },
