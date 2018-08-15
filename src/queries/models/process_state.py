@@ -27,7 +27,7 @@ class ProcessState(models.Model):
             User has requested query to be Finalized from UI.
             Broker passes state to algo pipeline.
             Algo pipeline produces finalized assets.
-        if 6: Finalized
+        if 7: Finalized
             UI - shows link to csv file with final results
             Daemon - nothing
             ML - Sets to this state when done finalizing
