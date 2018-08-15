@@ -43,8 +43,7 @@ def compute_revised_state(request):
         results = QueryResult.get_latest_query_result_by_query_id(query["id"])
         matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
         base = _get_base_state_entity(query)
-        base["tuning_update"] = results
-        base["matches"] = matches
+        base.update(_get_revision_update(query))
         return JsonResponse(base)
     else:
         return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)
@@ -64,11 +63,11 @@ def compute_finalized_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_finalize(), many=False).data
     if 'id' in query:
-        # TODO: Frank - augment with any additional data needed.
         base = _get_base_state_entity(query)
+        base.update(_get_revision_update(query))
         return JsonResponse(base)
     else:
-        return Response("No revised queries were found.", status=status.HTTP_204_NO_CONTENT)
+        return Response("No queries to be finalized were found.", status=status.HTTP_204_NO_CONTENT)
 
 
 def _get_base_state_entity(query):
@@ -91,3 +90,9 @@ def _get_base_state_entity(query):
         "number_of_matches_to_review": number_of_matches,
         "dynamic_target_adjustment": dynamic_target_adjustment
     }
+
+
+def _get_revision_update(query):
+    results = QueryResult.get_latest_query_result_by_query_id(query["id"])
+    matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
+    return {"tuning_update": results, "matches": matches}
