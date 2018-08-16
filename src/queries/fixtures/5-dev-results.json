@@ -47,6 +47,18 @@
       ]
     }
   },
+  {
+    "model": "queries.queryResult",
+    "pk": 5,
+    "fields": {
+      "query": 15,
+      "round": 1,
+      "match_criterion": 0.815,
+      "weights": [
+        1
+      ]
+    }
+  },
 
   {
     "model": "queries.match",
@@ -226,6 +238,16 @@
       "score": 0.89,
       "query_result": 2,
       "video_clip": 2
+    }
+  },
+  {
+    "model": "queries.match",
+    "pk": 20,
+    "fields": {
+      "score": 0.923,
+      "query_result": 5,
+      "video_clip": 2,
+      "user_match": true
     }
   }
 ]
