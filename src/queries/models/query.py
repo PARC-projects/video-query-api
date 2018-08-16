@@ -3,6 +3,13 @@ from django.db.models import DateTimeField
 
 from . import SearchSet, Video, ProcessState, VideoClip
 
+''' for storing files in user-specific directories when we get to that point
+def user_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    return 'final_reports/user_{0}/{1}'.format(instance.user.id, filename)
+    
+    and change to upload_to=user_directory_path
+'''
 
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
@@ -13,6 +20,7 @@ class Query(models.Model):
     notes = models.TextField(null=True)
     reference_clip_image = models.ImageField(null=True)
     process_state = models.ForeignKey(ProcessState, default=1, on_delete=models.PROTECT)
+    final_report_file = models.FileField(max_length=254, upload_to='final_reports/', help_text='final csv report')
     last_modified = DateTimeField(auto_now=True, editable=False, null=False, blank=False)
     # Let the algorithms know whether to “average” the features of all validated matches in each round and have that be
     # the new reference.

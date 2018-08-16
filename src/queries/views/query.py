@@ -3,9 +3,8 @@ from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
-
 from queries.models import Query, QueryResult, Match
-from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
+from queries.serializers import QuerySerializer, MatchSerializer
 
 
 class QueryViewSet(viewsets.ModelViewSet):

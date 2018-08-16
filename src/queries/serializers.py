@@ -43,7 +43,7 @@ class QuerySerializer(serializers.ModelSerializer):
         fields = (
             'id', 'name', 'search_set_to_query', 'video', 'reference_time', 'max_matches_for_review',
             'notes', 'reference_clip_image', 'process_state', 'last_modified', 'reference_clip_number',
-            'reference_clip_pk', 'clip_duration', 'use_dynamic_target_adjustment'
+            'reference_clip_pk', 'clip_duration', 'use_dynamic_target_adjustment', 'final_report_file'
         )
 
 
@@ -71,10 +71,4 @@ class FeatureSerializer(serializers.ModelSerializer):
 class VideoClipSerializer(serializers.ModelSerializer):
     class Meta:
         model = VideoClip
-        fields = '__all__'
-
-
-class FinalReportSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = FinalReport
         fields = '__all__'
