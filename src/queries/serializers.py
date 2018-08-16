@@ -72,3 +72,9 @@ class VideoClipSerializer(serializers.ModelSerializer):
     class Meta:
         model = VideoClip
         fields = '__all__'
+
+
+class FinalReportSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FinalReport
+        fields = '__all__'

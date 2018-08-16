@@ -8,3 +8,4 @@ from .search_set import *
 from .query import *
 from .query_result import *
 from .match import *
+from .final_report import *
