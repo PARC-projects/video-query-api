@@ -11,6 +11,7 @@ def user_directory_path(instance, filename):
     and change to upload_to=user_directory_path
 '''
 
+
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
     search_set_to_query = models.ForeignKey(SearchSet, on_delete=models.PROTECT)
@@ -20,12 +21,13 @@ class Query(models.Model):
     notes = models.TextField(null=True)
     reference_clip_image = models.ImageField(null=True)
     process_state = models.ForeignKey(ProcessState, default=1, on_delete=models.PROTECT)
-    final_report_file = models.FileField(max_length=254, upload_to='final_reports/', help_text='final csv report')
+    final_report_file = models.FileField(max_length=254, upload_to='final_reports/',
+                                         help_text='final csv report. For coreapi, use encoding in client.action(): '
+                                                   'client.action(..., encoding="multipart/form-data")')
     last_modified = DateTimeField(auto_now=True, editable=False, null=False, blank=False)
     # Let the algorithms know whether to “average” the features of all validated matches in each round and have that be
     # the new reference.
     use_dynamic_target_adjustment = models.BooleanField(default=False)
-
 
     class Meta:
         db_table = 'query'
@@ -63,7 +65,6 @@ class Query(models.Model):
         :return: Query
         """
         return Query.objects.filter(process_state=6).order_by('last_modified').first()
-
 
     @property
     def reference_clip_number(self):

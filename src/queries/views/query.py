@@ -27,7 +27,10 @@ class QueryViewSet(viewsets.ModelViewSet):
     Update a given query as whole.
 
     partial_update:
-    Update a set of parameters of a given query.
+    Update a set of parameters of a given query. <br/>
+    To update the final report file using python coreapi,<br/>
+    add encoding="multipart/form-data" to client.action(),<br/>
+    i.e., client.action(..., encoding="multipart/form-data")
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
