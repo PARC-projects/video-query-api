@@ -73,7 +73,6 @@ class Migration(migrations.Migration):
                 ('file', models.FileField(help_text='final csv report', max_length=254, upload_to='final_reports/')),
                 ('last_modified', models.DateTimeField(auto_now=True)),
                 ('use_dynamic_target_adjustment', models.BooleanField(default=False)),
-                ('process_state', models.ForeignKey(default=1, on_delete=django.db.models.deletion.PROTECT, to='queries.ProcessState')),
             ],
             options={
                 'db_table': 'query',
@@ -87,7 +86,6 @@ class Migration(migrations.Migration):
                 ('round', models.PositiveIntegerField(default=1)),
                 ('match_criterion', models.FloatField(default=0.8)),
                 ('weights', django.contrib.postgres.fields.ArrayField(base_field=models.FloatField(), size=None)),
-                ('query', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='queries.Query')),
             ],
             options={
                 'db_table': 'query_result',
@@ -129,10 +127,31 @@ class Migration(migrations.Migration):
                 'db_table': 'video_clip',
             },
         ),
+        migrations.CreateModel(
+            name='FinalReport',
+            fields=[
+                ('query', models.OneToOneField(help_text='Query id', on_delete=django.db.models.deletion.PROTECT, primary_key=True, serialize=False, to='queries.Query')),
+                ('file_name', models.CharField(help_text='file name for final csv report', max_length=254, unique=True)),
+                ('last_modified', models.DateTimeField(auto_now=True)),
+            ],
+            options={
+                'db_table': 'final_reports',
+            },
+        ),
         migrations.AddField(
             model_name='searchset',
             name='videos',
             field=models.ManyToManyField(to='queries.Video'),
+        ),
+        migrations.AddField(
+            model_name='queryresult',
+            name='query',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='queries.Query'),
+        ),
+        migrations.AddField(
+            model_name='query',
+            name='process_state',
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.PROTECT, to='queries.ProcessState'),
         ),
         migrations.AddField(
             model_name='query',
