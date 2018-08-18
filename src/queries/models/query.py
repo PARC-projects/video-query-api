@@ -21,7 +21,7 @@ class Query(models.Model):
     notes = models.TextField(null=True)
     reference_clip_image = models.ImageField(null=True)
     process_state = models.ForeignKey(ProcessState, default=1, on_delete=models.PROTECT)
-    final_report_file = models.FileField(max_length=254, upload_to='final_reports/',
+    final_report_file = models.FileField(max_length=254, upload_to='final_reports/', null=True,
                                          help_text='final csv report. For coreapi, use encoding in client.action(): '
                                                    'client.action(..., encoding="multipart/form-data")')
     last_modified = DateTimeField(auto_now=True, editable=False, null=False, blank=False)
