@@ -14,7 +14,6 @@ router.register(r'query-results', QueryResultViewSet)
 router.register(r'matches', MatchViewSet)
 router.register(r'features', FeatureViewSet)
 router.register(r'video-clips', VideoClipViewSet)
-router.register(r'final-reports', FinalReportViewSet)
 # router.register(r'users', UserViewSet)
 
 urlpatterns = [

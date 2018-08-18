@@ -3,9 +3,8 @@ from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
-
 from queries.models import Query, QueryResult, Match
-from queries.serializers import QuerySerializer, QueryResultSerializer, MatchSerializer
+from queries.serializers import QuerySerializer, MatchSerializer
 
 
 class QueryViewSet(viewsets.ModelViewSet):
@@ -28,7 +27,10 @@ class QueryViewSet(viewsets.ModelViewSet):
     Update a given query as whole.
 
     partial_update:
-    Update a set of parameters of a given query.
+    Update a set of parameters of a given query. <br/>
+    To update the final report file using python coreapi,<br/>
+    add encoding="multipart/form-data" to client.action(),<br/>
+    i.e., client.action(..., encoding="multipart/form-data")
     """
     queryset = Query.objects.all()
     serializer_class = QuerySerializer
