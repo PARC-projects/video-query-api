@@ -40,8 +40,6 @@ def compute_revised_state(request):
     """
     query = QuerySerializer(Query.get_latest_query_ready_for_revision(), many=False).data
     if 'id' in query:
-        results = QueryResult.get_latest_query_result_by_query_id(query["id"])
-        matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
         base = _get_base_state_entity(query)
         base.update(_get_revision_update(query))
         return JsonResponse(base)
@@ -94,5 +92,9 @@ def _get_base_state_entity(query):
 
 def _get_revision_update(query):
     results = QueryResult.get_latest_query_result_by_query_id(query["id"])
-    matches = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
-    return {"tuning_update": results, "matches": matches}
+    matches_latest = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
+    non_null_user_match = Match.objects.filter(query_result__query=query["id"], user_match__isnull=False)
+    user_matches = {}
+    for match in non_null_user_match:
+        user_matches.update({str(match.video_clip_id): match.user_match})
+    return {"tuning_update": results, "matches": matches_latest, "user_matches": user_matches}
