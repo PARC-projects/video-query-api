@@ -17,7 +17,9 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
+from django.conf import settings
 from rest_framework.documentation import include_docs_urls
+from django.conf.urls.static import static
 
 from queries import urls
 
@@ -28,4 +30,4 @@ urlpatterns = [
     path('', include(urls.router.urls)),
     url(r'^', include(urls.urlpatterns)),
     url(r'^docs/', include_docs_urls(title='Video Query', public=False))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
