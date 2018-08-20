@@ -43,7 +43,8 @@ class QuerySerializer(serializers.ModelSerializer):
         fields = (
             'id', 'name', 'search_set_to_query', 'video', 'reference_time', 'max_matches_for_review',
             'notes', 'reference_clip_image', 'process_state', 'last_modified', 'reference_clip_number',
-            'reference_clip_pk', 'clip_duration', 'use_dynamic_target_adjustment', 'final_report_file'
+            'reference_clip_pk', 'clip_duration', 'use_dynamic_target_adjustment', 'final_report_file',
+            'final_report_url'
         )
 
 
