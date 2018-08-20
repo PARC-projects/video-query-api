@@ -81,3 +81,7 @@ class Query(models.Model):
     @property
     def clip_duration(self):
         return SearchSet.objects.values_list('duration', flat=True).get(id=self.search_set_to_query_id)
+
+    @property
+    def final_report_url(self):
+        return self.final_report_file.url
