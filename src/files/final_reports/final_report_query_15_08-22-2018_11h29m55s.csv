@@ -1,0 +1,20 @@
+Query:,Query 15,Query pk:,15
+Video:,Video 1-1,Video pk:,1
+Search Set queried:,Search Set 1,Search set pk:,1
+last round:,2
+min score for a match:,0.6
+streams:,"('rgb', 'warped_optical_flow')"
+stream weights:,"[1.0, 0.5]"
+
+"Algorithm matches, user-identified matches, and user-identified non-matches"
+clip #,match type,video pk,video clip id,score,duration,notes
+3,Algorithm match,3,9,1.0,10,
+1,Algorithm match,1,1,1.0,10,
+2,Algorithm match,2,5,1.0,10,
+3,Algorithm match,2,6,1.0,10,
+2,Algorithm match,3,8,1.0,10,
+2,user-identified match,1,2,1.0,10,
+1,Algorithm match,2,4,1.0,10,
+3,Algorithm match,1,3,1.0,10,
+1,Algorithm match,3,7,1.0,10,
+4,Algorithm match,3,10,1.0,10,
