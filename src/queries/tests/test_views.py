@@ -29,6 +29,6 @@ class QueryTest(TestCase):
             process_state=ProcessState.objects.get(name="Process State 1")
         )
 
-    def test_dumb(self):
+    def test_dumb_test_to_insure_view_tests_are_setup_correctly(self):
         query = Query.objects.get(name="Query 1")
         self.assertEqual(query.name, "Query 1")
