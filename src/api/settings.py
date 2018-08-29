@@ -37,13 +37,13 @@ if os.environ.get("API_ALLOWED_HOST"):
 
 # Application definition
 INSTALLED_APPS = [
-    'queries',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'queries',
     'rest_framework',
     'django_filters',
     'corsheaders',
