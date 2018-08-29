@@ -6,7 +6,8 @@ class DnnStream(models.Model):
     max_number_of_splits = models.PositiveSmallIntegerField(
         blank=True,
         null=True,
-        help_text='maximum allowed number of splits for this stream')
+        help_text='maximum allowed number of splits for this stream'
+    )
 
     def __str__(self):
         return self.type
