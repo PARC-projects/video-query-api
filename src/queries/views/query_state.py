@@ -93,7 +93,8 @@ def _get_base_state_entity(query):
 def _get_revision_update(query):
     results = QueryResult.get_latest_query_result_by_query_id(query["id"])
     matches_latest = MatchSerializer(Match.get_latest_matches_by_query_id(query["id"]), many=True).data
-    non_null_user_match = Match.objects.filter(query_result__query=query["id"], user_match__isnull=False)
+    # Find all matches that the user scored as True or False in the last round
+    non_null_user_match = Match.objects.filter(query_result=results["id"], user_match__isnull=False)
     user_matches = {}
     for match in non_null_user_match:
         user_matches.update({str(match.video_clip_id): match.user_match})
