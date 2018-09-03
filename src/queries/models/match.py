@@ -76,7 +76,7 @@ class Match(models.Model):
         Location of video this match is associated with.
         """
         clip = VideoClip.objects.get(id=self.video_clip_id)
-        return str(clip.duration * (clip.clip - 1)) + ',' + str(clip.duration * (clip.clip))
+        return "{},{}".format(clip.duration * (clip.clip - 1), clip.duration * clip.clip)
 
     @property
     def is_match(self):
