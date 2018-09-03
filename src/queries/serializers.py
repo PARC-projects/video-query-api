@@ -53,7 +53,7 @@ class MatchSerializer(serializers.ModelSerializer):
         model = Match
         fields = (
             'id', 'query_result', 'score', 'user_match', 'video_clip', 'query_id', 'reference_video_id',
-            'reference_time', 'match_video_path', 'match_video_start_time', 'is_match'
+            'reference_time', 'match_video_path', 'match_video_time_span', 'is_match'
         )
 
 
