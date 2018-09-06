@@ -33,6 +33,7 @@ class QueryTest(TestCase):
             search_set_to_query_id=SearchSet.objects.all()[0].id,
             video_id=Video.objects.all()[0].id,
             process_state=ProcessState.objects.all()[0],
+            final_report_file='final_reports/final_report_query_14_08-18-2018_10h23m34s.csv'
 
         )
 
@@ -49,4 +50,9 @@ class QueryTest(TestCase):
         query = Query.objects.get(name="Query 1")
 
         self.assertEqual(query.final_report_url, None)
+
+    def test_final_report_url_is_valid_rul_when_final_report_is_available(self):
+        query = Query.objects.get(name="Query 2")
+
+        self.assertIsNotNone(query.final_report_url)
 

@@ -87,7 +87,4 @@ class Query(models.Model):
 
     @property
     def final_report_url(self):
-        if self.final_report_file:
-            return self.final_report_file.url
-        else:
-            return None
+        return self.final_report_file.url if self.final_report_file else None
