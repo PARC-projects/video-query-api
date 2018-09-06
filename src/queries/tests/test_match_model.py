@@ -74,14 +74,14 @@ class MatchTest(TestCase):
         match = Match.objects.all()[0]
         clip = VideoClip.objects.get(id=match.video_clip_id)
 
-        words = clip.match_video_time_span.split(",")
+        words = match.match_video_time_span.split(",")
 
-        self.assertEqual(clip.duration * (clip.clip - 1), words[0], "video_time_span has an inaccurate start")
+        self.assertEqual(clip.duration * (clip.clip - 1), int(words[0]), "video_time_span has an inaccurate start")
 
     def test_match_video_time_span_end(self):
         match = Match.objects.all()[0]
         clip = VideoClip.objects.get(id=match.video_clip_id)
 
-        words = clip.match_video_time_span.split(",")
+        words = match.match_video_time_span.split(",")
 
-        self.assertEqual(clip.duration * clip.clip, words[1])
+        self.assertEqual(clip.duration * clip.clip, int(words[1]), "video_time_span has an inaccurate end")
