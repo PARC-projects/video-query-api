@@ -41,13 +41,47 @@ class MatchTest(TestCase):
         )
 
         Match.objects.create(
-            score="0.8",
+            score="0.7",
             user_match=True,
             query_result=QueryResult.objects.all()[0],
             video_clip=VideoClip.objects.all()[0]
         )
 
-    def test_dumb(self):
-        # match = Query.objects.all()[0]
-        # print(match)
-        self.assertTrue(True)
+        Match.objects.create(
+            score="0.9",
+            user_match=True,
+            query_result=QueryResult.objects.all()[0],
+            video_clip=VideoClip.objects.all()[0]
+        )
+
+    def test_is_match_equals_false_when_score_is_below_match_criterion(self):
+        match = Match.objects.all()[0]
+        self.assertTrue(match.is_match)
+
+    def test_is_match_equals_false_when_score_is_below_match_criterion(self):
+        match = Match.objects.all()[1]
+        self.assertFalse(match.is_match)
+
+    def test_match_video_time_span_is_formatted_as_comma_separated(self):
+        match = Match.objects.all()[0]
+        clip = VideoClip.objects.get(id=match.video_clip_id)
+        self.assertEqual(
+            match.match_video_time_span,
+            "{},{}".format(clip.duration * (clip.clip - 1), clip.duration * clip.clip)
+        )
+
+    def test_match_video_time_span_start(self):
+        match = Match.objects.all()[0]
+        clip = VideoClip.objects.get(id=match.video_clip_id)
+
+        words = clip.match_video_time_span.split(",")
+
+        self.assertEqual(clip.duration * (clip.clip - 1), words[0], "video_time_span has an inaccurate start")
+
+    def test_match_video_time_span_end(self):
+        match = Match.objects.all()[0]
+        clip = VideoClip.objects.get(id=match.video_clip_id)
+
+        words = clip.match_video_time_span.split(",")
+
+        self.assertEqual(clip.duration * clip.clip, words[1])

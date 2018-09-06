@@ -76,9 +76,26 @@ class Match(models.Model):
         Location of video this match is associated with.
         """
         clip = VideoClip.objects.get(id=self.video_clip_id)
-        return "{},{}".format(clip.duration * (clip.clip - 1), clip.duration * clip.clip)
+        return "{},{}".format(
+            self.__get_video_time_span_start(clip),
+            self.__get_video_time_span_end(clip)
+        )
 
     @property
     def is_match(self):
         match_criterion = QueryResult.objects.values_list('match_criterion', flat=True).get(id=self.query_result_id)
         return self.score >= match_criterion
+
+    @staticmethod
+    def __get_video_time_span_start(clip):
+        """
+        Get the start time of a video time span based on clip
+        """
+        return clip.duration * (clip.clip - 1)
+
+    @staticmethod
+    def __get_video_time_span_end(clip):
+        """
+        Get the end time of a video time span based on clip
+        """
+        return clip.duration * clip.clip
