@@ -56,15 +56,18 @@ class MatchTest(TestCase):
 
     def test_is_match_equals_false_when_score_is_below_match_criterion(self):
         match = Match.objects.all()[0]
+
         self.assertTrue(match.is_match)
 
     def test_is_match_equals_false_when_score_is_below_match_criterion(self):
         match = Match.objects.all()[1]
+
         self.assertFalse(match.is_match)
 
     def test_match_video_time_span_is_formatted_as_comma_separated(self):
         match = Match.objects.all()[0]
         clip = VideoClip.objects.get(id=match.video_clip_id)
+
         self.assertEqual(
             match.match_video_time_span,
             "{},{}".format(clip.duration * (clip.clip - 1), clip.duration * clip.clip)
