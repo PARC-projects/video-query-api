@@ -77,9 +77,8 @@ class Query(models.Model):
             clip=self.reference_clip_number,
             duration=self.clip_duration
         )
-        if ref_clip:
-            return ref_clip.id
-        return None
+
+        return ref_clip.id if ref_clip else None
 
     @property
     def clip_duration(self):
