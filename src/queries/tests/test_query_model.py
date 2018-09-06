@@ -1,5 +1,6 @@
 from django.test import TestCase
-from ..models import Query, ProcessState, SearchSet, Video, Match, QueryResult, VideoClip
+
+from ..models import Query, ProcessState, SearchSet, Video
 
 
 class QueryTest(TestCase):
@@ -24,10 +25,12 @@ class QueryTest(TestCase):
             name="Query 1",
             search_set_to_query_id=SearchSet.objects.all()[0].id,
             video_id=Video.objects.all()[0].id,
-            process_state=ProcessState.objects.all()[0]
+            process_state=Video.objects.all()[0]
         )
 
-    def test_dumb_test_to_insure_model_tests_are_setup_correctly(self):
-        # query = Query.objects.get(name="Query 1")
-        # self.assertEqual(query.name, "Query 1")
-        self.assertTrue(True)
+    def test_reference_clip_number(self):
+        query = Query.objects.get(name="Query 1")
+        self.assertEqual(
+            query.reference_clip_number,
+            int(query.reference_time.total_seconds() / query.clip_duration) + 1
+        )

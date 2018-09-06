@@ -76,10 +76,7 @@ class Match(models.Model):
         Location of video this match is associated with.
         """
         clip = VideoClip.objects.get(id=self.video_clip_id)
-        return "{},{}".format(
-            self.__get_video_time_span_start(clip),
-            self.__get_video_time_span_end(clip)
-        )
+        return "{},{}".format(self.__get_video_time_span_start(clip), self.__get_video_time_span_end(clip))
 
     @property
     def is_match(self):
