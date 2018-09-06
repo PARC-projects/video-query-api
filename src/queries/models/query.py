@@ -90,4 +90,4 @@ class Query(models.Model):
         if self.final_report_file:
             return self.final_report_file.url
         else:
-            return ""
+            return None
