@@ -72,11 +72,13 @@ class Query(models.Model):
 
     @property
     def reference_clip_pk(self):
-        ref_clip = VideoClip.objects\
-            .get(video_id=self.video_id, clip=self.reference_clip_number, duration=self.clip_duration)
-        if ref_clip:
-            return ref_clip.id
-        return None
+        ref_clip = VideoClip.objects.get(
+            video_id=self.video_id,
+            clip=self.reference_clip_number,
+            duration=self.clip_duration
+        )
+
+        return ref_clip.id if ref_clip else None
 
     @property
     def clip_duration(self):
@@ -84,7 +86,4 @@ class Query(models.Model):
 
     @property
     def final_report_url(self):
-        if self.final_report_file:
-            return self.final_report_file.url
-        else:
-            return ""
+        return self.final_report_file.url if self.final_report_file else None
