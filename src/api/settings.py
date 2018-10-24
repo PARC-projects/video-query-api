@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
     'queries',
     'rest_framework',
     'django_filters',
@@ -95,9 +96,9 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 if os.environ.get("API_CORS_ORIGIN_WHITELIST"):
-    l = list(CORS_ORIGIN_WHITELIST)
-    l.append(os.environ.get("API_CORS_ORIGIN_WHITELIST"))
-    CORS_ORIGIN_WHITELIST = tuple(l)
+    l1 = list(CORS_ORIGIN_WHITELIST)
+    l1.append(os.environ.get("API_CORS_ORIGIN_WHITELIST"))
+    CORS_ORIGIN_WHITELIST = tuple(l1)
 
 ROOT_URLCONF = 'api.urls'
 
