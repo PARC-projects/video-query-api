@@ -98,4 +98,4 @@ def _get_revision_update(query):
     user_matches = {}
     for match in non_null_user_match:
         user_matches.update({str(match.video_clip_id): match.user_match})
-    return {"tuning_update": results, "matches": matches_latest, "user_matches": user_matches}
+    return {"latest_query_result": results, "matches": matches_latest, "user_matches": user_matches}
