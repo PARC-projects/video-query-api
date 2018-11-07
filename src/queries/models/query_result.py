@@ -1,4 +1,5 @@
 from django.contrib.postgres.fields import ArrayField
+from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.core.exceptions import NON_FIELD_ERRORS
 
@@ -10,6 +11,7 @@ class QueryResult(models.Model):
     round = models.PositiveIntegerField(default=1)
     match_criterion = models.FloatField(default=0.8)
     weights = ArrayField(models.FloatField())
+    bootstrapped_target = JSONField(default=dict)
 
     class Meta:
         db_table = 'query_result'
