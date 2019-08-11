@@ -91,8 +91,8 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:4200',
-    'localhost:8001'
+    'http://localhost:4200',
+    'http://localhost:8001'
 )
 
 if os.environ.get("API_CORS_ORIGIN_WHITELIST"):
