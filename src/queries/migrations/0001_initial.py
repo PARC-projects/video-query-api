@@ -60,7 +60,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=254, unique=True)),
                 ('path', models.CharField(max_length=4096)),
-                ('web_source', models.BooleanField(default=False)),
+                ('external_source', models.BooleanField(default=False)),
             ],
             options={
                 'db_table': 'video',
