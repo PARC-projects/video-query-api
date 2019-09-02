@@ -46,12 +46,18 @@ class Match(models.Model):
     def query_id(self):
         return QueryResult.objects.values_list('query', flat=True).get(id=self.query_result_id)
 
-    # TODO: CHAD: Check with Frank to see where he is using this.
     @property
     def reference_video_id(self):
         return Query.objects.values_list('video', flat=True).get(id=self.query_id)
 
-    # TODO: CHAD: Check with Frank to see where he is using this.
+    @property
+    def reference_video_external_source(self):
+        """
+        Identifies if realted video is of external source
+        """
+        video_id = VideoClip.objects.values_list('video', flat=True).get(id=self.video_clip_id)
+        return Video.objects.values_list('external_source', flat=True).get(id=video_id)
+
     @property
     def reference_time(self):
         return Query.objects.values_list('reference_time', flat=True).get(id=self.query_id)
@@ -60,7 +66,7 @@ class Match(models.Model):
     def match_video_path(self):
         """
         TODO: CHAD - Consider perf of multiple calls to VideoClip.
-        Used on UI to show video for match (../existing-query)
+        Used on UI to show video for match (../existing-query)`
         :return:
         Location of video this match is associated with.
         """
