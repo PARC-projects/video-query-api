@@ -1,7 +1,25 @@
-FROM python:3
+# pull official base image
+FROM python:3.7.4-alpine
+
+# set work directory
+WORKDIR /user/src/app/
+
+# Prevents Python from writing pyc files to disk
+ENV PYTHONDONTWRITEBYTECODE 1
+# Prevents Python from buffering stdout and stderr
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
-WORKDIR /code
-COPY requirements.txt /code/
+
+# install dependencies
+RUN pip install --upgrade pip
+
+# Needed for pillow
+RUN apk add jpeg-dev zlib-dev
+
+# Needed for pyscopg
+RUN apk add postgresql-dev gcc python3-dev musl-dev
+
+COPY ./requirements.txt /user/src/app/
 RUN pip install -r requirements.txt
-COPY . /code/
+
+# copy project
+COPY /src/ /usr/src/app

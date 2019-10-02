@@ -1,6 +1,8 @@
 {
     "python.pythonPath": "env\\Scripts\\python.exe",
     "cSpell.words": [
-        "prototxt"
+        "postgres",
+        "prototxt",
+        "runserver"
     ]
 }

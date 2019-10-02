@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  web:
+    image: 'video-query-api'
+    build: .
+    # command: python manage.py runserver 0.0.0.0:30001
+    volumes:
+      - ./src/:/usr/src/app/
+    ports:
+      - 8000:8000
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=foo
