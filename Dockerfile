@@ -2,7 +2,8 @@
 FROM python:3.7.4-alpine
 
 # set work directory
-WORKDIR /user/src/app/
+RUN mkdir /code
+WORKDIR /code
 
 # Prevents Python from writing pyc files to disk
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -18,8 +19,8 @@ RUN apk add jpeg-dev zlib-dev
 # Needed for pyscopg
 RUN apk add postgresql-dev gcc python3-dev musl-dev
 
-COPY ./requirements.txt /user/src/app/
+COPY ./requirements.txt /code/
 RUN pip install -r requirements.txt
 
 # copy project
-COPY /src/ /usr/src/app
+COPY ./src/ /code/

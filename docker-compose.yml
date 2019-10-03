@@ -4,11 +4,16 @@ services:
   web:
     image: 'video-query-api'
     build: .
-    # command: python manage.py runserver 0.0.0.0:30001
+    command: python manage.py runserver 0.0.0.0:30001
     volumes:
-      - ./src/:/usr/src/app/
+      - ./src/:/code/
     ports:
       - 8000:8000
     environment:
       - DEBUG=1
-      - SECRET_KEY=foo
+      - API_DB_HOST=localhost
+      - API_DB_NAME=Vide-Query
+      - API_DB_PASS=password
+      - API_DB_PORT=5432
+      - API_DB_USER=user
+      - API_SECRET_KEY=some-key
