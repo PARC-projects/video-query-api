@@ -22,5 +22,11 @@ RUN apk add postgresql-dev gcc python3-dev musl-dev
 COPY ./requirements.txt /code/
 RUN pip install -r requirements.txt
 
+# copy entrypoint.sh
+COPY ./entrypoint.sh /code/
+
 # copy project
 COPY ./src/ /code/
+
+# run entrypoint.sh
+ENTRYPOINT ["/code/entrypoint.sh"]
