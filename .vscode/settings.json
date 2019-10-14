@@ -1,6 +1,15 @@
 {
     "python.pythonPath": "env\\Scripts\\python.exe",
     "cSpell.words": [
-        "prototxt"
+        "CORS",
+        "corsheaders",
+        "gunicorn",
+        "nginx",
+        "postgres",
+        "postgresql",
+        "prototxt",
+        "psycopg",
+        "runserver",
+        "wsgi"
     ]
 }
