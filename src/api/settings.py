@@ -29,7 +29,8 @@ DEBUG = os.environ.get("API_DEBUG", False)
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'localhost'
+    'localhost',
+    'host.docker.internal'
 ]
 
 if os.environ.get("API_ALLOWED_HOST"):
@@ -91,8 +92,10 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:4200',
-    'http://localhost:8001'
+    'http://localhost:4200', # dev
+    'http://localhost:8001', # dev
+    'http://localhost:3000', # video-query-client-web docker
+    'http://host.docker.internal' # Local host docker
 )
 
 if os.environ.get("API_CORS_ORIGIN_WHITELIST"):
