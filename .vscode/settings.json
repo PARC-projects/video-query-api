@@ -3,10 +3,13 @@
     "cSpell.words": [
         "CORS",
         "corsheaders",
+        "gunicorn",
+        "nginx",
         "postgres",
         "postgresql",
         "prototxt",
         "psycopg",
-        "runserver"
+        "runserver",
+        "wsgi"
     ]
 }

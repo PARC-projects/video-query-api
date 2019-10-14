@@ -4,9 +4,10 @@ services:
   web:
     image: 'video-query-api'
     build: .
-    command: python manage.py runserver 0.0.0.0:8001
-    volumes:
-      - ./src/:/code/
+    # command: python manage.py runserver 0.0.0.0:8001
+    command: gunicorn api.wsgi:application --bind 0.0.0.0:8001
+    # volumes:
+      # - ./src/:/code/
     ports:
       - 8001:8001
     environment:
@@ -27,6 +28,12 @@ services:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB='Video-Query'
+#   nginx:
+#     build: ./nginx
+#     ports:
+#         - 1337:80
+#     depends_on:
+#         - web
 
 volumes:
   postgres_data:
