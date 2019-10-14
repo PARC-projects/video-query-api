@@ -4,7 +4,7 @@ services:
   web:
     image: 'video-query-api'
     build: .
-    command: python manage.py runserver 0.0.0.0:30001
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./src/:/code/
     ports:
