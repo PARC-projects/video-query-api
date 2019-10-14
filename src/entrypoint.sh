@@ -13,5 +13,9 @@ fi
 
 python manage.py flush --no-input
 python manage.py migrate
+python manage.py loaddata 1-lookups
+
+# Development
+# python3 manage.py loaddata 2-dev-video 3-dev-search-set 4-dev-query 5-dev-results 6-dev-features 7-dev-video-clip
 
 exec "$@"
