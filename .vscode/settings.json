@@ -1,9 +1,12 @@
 {
     "python.pythonPath": "env\\Scripts\\python.exe",
     "cSpell.words": [
+        "CORS",
+        "corsheaders",
         "postgres",
         "postgresql",
         "prototxt",
+        "psycopg",
         "runserver"
     ]
 }

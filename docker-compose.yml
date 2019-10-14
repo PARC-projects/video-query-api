@@ -4,13 +4,13 @@ services:
   web:
     image: 'video-query-api'
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8001
     volumes:
       - ./src/:/code/
     ports:
-      - 8000:8000
+      - 8001:8001
     environment:
-      - DEBUG=1
+      - API_DEBUG=True
       - API_DB_HOST=db
       - API_DB_NAME='Video-Query'
       - API_DB_PASS=password
