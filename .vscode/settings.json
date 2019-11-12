@@ -1,15 +1,18 @@
 {
-    "python.pythonPath": "env\\Scripts\\python.exe",
-    "cSpell.words": [
-        "CORS",
-        "corsheaders",
-        "gunicorn",
-        "nginx",
-        "postgres",
-        "postgresql",
-        "prototxt",
-        "psycopg",
-        "runserver",
-        "wsgi"
-    ]
+  "python.pythonPath": "env\\Scripts\\python.exe",
+  "cSpell.words": [
+    "CORS",
+    "corsheaders",
+    "gunicorn",
+    "nginx",
+    "postgres",
+    "postgresql",
+    "prototxt",
+    "psycopg",
+    "runserver",
+    "wsgi"
+  ],
+  "python.linting.pylintArgs": [
+    "--load-plugins=pylint_django",
+  ]
 }
