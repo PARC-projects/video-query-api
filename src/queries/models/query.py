@@ -98,3 +98,7 @@ class Query(models.Model):
         )
 
         return ref_clip.name if ref_clip else None
+
+    @property
+    def dataset(self):
+        return SearchSet.objects.values_list('name', flat=True).get(id=self.search_set_to_query_id)
