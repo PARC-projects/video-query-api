@@ -11,6 +11,7 @@ def user_directory_path(instance, filename):
     and change to upload_to=user_directory_path
 '''
 
+
 class Query(models.Model):
     name = models.CharField(max_length=254, unique=True)
     search_set_to_query = models.ForeignKey(
@@ -89,3 +90,11 @@ class Query(models.Model):
     @property
     def final_report_url(self):
         return self.final_report_file.url if self.final_report_file else None
+
+    @property
+    def video_name(self):
+        ref_clip = Video.objects.get(
+            id=self.video_id
+        )
+
+        return ref_clip.name if ref_clip else None
