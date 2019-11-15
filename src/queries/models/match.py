@@ -73,6 +73,7 @@ class Match(models.Model):
         video_id = VideoClip.objects.values_list('video', flat=True).get(id=self.video_clip_id)
         return Video.objects.values_list('path', flat=True).get(id=video_id)
 
+
     @property
     def match_video_time_span(self):
         """
@@ -88,6 +89,17 @@ class Match(models.Model):
     def is_match(self):
         match_criterion = QueryResult.objects.values_list('match_criterion', flat=True).get(id=self.query_result_id)
         return self.score >= match_criterion
+
+    @property
+    def match_video_name(self):
+        """
+        TODO: CHAD - Consider perf of multiple calls to VideoClip.
+        Used on UI to show video for match (../existing-query)`
+        :return:
+        Location of video this match is associated with.
+        """
+        video_id = VideoClip.objects.values_list('video', flat=True).get(id=self.video_clip_id)
+        return Video.objects.values_list('name', flat=True).get(id=video_id)
 
     @staticmethod
     def __get_video_time_span_start(clip):
