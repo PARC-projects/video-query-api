@@ -54,7 +54,7 @@ class MatchSerializer(serializers.ModelSerializer):
         fields = (
             'id', 'query_result', 'score', 'user_match', 'video_clip', 'query_id', 'reference_video_id',
             'reference_time', 'reference_video_external_source', 'match_video_path', 'match_video_time_span', 'is_match',
-            'match_video_name'
+            'match_video_name', 'reference_start_time'
         )
 
 

@@ -3,6 +3,7 @@
   "cSpell.words": [
     "CORS",
     "corsheaders",
+    "gmtime",
     "gunicorn",
     "nginx",
     "postgres",
@@ -10,6 +11,7 @@
     "prototxt",
     "psycopg",
     "runserver",
+    "strftime",
     "wsgi"
   ],
   "python.linting.pylintArgs": [
