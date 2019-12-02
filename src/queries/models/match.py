@@ -113,6 +113,12 @@ class Match(models.Model):
         """
         return time.strftime('%H:%M:%S', time.gmtime(int(self.match_video_time_span.split(',')[0])))
 
+    @property
+    def reference_end_time(self):
+        """
+        Format a reference end time so we can set video position on UI.
+        """
+        return time.strftime('%H:%M:%S', time.gmtime(int(self.match_video_time_span.split(',')[1])))
 
     @staticmethod
     def __get_video_time_span_start(clip):
