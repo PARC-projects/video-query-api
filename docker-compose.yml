@@ -8,7 +8,7 @@ services:
     environment:
       - API_DEBUG=True
       - API_DB_HOST=db
-      - API_DB_NAME='Video-Query'
+      - API_DB_NAME='video-query'
       - API_DB_PASS=password
       - API_DB_PORT=5432
       - API_DB_USER=user
@@ -22,7 +22,7 @@ services:
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB='Video-Query'
+      - POSTGRES_DB='video-query'
   nginx:
     build: ./nginx
     ports:
