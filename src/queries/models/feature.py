@@ -8,13 +8,13 @@ from . import VideoClip, DnnStream
 class Feature(models.Model):
     video_clip = models.ForeignKey(
         VideoClip,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         help_text='Id in the video_clips table for the clip corresponding to this row.'
     )
     dnn_stream = models.ForeignKey(
         DnnStream,
         to_field='type',
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         help_text='DNN stream name from dnn_streams table signifying which of the streams in the multi-stream DNN this '
                   'row belongs.'
     )

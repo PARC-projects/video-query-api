@@ -6,7 +6,7 @@ from . import QueryResult, Query, VideoClip, Video
 
 
 class Match(models.Model):
-    query_result = models.ForeignKey(QueryResult, on_delete=models.PROTECT)
+    query_result = models.ForeignKey(QueryResult, on_delete=models.CASCADE)
     score = models.FloatField(default=0)
     # Holds state of user validation on UI.
     # null = they have not validated or invalidate the match

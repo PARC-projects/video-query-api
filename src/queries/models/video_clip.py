@@ -7,7 +7,7 @@ from . import Video
 class VideoClip(models.Model):
     video = models.ForeignKey(
         Video,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         help_text='Id in the video table for the video corresponding to this clip'
     )
     clip = models.PositiveIntegerField(
