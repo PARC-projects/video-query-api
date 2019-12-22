@@ -1,10 +1,12 @@
+import time
+
 from django.db import models
 
 from . import QueryResult, Query, VideoClip, Video
 
 
 class Match(models.Model):
-    query_result = models.ForeignKey(QueryResult, on_delete=models.PROTECT)
+    query_result = models.ForeignKey(QueryResult, on_delete=models.CASCADE)
     score = models.FloatField(default=0)
     # Holds state of user validation on UI.
     # null = they have not validated or invalidate the match
@@ -55,7 +57,8 @@ class Match(models.Model):
         """
         Identifies if realted video is of external source
         """
-        video_id = VideoClip.objects.values_list('video', flat=True).get(id=self.video_clip_id)
+        video_id = VideoClip.objects.values_list(
+            'video', flat=True).get(id=self.video_clip_id)
         return Video.objects.values_list('external_source', flat=True).get(id=video_id)
 
     @property
@@ -70,7 +73,8 @@ class Match(models.Model):
         :return:
         Location of video this match is associated with.
         """
-        video_id = VideoClip.objects.values_list('video', flat=True).get(id=self.video_clip_id)
+        video_id = VideoClip.objects.values_list(
+            'video', flat=True).get(id=self.video_clip_id)
         return Video.objects.values_list('path', flat=True).get(id=video_id)
 
     @property
@@ -86,8 +90,35 @@ class Match(models.Model):
 
     @property
     def is_match(self):
-        match_criterion = QueryResult.objects.values_list('match_criterion', flat=True).get(id=self.query_result_id)
+        match_criterion = QueryResult.objects.values_list(
+            'match_criterion', flat=True).get(id=self.query_result_id)
         return self.score >= match_criterion
+
+    @property
+    def match_video_name(self):
+        """
+        TODO: CHAD - Consider perf of multiple calls to VideoClip.
+        Used on UI to show video for match (../existing-query)`
+        :return:
+        Location of video this match is associated with.
+        """
+        video_id = VideoClip.objects.values_list(
+            'video', flat=True).get(id=self.video_clip_id)
+        return Video.objects.values_list('name', flat=True).get(id=video_id)
+
+    @property
+    def reference_start_time(self):
+        """
+        Format a reference start time so we can set video position on UI.
+        """
+        return time.strftime('%H:%M:%S', time.gmtime(int(self.match_video_time_span.split(',')[0])))
+
+    @property
+    def reference_end_time(self):
+        """
+        Format a reference end time so we can set video position on UI.
+        """
+        return time.strftime('%H:%M:%S', time.gmtime(int(self.match_video_time_span.split(',')[1])))
 
     @staticmethod
     def __get_video_time_span_start(clip):

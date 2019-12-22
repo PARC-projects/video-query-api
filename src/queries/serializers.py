@@ -44,7 +44,7 @@ class QuerySerializer(serializers.ModelSerializer):
             'id', 'name', 'search_set_to_query', 'video', 'reference_time', 'max_matches_for_review',
             'notes', 'reference_clip_image', 'process_state', 'last_modified', 'reference_clip_number',
             'reference_clip_pk', 'clip_duration', 'use_dynamic_target_adjustment', 'final_report_file',
-            'final_report_url'
+            'final_report_url', 'video_name', 'dataset'
         )
 
 
@@ -53,7 +53,8 @@ class MatchSerializer(serializers.ModelSerializer):
         model = Match
         fields = (
             'id', 'query_result', 'score', 'user_match', 'video_clip', 'query_id', 'reference_video_id',
-            'reference_time', 'reference_video_external_source', 'match_video_path', 'match_video_time_span', 'is_match'
+            'reference_time', 'reference_video_external_source', 'match_video_path', 'match_video_time_span', 'is_match',
+            'match_video_name', 'reference_start_time', 'reference_end_time'
         )
 
 

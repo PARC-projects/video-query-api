@@ -7,7 +7,7 @@ from . import Query
 
 
 class QueryResult(models.Model):
-    query = models.ForeignKey(Query, on_delete=models.PROTECT)
+    query = models.ForeignKey(Query, on_delete=models.CASCADE)
     round = models.PositiveIntegerField(default=1)
     match_criterion = models.FloatField(default=0.8)
     weights = ArrayField(models.FloatField())
