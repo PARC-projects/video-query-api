@@ -12,5 +12,6 @@ class AuthTokenView(ObtainAuthToken):
         token, created = Token.objects.get_or_create(user=user)
         return Response({
             'token': token.key,
-            'is_staff': user.is_staff
+            'is_staff': user.is_staff,
+            'bypass_onboarding': user.profile.bypass_onboarding
         })
