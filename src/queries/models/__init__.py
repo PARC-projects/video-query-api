@@ -7,6 +7,7 @@ from queries.models.search_set import SearchSet
 from queries.models.query import Query
 from queries.models.query_result import QueryResult
 from queries.models.match import Match
+from queries.models.profile import Profile
 
 __all__ = [
     'DnnStream',
@@ -17,5 +18,6 @@ __all__ = [
     'SearchSet',
     'Query',
     'QueryResult',
-    'Match'
+    'Match',
+    'Profile'
 ]
