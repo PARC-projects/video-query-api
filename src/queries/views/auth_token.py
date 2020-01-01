@@ -13,5 +13,6 @@ class AuthTokenView(ObtainAuthToken):
         return Response({
             'token': token.key,
             'is_staff': user.is_staff,
-            'bypass_onboarding': user.profile.bypass_onboarding
+            'bypass_onboarding': user.profile.bypass_onboarding,
+            'profile_id': user.profile.id
         })
