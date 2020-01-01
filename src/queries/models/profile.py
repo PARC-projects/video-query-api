@@ -6,6 +6,7 @@ from django.dispatch import receiver
 # https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone
 
 class Profile(models.Model):
+    db_table = 'profile'
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bypass_onboarding = models.BooleanField(default=False)
 
