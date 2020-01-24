@@ -16,13 +16,14 @@ fi
 # The table of which migrations have been applied is not cleared.
 # python manage.py flush --no-input
 
-# Migations
+# Migrations
 python manage.py migrate
 python manage.py loaddata 1-lookups
 
 # Development Migrations
 # python3 manage.py loaddata 2-dev-video 3-dev-search-set 4-dev-query 5-dev-results 6-dev-features 7-dev-video-clip
 
-python manage.py static --no-input --clear
+# Use this if a STATIC_ROOT directory is specified for production in settings.py
+# python manage.py collectstatic --no-input --clear
 
 exec "$@"
