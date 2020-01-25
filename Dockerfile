@@ -17,7 +17,7 @@ RUN pip install --upgrade pip
 RUN apk add jpeg-dev zlib-dev
 
 # Needed for pyscopg
-RUN apk add postgresql-dev gcc python3-dev musl-dev
+RUN apk add postgresql-dev gcc python3-dev musl-dev libffi-dev
 
 COPY ./requirements.txt /code/
 RUN pip install -r requirements.txt
