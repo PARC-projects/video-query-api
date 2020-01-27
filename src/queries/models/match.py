@@ -55,7 +55,7 @@ class Match(models.Model):
     @property
     def reference_video_external_source(self):
         """
-        Identifies if realted video is of external source
+        Identifies if related video is of external source
         """
         video_id = VideoClip.objects.values_list(
             'video', flat=True).get(id=self.video_clip_id)
