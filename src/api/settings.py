@@ -29,7 +29,7 @@ DEBUG = os.environ.get("API_DEBUG", False)
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '172.22.0.3',  # Docker api container
+    'video-query-api',  # Docker api container specified in docker-compose.yml
     'localhost',
     'host.docker.internal'
 ]
