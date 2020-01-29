@@ -24,6 +24,6 @@ python manage.py loaddata 1-lookups
 # python3 manage.py loaddata 2-dev-video 3-dev-search-set 4-dev-query 5-dev-results 6-dev-features 7-dev-video-clip
 
 # Use this if a STATIC_ROOT directory is specified for production in settings.py
-python manage.py collectstatic --no-input --clear
+# python manage.py collectstatic --no-input --clear
 
 exec "$@"
