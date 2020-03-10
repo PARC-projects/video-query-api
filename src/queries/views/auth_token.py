@@ -14,5 +14,7 @@ class AuthTokenView(ObtainAuthToken):
             'token': token.key,
             'is_staff': user.is_staff,
             'bypass_onboarding': user.profile.bypass_onboarding,
-            'profile_id': user.profile.id
+            'profile_id': user.profile.id,
+            'first_name': user.first_name,
+            'last_name': user.last_name
         })
