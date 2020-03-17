@@ -21,6 +21,8 @@ class SearchSet(models.Model):
     # Duration of video to use
     duration = models.PositiveIntegerField(default=10)
 
+    dated_created = models.DateTimeField(auto_now_add=True)
+
     class Meta:
         db_table = 'search_set'
 
