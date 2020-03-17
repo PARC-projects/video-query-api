@@ -20,6 +20,7 @@ class SearchSet(models.Model):
     videos = models.ManyToManyField(Video)
     # Duration of video to use
     duration = models.PositiveIntegerField(default=10)
+    date_created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         db_table = 'search_set'
