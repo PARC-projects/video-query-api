@@ -22,6 +22,8 @@ class SearchSet(models.Model):
     duration = models.PositiveIntegerField(default=10)
     date_created = models.DateTimeField(auto_now_add=True)
 
+    dated_created = models.DateTimeField(auto_now_add=True)
+
     class Meta:
         db_table = 'search_set'
 
