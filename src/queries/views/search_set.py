@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from rest_framework.decorators import action, api_view
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
@@ -29,9 +29,11 @@ class SearchSetViewSet(viewsets.ModelViewSet):
     """
     queryset = SearchSet.objects.all()
     serializer_class = SearchSetSerializer
-    filter_backends = (SearchFilter, DjangoFilterBackend)
+    filter_backends = (DjangoFilterBackend, SearchFilter,
+                       filters.OrderingFilter)
     search_fields = ('name',)
     filter_fields = ('name',)
+    ordering_fields = ('name', 'date_created',)
 
     @action(methods=['get'], detail=True)
     def videos(self, request, pk):
@@ -55,7 +57,7 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         duration = SearchSet.objects.get(pk=pk).duration
         return Response(Feature.objects.filter(video_clip__video__searchset=pk,
-                        video_clip__duration=duration).values())
+                                               video_clip__duration=duration).values())
 
     @action(methods=['get'], detail=True)
     def all(self, request):
@@ -64,9 +66,10 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         return Response(SearchSet.objects.all().values())
 
+
 @api_view(['GET'])
 def search_sets_all(request):
-    results = SearchSetSerializer(SearchSet.objects.all(), many=True).data;
+    results = SearchSetSerializer(SearchSet.objects.all(), many=True).data
     return JsonResponse({
         "results": results
     })
