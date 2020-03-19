@@ -40,15 +40,17 @@ class SearchSetViewSet(viewsets.ModelViewSet):
         """
         GET videos based on search set id
         """
+        videos = Video.objects.filter(searchset__id=pk)
+        ordering = self.request.query_params.get('ordering', None)
+
+        if ordering is not None:
+            videos = videos.order_by(ordering)
 
         if 'searchTerm' in request.query_params:
-            return Response(
-                Video.objects
-                .filter(searchset__id=pk)
-                .filter(name__icontains=request.query_params['searchTerm']).values()
-            )
+            videos = videos.filter(name__icontains=request.query_params['searchTerm'])
+            return Response(videos)
         else:
-            return Response(Video.objects.filter(searchset__id=pk).values())
+            return Response(videos.values())
 
     @action(methods=['get'], detail=True)
     def features(self, request, pk):

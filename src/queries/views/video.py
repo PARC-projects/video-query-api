@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 
@@ -26,6 +26,7 @@ class VideoViewSet(viewsets.ModelViewSet):
     """
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
-    filter_backends = (SearchFilter, DjangoFilterBackend)
+    filter_backends = (SearchFilter, DjangoFilterBackend, filters.OrderingFilter)
     search_fields = ('name', 'path')
     filter_fields = ('name', 'path')
+    ordering_fields = ('name', 'date_created')
