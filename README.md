@@ -39,7 +39,7 @@ Algorithm development by Frank Torres, Matthew Shreve, Gaurang Ganguli and Hoda 
 
 ## License
 
-Copyright (C) 2018 Palo Alto Research Center, Inc.
+Copyright (C) 2020 Palo Alto Research Center, Inc.
 
 This program is free software for non-commercial uses: you can redistribute it and/or modify
 it under the terms of the Aladdin Free Public License - see the [LICENSE.md](LICENSE.md) file for details.
